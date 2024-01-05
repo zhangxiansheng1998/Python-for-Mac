@@ -32,4 +32,5 @@ class TestCase(unittest.TestCase):
         #self.c.xpath('//*[@label="pages/login/selectAccount/selectAccount[4]"]/Other[1]').click()
 
 if __name__ == '__main__':
+
     unittest.main()
