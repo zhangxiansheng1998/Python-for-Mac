@@ -11,19 +11,19 @@ def generate_time_ranges(start_time, end_time, num_intervals):
 
 def generate_order_data():
     # 设置时间范围和数量
-    start_time_create_early = datetime(2023, 12, 30, 0, 0, 0)
-    end_time_create_early = datetime(2023, 12, 30, 7, 0, 0)
+    start_time_create_early = datetime(2023, 12, 30, 2, 0, 0)
+    end_time_create_early = datetime(2023, 12, 30, 6, 0, 0)
 
-    start_time_create_late = datetime(2023, 12, 30, 7, 0, 1)
-    end_time_create_late = datetime(2023, 12, 30, 18, 0, 0)
+    start_time_create_late = datetime(2023, 12, 30, 6, 0, 1)
+    end_time_create_late = datetime(2023, 12, 30, 8, 0, 0)
 
-    start_time_create_final = datetime(2023, 12, 30, 18, 0, 1)
-    end_time_create_final = datetime(2023, 12, 30, 23, 59, 59)
+    start_time_create_final = datetime(2023, 12, 30, 8, 0, 1)
+    end_time_create_final = datetime(2023, 12, 30, 9, 59, 59)
 
     # 每个时间段生成的个数
-    num_intervals_create_early = 29
-    num_intervals_create_late = 450
-    num_intervals_create_final = 100
+    num_intervals_create_early = 3
+    num_intervals_create_late = 13
+    num_intervals_create_final = 20
 
 
     # 生成创建订单时间
@@ -48,7 +48,7 @@ def generate_order_data():
     return df
 
 
-def save_to_excel(df, filename='602W_hualian_and_black_time.xlsx'):
+def save_to_excel(df, filename='36_group_timeline.xlsx'):
     # 将DataFrame保存为Excel文档
     df.to_excel(filename, index=False)
 
