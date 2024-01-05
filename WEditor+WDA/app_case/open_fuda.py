@@ -6,3 +6,5 @@ import wda
 c = wda.Client('http://localhost:8100') # 8100为启动WDA设置的端口号
 
 c.xpath('//*[@label="付哒"]').click()
+
+print('已打开')
