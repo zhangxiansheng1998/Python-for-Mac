@@ -1,8 +1,8 @@
 import subprocess
-from Appium.base.appium_base_page import Basepage
+from Appium.base.appium_base_page import BasePage
 
 
-class Kill_process(Basepage):
+class Kill_process(BasePage):
 
     def kill_appium(self):
         output = subprocess.check_output("tasklist", shell=True)

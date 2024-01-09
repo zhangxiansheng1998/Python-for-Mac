@@ -1,138 +1,183 @@
 """"
 BasePage类是POM中的基类，主要用于提供常用的函数为页面对象进行服务
 """
-import os
-import time
+import pyautogui
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.wait import WebDriverWait
+import time
+from selenium.webdriver.common.by import By
 
 
-class Basepage:
+
+class BasePage:
 
     def __init__(self, driver):
         self.driver = driver
-        self.timeformate = time.strftime("%Y-%m-%d %H-%M-%S")
+        self.timeformate = time.strftime("%Y-%m-%d~%H-%M-%S")
 
-    # 访问url
     def visit(self, url):
-        self.driver.get(url)
+        """访问网页"""
+        try:
+            self.driver.get(url)
+        except Exception as e:
+            print("\n输入的URL地址{}不正确，请重新输入".format(url))
+            print("\n捕获的异常信息为:", e)
 
-    # 定位元素
     def locator(self, loc):
+        """定位单个元素"""
         return self.driver.find_element(*loc)
 
-    # 定位一组元素
     def locators(self, loc):
+        """定位一组元素"""
         return self.driver.find_elements(*loc)
 
-    # 输入
     def input(self, loc, txt):
-        self.locator(loc).send_keys(txt)
+        """输入"""
+        return self.locator(loc).send_keys(txt)
 
-    # 点击某个元素
     def click(self, loc):
-        self.locator(loc).click()
+        """点击某个元素"""
+        return self.locator(loc).click()
 
-    # 强制等待
     def wait(self, seconds):
+        """强制等待"""
         time.sleep(seconds)
 
-    # 隐式等待
     def implicitly_wait(self, seconds):
+        """隐式等待，只需设置一次，全局有效，每隔0.5s查询一次"""
         self.driver.implicitly_wait(seconds)
 
-    # 显式等待
     def explicitly_wait(self, loc, seconds):
+        """显式等待   loc：元素   seconds：等待时间"""
         WebDriverWait(self.driver, seconds).until(lambda x: x.find_element(*loc))
 
-    # 放大窗口
     def max(self):
+        """放大窗口"""
         self.driver.maximize_window()
 
-    # 全选
     def select_all(self, loc):
+        """全选"""
         self.driver.find_element(*loc).send_keys(Keys.CONTROL, 'a')
 
-    # 复制
     def copy(self, loc):
+        """复制"""
         self.driver.find_element(*loc).send_keys(Keys.CONTROL, 'c')
 
-    # 粘贴
     def paste(self, loc):
+        """粘贴"""
         self.driver.find_element(*loc).send_keys(Keys.CONTROL, 'v')
 
-    # 删除
     def backspace(self, loc):
+        """删除"""
         self.select_all(loc)
         self.driver.find_element(*loc).send_keys(Keys.BACKSPACE)
 
-    # 滚动到底部
     def js_scroll_bottom(self):
+        """浏览器滚动到底部"""
         js = "var q=document.documentElement.scrollTop=10000"
         self.driver.execute_script(js)
 
-    # 滚动到顶部
     def js_scroll_top(self):
+        """浏览器滚动到顶部"""
         js = "var q=document.documentElement.scrollTop=0"
         self.driver.execute_script(js)
 
-    # 截图
     def screen(self):
+        """截图"""
         self.driver.get_screenshot_as_file(u"../picture/" + self.timeformate + ".png")
 
-    # 获取元素对应的文本内容
     def get_text(self, loc):
+        """获取元素对应的文本内容(元素本身有内容)"""
         return self.locator(loc).text
 
-    # 点击下拉框中包含特定的值
-    def get_list_value(self, list, value):
-        for li in list:
-            if value in li.text:
-                li.click()
-                break
+    def get_value(self, loc):
+        """获取元素value属性中文本内容(元素本身没有内容，但是value值有内容)"""
+        return self.locator(loc).get_attribute("value")
 
-    # 元素定位失败后，截图的通用模板
-    def screen_template(self,loc):
+    def get_li_value(self,ul_class,value):
+        """点击下拉框中某个特定的值   ul_class：ul的class值   value：要查询的值"""
+        self.driver.find_element_by_xpath('//ul[@class="{}"]/li/span[contains(text(),"{}")]'.format(ul_class,value)).click()
+
+    def screen_template(self, loc):
+        """定位失败时，截图并关闭浏览器"""
         self.driver.get_screenshot_as_file(u"../picture/failure/" + self.timeformate + ".png")
-        print('未定位到元素:{element}, 已截图'.format(element=loc))
+        print('\n未定位到元素:{element}, 已截图'.format(element=loc))
         self.driver.quit()
 
-    # 定位单个元素（含截图）
     def locator_png(self, loc):
+        """定位单个元素（如果报错，会自动截图）"""
         try:
             return self.driver.find_element(*loc)
         except:
             self.screen_template(loc)
 
-    # 定位一组元素（含截图）
     def locators_png(self, loc):
+        """定位一组元素（如果报错，会自动截图）"""
         try:
             return self.driver.find_elements(*loc)
         except:
             self.screen_template(loc)
 
-    # 点击某个元素（含截图）
     def click_png(self, loc):
+        """点击某个元素（如果报错，会自动截图）"""
         try:
             self.locator(loc).click()
         except:
             self.screen_template(loc)
 
-    # 输入（含截图）
     def input_png(self, loc, txt):
+        """输入内容（如果报错，会自动截图）"""
         try:
             self.locator(loc).send_keys(txt)
         except:
             self.screen_template(loc)
 
-    # 获取元素对应的文本内容（含截图）
     def get_text_png(self, loc):
+        """获取元素对应的文本内容（如果报错，会自动截图）"""
         try:
             return self.locator(loc).text
         except:
             self.screen_template(loc)
 
+    def quit(self):
+        """退出浏览器"""
+        self.wait(1)
+        self.driver.quit()
 
+    def assert_text_euqal(self, expectation, reality):
+        """断言元素本身对应的文本内容   expectation：预期值   reality：实际值（传入元素）"""
+        try:
+            new_reality = self.get_text(reality)
+            assert expectation == new_reality
+            print("\n断言成功!")
+        except Exception as e:
+            print("\n断言失败!预期值'{}'与实际值'{}'，请重新输入".format(expectation,new_reality))
+            assert False
 
+    def assert_value_euqal(self, expectation, reality):
+        """断言元素value属性中的文本内容   expectation：预期值   reality：实际值（传入元素）"""
 
+        try:
+            new_reality = self.get_value(reality)
+            assert expectation == new_reality
+            print("\n断言成功!")
+        except Exception as e:
+            print("\n断言失败!预期值'{}'与实际值'{}'，请重新输入".format(expectation,new_reality))
+            assert False
 
+    def imitate_two_keyboard(self):
+        """模拟键盘按键"""
+        try:
+            pyautogui.press('f12')
+        except Exception as e:
+            print("\n按键失败!捕获到相应的异常为：",e)
+            assert False
+
+    def switch_to_newest_window(self):
+        """切换浏览器最新一个窗口句柄"""
+        try:
+            windows = self.driver.window_handles
+            self.driver.switch_to.window(windows[-1])
+        except Exception as e:
+            print("\n窗口切换失败!捕获到相应的异常为：",e)
+            assert False

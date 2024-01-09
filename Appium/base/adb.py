@@ -1,8 +1,8 @@
 import subprocess
-from Appium.base.appium_base_page import Basepage
+from Appium.base.appium_base_page import BasePage
 
 
-class Connect_simulator(Basepage):
+class Connect_simulator(BasePage):
     output = subprocess.check_output("adb connect 127.0.0.1:16384", shell=True)
     output.decode('gbk')
     string_data = output.decode('utf-8')  # byte转string

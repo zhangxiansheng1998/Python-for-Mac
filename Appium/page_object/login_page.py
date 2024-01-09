@@ -1,8 +1,8 @@
 
-from Appium.base.appium_base_page import Basepage
+from Appium.base.appium_base_page import BasePage
 from Appium.data.login_page_element import login_element
 
-class Login(Basepage):
+class Login(BasePage):
 
     def login_success(self):
         """正常登录"""
