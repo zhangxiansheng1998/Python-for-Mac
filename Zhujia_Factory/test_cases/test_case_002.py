@@ -8,6 +8,9 @@ from Zhujia_Factory.data.login_page_element import *
 
 class AddShop(unittest.TestCase):
 
+    driver = None
+    loginpage = None
+
     @classmethod
     def setUpClass(cls):
         print('程序开始')
