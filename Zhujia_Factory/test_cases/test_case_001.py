@@ -32,9 +32,9 @@ class Login(unittest.TestCase):
     #@unittest.skip('unittest不执行这条测试用例')
     def test_2_login_fail(self):
         """不发送验证码登录系统"""
-        self.loginpage.login_without_sending_code('15180381485','111111')
+        self.loginpage.login_without_sending_code('17320509658','111111')
         self.loginpage.wait(3)
-        self.loginpage.assert_text_euqal('验证码错误',assert_element['assert_box'])
+        self.loginpage.assert_text_euqal('验证码失效,请先发送验证码',assert_element['assert_box'])
 
     #@unittest.skip('unittest不执行这条测试用例')
     def test_3_login_fail(self):
