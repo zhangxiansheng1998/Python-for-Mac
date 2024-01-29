@@ -6,9 +6,9 @@ from selenium.webdriver.common.by import By
 '''
 
 button = {
-    'shop_list': (By.XPATH, '/html/body/div[1]/div/div[2]/div[1]/div/div[1]/div[2]/div/div/p[1]'),
+    'shop_list': (By.XPATH, '/html/body/div[1]/div/div[2]/div[1]/div/div[2]/div[2]/div/div/p[1]'),
     # 店铺列表按钮
-    'add_shop': (By.XPATH, '/html/body/div[1]/div/div[2]/div[1]/div/div[1]/div[2]/div/div/p[2]')
+    'add_shop': (By.XPATH, '/html/body/div[1]/div/div[2]/div[2]/div[1]/div[2]/button[1]')
     # 新增店铺按钮
 }
 
@@ -85,7 +85,11 @@ add_shop = {
     # 店铺类型-材料供应商
     'shop_type_4': (By.XPATH, '/html/body/div[1]/div/div[2]/div[2]/div[2]/div/form/div[3]/div[2]/div[4]/label/span[1]/span'),
     # 店铺类型-原材料供应商
-    'server_phone': (By.XPATH, '/html/body/div[1]/div/div[2]/div[2]/div[2]/div/form/div[4]/div/div/div/input')
+    'server_phone': (By.XPATH, '/html/body/div[1]/div/div[2]/div[2]/div[2]/div/form/div[4]/div/div/div/input'),
     # 客服电话
+    'logo': (By.CSS_SELECTOR, 'input[type=file]'),
+    # logo
+    'submit': (By.XPATH, '/html/body/div[1]/div/div[2]/div[2]/div[1]/div[2]/button')
+    # 提交验证按钮
 
 }
