@@ -17,6 +17,9 @@ while True:
 
 class TestCase(unittest.TestCase):
 
+    obj = None
+    driver = None
+
     @classmethod
     def setUpClass(cls):
         print('\n程序开始')
