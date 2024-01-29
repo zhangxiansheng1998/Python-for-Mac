@@ -28,15 +28,15 @@ def Runall():
     today = datetime.today()  # 获取当前日期
     formatted_date = today.strftime("%Y-%m-%d")  # 格式化日期为字符串，例如："2024-01-12"
     suite_tests = unittest.defaultTestLoader.discover(case_path, pattern="test*.py")
-    # # "."表示当前目录，"*tests.py"匹配当前目录下所有tests.py结尾的用例
+    # "*tests.py"匹配当前目录下所有tests.py结尾的用例
     BeautifulReport(suite_tests).report(filename='{htmlname}.html'.format(htmlname=now),
                                         description='WEB自动化测试报告',
                                         report_dir=f'../report/{formatted_date}')
-    # # description 对应html文件中的用例名称，log_path 表示html文件存放的位置
+    # description 对应html文件中的用例名称，log_path 表示html文件存放的位置
 
 
 def Create_Email():
-    """修改邮件正文中html模块内容"""
+    """创建邮件正文中的html内容"""
     create_folder_for_today_two()
     NewReport = new_report(report_path)
     data = extract_test_summary_with_regex(NewReport)
@@ -45,7 +45,7 @@ def Create_Email():
 
 
 def Send_Email():
-    """将report目录"""
+    """发送邮件"""
     NewReport = new_report(report_path)
     send_mail(NewReport)
 

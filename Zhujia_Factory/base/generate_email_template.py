@@ -2,6 +2,7 @@ import re
 from datetime import time
 from Zhujia_Factory.base.E_mail import *
 from Zhujia_Factory.runall.run_all import *
+from Zhujia_Factory.data.login_page_element import *
 
 now = time.strftime("%Y-%m-%d~%H-%M-%S")  # 获取当前时间
 today = datetime.today()  # 获取当前日期
@@ -50,6 +51,7 @@ def extract_test_summary_with_regex(html_file):
     begin_time_tests = begin_time_match.group(1) if begin_time_match else "正则表达式提取有误"
     running_time_tests = running_time_match.group(1) if running_time_match else "正则表达式提取有误"
     success_rate = "{:.1%}".format(passed_tests / total_tests if skipped_tests == 0 else passed_tests / (total_tests-skipped_tests))
+    env = 'Prd' if website['url'] == 'http://admin.huijinwei.com' else 'Dev'
 
     return {
         '用例总数': total_tests,
@@ -58,7 +60,8 @@ def extract_test_summary_with_regex(html_file):
         '用例跳过': skipped_tests,
         '开始时间': begin_time_tests,
         '运行时间': running_time_tests,
-        '成功率': success_rate
+        '成功率': success_rate,
+        '运行环境':env
     }
 
 
@@ -91,7 +94,7 @@ def generate_html(data):
         </div>
         <div style="text-indent: 2em;padding-top: 1%;">
             <div style="padding-top: 1%;color: #0066FF;">测试框架：python+unittest+selenium</div>
-            <div style="padding-top: 2%;color: #0066FF;">测试环境：正式环境</div>
+            <div style="padding-top: 2%;color: #0066FF;">测试环境：{data['运行环境']}</div>
             <div style="padding-top: 2%;color: #0066FF;">浏览器名称：Chrome</div>
             <div style="padding-top: 2%;color: #0066FF;">浏览器版本：93.0.4577.82</div>
             <div style="padding-top: 2%;color: #0066FF;">用例总数: {data['用例总数']}</div>
