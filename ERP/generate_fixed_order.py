@@ -1,21 +1,14 @@
-import unittest
 from Browser import *
 from base_page import *
 from selenium.webdriver.common.by import By
 import random
-
-while True:
-    try:
-        # 定义订单生成的个数
-        total_orders = int(input("\n请输入您要生成的订单数量:"))
-        print("\n输入正确！")
-        # 如果用户输入的是数字，则跳出循环
-        break
-    except ValueError:
-        print("\n输入错误，请重新输入！")
+import os
+import unittest
 
 
 class TestCase(unittest.TestCase):
+    obj = None
+    driver = None
 
     @classmethod
     def setUpClass(cls):
@@ -24,6 +17,7 @@ class TestCase(unittest.TestCase):
         cls.driver = webdriver.Chrome(options=Browser().browser_headless())  # 无头模式启动
         cls.obj = BasePage(cls.driver)
         cls.obj.implicitly_wait(15)
+        cls.total_orders = int(os.getenv('total_orders', 1))  # #定义环境变量，可以动态的传递total_orders的值，默认为1
 
     @classmethod
     def tearDownClass(cls):
@@ -37,15 +31,15 @@ class TestCase(unittest.TestCase):
         self.obj.input((By.ID, 'loginname'), "admin")
         self.obj.input((By.ID, 'nloginpwd'), "123456")
         self.obj.click((By.CSS_SELECTOR,
-                              "body > div.lbl_login_bg > div.new_login_r > div.login_form.clb > div:nth-child(1) > "
-                              "div > div:nth-child(3) > button"))
+                        "body > div.lbl_login_bg > div.new_login_r > div.login_form.clb > div:nth-child(1) > "
+                        "div > div:nth-child(3) > button"))
         print("\n登录成功！")
 
     # @unittest.skip('unittest不执行这条测试用例')
     def test_2_generate_order(self):
         """生成订单"""
         self.obj.wait(5)
-        for i in range(total_orders):
+        for i in range(self.total_orders):
             myTime = time.strftime("%Y-%m-%d~%H-%M-%S")
             self.obj.click((By.ID, 'add_order'))
             self.obj.switch_to_newest_window()
@@ -68,13 +62,13 @@ class TestCase(unittest.TestCase):
             self.obj.explicitly_wait((By.ID, 'save_order'), 10)
             self.obj.click((By.ID, 'save_order'))
             self.obj.explicitly_wait((By.CSS_SELECTOR,
-                                  '#order_factory > div.aui_state_focus.aui_state_lock > div > table > tbody > '
-                                  'tr:nth-child(2) > td.aui_c > div > table > tbody > tr:nth-child(2) > td.aui_main > '
-                                  'div > div > div.system_overlay_btn > button.sbt_white.fr.mr10.group_orders'), 10)
+                                      '#order_factory > div.aui_state_focus.aui_state_lock > div > table > tbody > '
+                                      'tr:nth-child(2) > td.aui_c > div > table > tbody > tr:nth-child(2) > td.aui_main > '
+                                      'div > div > div.system_overlay_btn > button.sbt_white.fr.mr10.group_orders'), 10)
             self.obj.click((By.CSS_SELECTOR,
-                                  '#order_factory > div.aui_state_focus.aui_state_lock > div > table > tbody > '
-                                  'tr:nth-child(2) > td.aui_c > div > table > tbody > tr:nth-child(2) > td.aui_main > '
-                                  'div > div > div.system_overlay_btn > button.sbt_white.fr.mr10.group_orders'))
+                            '#order_factory > div.aui_state_focus.aui_state_lock > div > table > tbody > '
+                            'tr:nth-child(2) > td.aui_c > div > table > tbody > tr:nth-child(2) > td.aui_main > '
+                            'div > div > div.system_overlay_btn > button.sbt_white.fr.mr10.group_orders'))
             self.obj.switch_to_newest_window()
             self.obj.explicitly_wait((By.XPATH, '//*[@id="rows"]/div[2]'), 10)
             ul_num = self.obj.get_ul_number((By.XPATH, '//*[@id="rows"]/div[2]'))
@@ -107,7 +101,7 @@ class TestCase(unittest.TestCase):
             print("\n订单金额:", random_number, "元")
             print("\n截图时间:", myTime)
 
-        print("\n总共生成", total_orders, "个订单")
+        print("\n总共生成", self.total_orders, "个订单")
         print("\n订单地址", 'http://h.thinkermen.com/wincc_xingeercc/mini2021_1.6.9/index.php?r=order/factory')
 
 

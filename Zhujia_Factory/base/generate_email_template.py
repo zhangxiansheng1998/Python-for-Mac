@@ -1,12 +1,13 @@
 import re
 from datetime import time
 from Zhujia_Factory.base.E_mail import *
-from Zhujia_Factory.runall.run_all import *
 from Zhujia_Factory.data.login_page_element import *
+from Zhujia_Factory.runall.run_all import *
 
 now = time.strftime("%Y-%m-%d~%H-%M-%S")  # 获取当前时间
 today = datetime.today()  # 获取当前日期
 formatted_date = today.strftime("%Y-%m-%d")  # 格式化日期为字符串，例如："2024-01-12"
+
 
 def create_folder_for_today_two():
     """在report目录下生成当天日期的目录"""
@@ -22,6 +23,7 @@ def create_folder_for_today_two():
     if not os.path.exists(folder_path):
         os.makedirs(folder_path)
         print(f"文件夹'{formatted_date1}'创建成功")
+
 
 def extract_test_summary_with_regex(html_file):
     with open(html_file, 'r', encoding='utf-8') as file:
@@ -50,8 +52,10 @@ def extract_test_summary_with_regex(html_file):
     skipped_tests = int(skipped_tests_match.group(1)) if skipped_tests_match else "正则表达式提取有误"
     begin_time_tests = begin_time_match.group(1) if begin_time_match else "正则表达式提取有误"
     running_time_tests = running_time_match.group(1) if running_time_match else "正则表达式提取有误"
-    success_rate = "{:.1%}".format(passed_tests / total_tests if skipped_tests == 0 else passed_tests / (total_tests-skipped_tests))
+    success_rate = "{:.1%}".format(
+        passed_tests / total_tests if skipped_tests == 0 else passed_tests / (total_tests - skipped_tests))
     env = 'Prd' if website['url'] == 'http://admin.huijinwei.com' else 'Dev'
+    chart_data = [passed_tests, failed_tests, skipped_tests]
 
     return {
         '用例总数': total_tests,
@@ -61,7 +65,8 @@ def extract_test_summary_with_regex(html_file):
         '开始时间': begin_time_tests,
         '运行时间': running_time_tests,
         '成功率': success_rate,
-        '运行环境':env
+        '运行环境': env,
+        '饼状图数据': chart_data
     }
 
 
@@ -71,23 +76,24 @@ def generate_html(data):
     <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <title>饼状图</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
         <title>WEB自动化测试报告</title>
     </head>
     <body>
-    
+
     <style>
-    .panel {{
-                width: 600px;
-                height: 530px;
-                margin: auto 0;
-                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-                border-radius: 5%;
-                background-image: url("../background.jpg");
-                background-size: cover;
-                background-repeat: no-repeat;
-            
+        .panel {{
+            width: 600px;
+            height: 530px;
+            margin: auto 0;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 5%;
+            background-image: url("./background.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
     </style>
-    
+
     <div class="panel">
         <div style="text-align: center;padding-top: 4%;">
             <div style="font-weight: bold;font-size: 25px;">筑家工厂-WEB自动化测试报告</div>
@@ -107,7 +113,7 @@ def generate_html(data):
             <div style="padding-top: 2%;color: red;font-size: 17px;">本邮件为自动发送，无需回复。如需查看详细内容，请下载附件！</div>
             <div style="padding-top: 1%;color: red;font-size: 17px;">提示：预览附件时，邮箱没有加载CSS样式，导致数据显示错乱！</div>
         </div>
-        </div>
+    </div>
     </body>
     <script >
     </script>
@@ -119,4 +125,3 @@ def generate_html(data):
 def save_html(html_content, filename=f'{project_path}/report_email/{formatted_date}/{now}.html'):
     with open(filename, 'w') as file:
         file.write(html_content)
-

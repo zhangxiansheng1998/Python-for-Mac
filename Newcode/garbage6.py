@@ -1,22 +1,31 @@
-class ParentClass:
-    def __init__(self):
-        self.parent_attribute = "Parent attribute"
+class Animal(object):
+    """动物类"""
 
-    def parent_method(self):
-        print("Parent method")
+    def func(self):
+        print('动物发出了声音')
 
-class ChildClass(ParentClass):
-    def __init__(self):
-        super().__init__()  # 调用父类的构造函数
-        self.child_attribute = "Child attribute"
 
-    def child_method(self):
-        print("Child method")
+class Cat(Animal):
+    """猫类"""
 
-# 创建子类对象
-child = ChildClass()
-parent = ParentClass()
-print(parent.parent_attribute)
-print(parent.parent_method())
-print(child.parent_method())
-print(child.child_method())
+    def func(self):
+        print('喵 喵 喵')
+
+
+class Dog(Animal):
+    """狗类"""
+
+    def func(self):
+        print('汪 汪 汪 ')
+
+
+class Hero:
+    def func(self):
+        print('这个是英雄类的方法，不是动物类的对象')
+
+
+def work01(musen: Animal):
+    musen.func()
+
+
+work01(Hero())

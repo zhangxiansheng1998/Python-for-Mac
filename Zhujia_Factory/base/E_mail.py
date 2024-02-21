@@ -9,6 +9,7 @@ import smtplib
 import time
 from datetime import datetime
 from Zhujia_Factory.base.generate_email_template import *
+from Zhujia_Factory.runall.run_all import *
 
 now = time.strftime("%Y-%m-%d~%H-%M-%S")  # 获取当前时间
 reportname = now + ".html"
