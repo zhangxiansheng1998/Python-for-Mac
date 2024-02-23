@@ -1,7 +1,7 @@
 """"
 BasePage类是POM中的基类，主要用于提供常用的函数为页面对象进行服务
 """
-import pyautogui
+#import pyautogui
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.wait import WebDriverWait
 import time

@@ -65,7 +65,7 @@ class TestCase(unittest.TestCase):
             self.obj.input((By.NAME, 'shuliang'), "1")
             self.obj.input((By.NAME, 'yanse'), "黑色")
             # 生成0.02到0.2元之间的随机浮点数,保留小数点后2位
-            random_number = round(random.uniform(0.02, 0.2), 2)
+            random_number = round(random.uniform(1000, 2000), 2)
             self.obj.input((By.NAME, 'danjia'), "{}".format(random_number))
             self.obj.click((By.ID, 'start_count'))
             self.obj.explicitly_wait((By.ID, 'save_order'), 10)

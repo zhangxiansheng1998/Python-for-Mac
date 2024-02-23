@@ -27,7 +27,7 @@ class TestCase(unittest.TestCase):
     def test_1_login(self):
         """登录ERP系统"""
         self.obj.max()
-        self.obj.visit("http://h.thinkermen.com/wincc_xingeercc/mini2021_1.6.9/index.php?r=login")
+        self.obj.visit("http://h.thinkermen.com/wincc_xingeercc/mini2021_1.7.3/index.php?r=login")
         self.obj.input((By.ID, 'loginname'), "admin")
         self.obj.input((By.ID, 'nloginpwd'), "123456")
         self.obj.click((By.CSS_SELECTOR,
@@ -41,10 +41,10 @@ class TestCase(unittest.TestCase):
         self.obj.wait(5)
         for i in range(self.total_orders):
             myTime = time.strftime("%Y-%m-%d~%H-%M-%S")
-            self.obj.click((By.ID, 'add_order'))
+            self.obj.click((By.XPATH, '/html/body/div[3]/div[17]/div[2]/div[2]/a[1]/div[1]/img'))
             self.obj.switch_to_newest_window()
-            self.obj.explicitly_wait((By.XPATH, '/html/body/div[15]/div[2]/div[3]/ul/li[2]/div'), 10)
-            self.obj.click((By.XPATH, '/html/body/div[15]/div[2]/div[3]/ul/li[2]/div'))
+            self.obj.explicitly_wait((By.XPATH, '/html/body/div[16]/div[2]/div[3]/ul/li[2]/div'), 10)
+            self.obj.click((By.XPATH, '/html/body/div[16]/div[2]/div[3]/ul/li[2]/div'))
             self.obj.switch_to_newest_window()
             self.obj.explicitly_wait((By.ID, 'customer_name'), 10)
             self.obj.input((By.ID, 'customer_name'), "倪浩平")
@@ -78,10 +78,9 @@ class TestCase(unittest.TestCase):
                 self.obj.switch_to_newest_window()
                 self.obj.wait(5)
                 self.obj.erp_order_screenshot(myTime)
-                self.obj.close()
                 self.obj.switch_to_newest_window()
-                self.obj.explicitly_wait((By.XPATH, '//*[@id="order_factory"]/div[10]/div[1]/li'), 10)
-                self.obj.click((By.XPATH, '//*[@id="order_factory"]/div[10]/div[1]/li'))
+                self.obj.explicitly_wait((By.XPATH, '//*[@id="order_factory"]/div[80]/div/li'), 10)
+                self.obj.click((By.XPATH, '//*[@id="order_factory"]/div[80]/div/li'))
 
             if ul_num >= 30:
                 self.obj.click((By.CSS_SELECTOR, '#pager > div.jPag-control-front > a'))
@@ -92,17 +91,16 @@ class TestCase(unittest.TestCase):
                 self.obj.switch_to_newest_window()
                 self.obj.wait(5)
                 self.obj.erp_order_screenshot(myTime)
-                self.obj.close()
                 self.obj.switch_to_newest_window()
-                self.obj.explicitly_wait((By.XPATH, '//*[@id="order_factory"]/div[10]/div[1]/li'), 10)
-                self.obj.click((By.XPATH, '//*[@id="order_factory"]/div[10]/div[1]/li'))
+                self.obj.explicitly_wait((By.XPATH, '//*[@id="order_factory"]/div[80]/div/li'), 10)
+                self.obj.click((By.XPATH, '//*[@id="order_factory"]/div[80]/div/li'))
 
             print("\n第", i + 1, "笔订单")
             print("\n订单金额:", random_number, "元")
             print("\n截图时间:", myTime)
 
         print("\n总共生成", self.total_orders, "个订单")
-        print("\n订单地址", 'http://h.thinkermen.com/wincc_xingeercc/mini2021_1.6.9/index.php?r=order/factory')
+        print("\n订单地址", 'http://h.thinkermen.com/wincc_xingeercc/mini2021_1.7.3/index.php?r=order/factory')
 
 
 if __name__ == '__main__':
