@@ -3,6 +3,7 @@ sys.path.append("/Volumes/Disk/MyProject")  # 将目录加入环境变量，否�
 # sys.path.append("/Users/macbook_air/Desktop/backup/MyProject")  # 将目录加入环境变量，否则命令行下运行代码时会报错
 
 import unittest
+import os
 from BeautifulReport import BeautifulReport
 from Zhujia_Factory.base.E_mail import *
 
