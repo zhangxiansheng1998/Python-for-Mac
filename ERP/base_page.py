@@ -188,7 +188,8 @@ class BasePage:
     def imitate_two_keyboard(self):
         """模拟键盘按键"""
         try:
-            pyautogui.press('f12')
+            #pyautogui.press('f12')
+            print('暂未使用')
         except Exception as e:
             print("\n按键失败!捕获到相应的异常为：",e)
             assert False
