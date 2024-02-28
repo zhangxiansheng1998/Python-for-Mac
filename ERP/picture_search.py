@@ -17,7 +17,7 @@ applescript_code = """
     -- 生成今天的日期并格式化为 yyyy-mm-dd 格式
     set currentDate to do shell script "date +'%Y-%m-%d'"
     
-    set folderPath to "/Volumes/Disk/MyProject/ERP/picture/" & currentDate
+    set folderPath to "/Users/macbook_air/Desktop/MyProject/ERP/picture/" & currentDate
     
     tell application "Finder"
         set folderToOpen to POSIX file folderPath as alias

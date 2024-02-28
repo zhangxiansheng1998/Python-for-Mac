@@ -1,28 +1,11 @@
 import sys
-sys.path.append("/Volumes/Disk/MyProject")  # 将目录加入环境变量，否则命令行下运行代码时会报错
-# sys.path.append("/Users/macbook_air/Desktop/backup/MyProject")  # 将目录加入环境变量，否则命令行下运行代码时会报错
+sys.path.append("/Users/macbook_air/Desktop/MyProject")  # 将目录加入环境变量，否则命令行下运行代码时会报错
 
 import unittest
 import os
 from BeautifulReport import BeautifulReport
 from Zhujia_Factory.base.E_mail import *
-
-
-"""根据当前文件的路径，生成对应的project_path、report_path、case_path"""
-current_file_path = os.path.abspath(__file__)
-today = datetime.today()  # 获取当前日期
-formatted_date = today.strftime("%Y-%m-%d")  # 格式化日期为字符串，例如："2024-01-12"
-
-if current_file_path.startswith('/Volumes/Disk/MyProject/Zhujia_Factory/runall/run_all.py'):
-    project_path = '/Volumes/Disk/MyProject/Zhujia_Factory'
-    report_path = os.path.join(project_path,
-                               f"/Volumes/Disk/MyProject/Zhujia_Factory/report/{formatted_date}/")
-    case_path = os.path.join(project_path, "test_cases")
-else:
-    project_path = '/Users/macbook_air/Desktop/backup/MyProject/Zhujia_Factory'
-    report_path = os.path.join(project_path,
-                               f"/Users/macbook_air/Desktop/backup/MyProject/Zhujia_Factory/report/{formatted_date}/")
-    case_path = os.path.join(project_path, "test_cases")
+from Zhujia_Factory.config.conf import *
 
 
 def create_folder_for_today():
