@@ -2,7 +2,6 @@ import unittest
 from Browser import *
 from base_page import *
 from selenium.webdriver.common.by import By
-import random
 import re
 
 
@@ -53,41 +52,47 @@ class TestCase(unittest.TestCase):
         failed_reason_xpath = '/html/body/div[1]/div[2]/div[2]/div/div[2]/div[1]/div[3]/div/div[1]/div/table/tbody/tr[{index}]/td[15]'
         order_number_xpath = '/html/body/div[1]/div[2]/div[2]/div/div[2]/div[1]/div[3]/div/div[1]/div/table/tbody/tr[{index}]/td[2]'
 
-        if 0 < failed_orders <= 20:
-            for index in range(1,failed_orders+1):
-                xpath = failed_reason_xpath.format(index=index)
-                xpath2 = order_number_xpath.format(index=index)
-                failed_reason = self.obj.get_text((By.XPATH,xpath))
-                order_number = self.obj.get_text((By.XPATH,xpath2))
-                print('订单号: ' + order_number + ', 失败原因: ' + failed_reason)
-
-        if failed_orders > 20:
-            pages = failed_orders // 20 + (1 if failed_orders % 20 > 0 else 0)
-            twenty_left = (failed_orders % 20) + 1
-
-            for page in range(1, pages):
-                """翻页处理"""
-                self.obj.wait(2)
-                for index in range(1, 21):
+        """将结果保存到result.txt文件中"""
+        with open('result.txt', 'w', encoding='utf-8') as f:
+            if 0 < failed_orders <= 20:
+                for index in range(1,failed_orders+1):
                     xpath = failed_reason_xpath.format(index=index)
                     xpath2 = order_number_xpath.format(index=index)
                     failed_reason = self.obj.get_text((By.XPATH,xpath))
                     order_number = self.obj.get_text((By.XPATH,xpath2))
-                    print('订单号: ' + order_number + ', 失败原因: ' + failed_reason)
+                    #print('订单号: ' + order_number + ', 失败原因: ' + failed_reason)
+                    f.write('订单号: ' + str(order_number) + ', 失败原因: '+ str(failed_reason)+ '\n')
 
-                self.obj.wait(2)
-                self.obj.click((By.XPATH, '/html/body/div[1]/div[2]/div[2]/div/div[3]/div/ul/li[{page}]'.format(page=page+1)))
-                print(f"已翻至第{page + 1}页")
+            if failed_orders > 20:
+                pages = failed_orders // 20 + (1 if failed_orders % 20 > 0 else 0)  # 定义页数，每20条数据为1页
+                twenty_left = (failed_orders % 20) + 1  # 定义最后一页，剩余的数据
 
-            """最后一页的剩余订单数量"""
-            self.obj.wait(8)
-            for index in range(1, twenty_left):
-                xpath = failed_reason_xpath.format(index=index)
-                xpath2 = order_number_xpath.format(index=index)
-                failed_reason = self.obj.get_text((By.XPATH, xpath))
-                order_number = self.obj.get_text((By.XPATH, xpath2))
-                print('订单号: ' + order_number + ', 失败原因: ' + failed_reason)
+                for page in range(1, pages):
+                    """翻页处理"""
+                    self.obj.wait(2)
+                    for index in range(1, 21):
+                        xpath = failed_reason_xpath.format(index=index)
+                        xpath2 = order_number_xpath.format(index=index)
+                        failed_reason = self.obj.get_text((By.XPATH,xpath))
+                        order_number = self.obj.get_text((By.XPATH,xpath2))
+                        #print('订单号: ' + order_number + ', 失败原因: ' + failed_reason)
+                        f.write('订单号: ' + str(order_number) + ', 失败原因: ' + str(failed_reason) + '\n')
+
+                    self.obj.wait(2)
+                    self.obj.click((By.XPATH, '/html/body/div[1]/div[2]/div[2]/div/div[3]/div/ul/li[{page}]'.format(page=page+1)))
+                    print(f"已翻至第{page + 1}页")
+
+                """最后一页的剩余订单数量"""
+                self.obj.wait(8)
+                for index in range(1, twenty_left):
+                    xpath = failed_reason_xpath.format(index=index)
+                    xpath2 = order_number_xpath.format(index=index)
+                    failed_reason = self.obj.get_text((By.XPATH, xpath))
+                    order_number = self.obj.get_text((By.XPATH, xpath2))
+                    #print('订单号: ' + order_number + ', 失败原因: ' + failed_reason)
+                    f.write('订单号: ' + str(order_number) + ', 失败原因: ' + str(failed_reason) + '\n')
 
 
 if __name__ == '__main__':
     unittest.main()
+
