@@ -13,7 +13,7 @@ class TestCase(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         print('\n程序开始')
-        # cls.driver = webdriver.Chrome(options=Browser().browser_ui()) # 带UI界面启动
+        #cls.driver = webdriver.Chrome(options=Browser().browser_ui()) # 带UI界面启动
         cls.driver = webdriver.Chrome(options=Browser().browser_headless())  # 无头模式启动
         cls.obj = BasePage(cls.driver)
         cls.obj.implicitly_wait(15)
@@ -79,8 +79,8 @@ class TestCase(unittest.TestCase):
                 self.obj.wait(5)
                 self.obj.erp_order_screenshot(myTime)
                 self.obj.switch_to_newest_window()
-                self.obj.explicitly_wait((By.XPATH, '//*[@id="order_factory"]/div[80]/div/li'), 10)
-                self.obj.click((By.XPATH, '//*[@id="order_factory"]/div[80]/div/li'))
+                self.obj.explicitly_wait((By.XPATH, '/html/body/div[81]/div/li'), 10)
+                self.obj.click((By.XPATH, '/html/body/div[81]/div/li'))
 
             if ul_num >= 30:
                 self.obj.click((By.CSS_SELECTOR, '#pager > div.jPag-control-front > a'))
@@ -92,8 +92,8 @@ class TestCase(unittest.TestCase):
                 self.obj.wait(5)
                 self.obj.erp_order_screenshot(myTime)
                 self.obj.switch_to_newest_window()
-                self.obj.explicitly_wait((By.XPATH, '//*[@id="order_factory"]/div[80]/div/li'), 10)
-                self.obj.click((By.XPATH, '//*[@id="order_factory"]/div[80]/div/li'))
+                self.obj.explicitly_wait((By.XPATH, '/html/body/div[81]/div/li'), 10)
+                self.obj.click((By.XPATH, '/html/body/div[81]/div/li'))
 
             print("\n第", i + 1, "笔订单")
             print("\n订单金额:", random_number, "元")

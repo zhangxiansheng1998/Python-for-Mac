@@ -65,7 +65,7 @@ class TestCase(unittest.TestCase):
             self.obj.input((By.NAME, 'shuliang'), "1")
             self.obj.input((By.NAME, 'yanse'), "黑色")
             # 生成0.02到0.2元之间的随机浮点数,保留小数点后2位
-            random_number = round(random.uniform(1000, 2000), 2)
+            random_number = round(random.uniform(1, 3), 2)
             self.obj.input((By.NAME, 'danjia'), "{}".format(random_number))
             self.obj.click((By.ID, 'start_count'))
             self.obj.explicitly_wait((By.ID, 'save_order'), 10)
@@ -88,8 +88,8 @@ class TestCase(unittest.TestCase):
                 self.obj.wait(5)
                 self.obj.erp_order_screenshot(myTime)
                 self.obj.switch_to_newest_window()
-                self.obj.explicitly_wait((By.XPATH, '//*[@id="order_factory"]/div[80]/div/li'), 10)
-                self.obj.click((By.XPATH, '//*[@id="order_factory"]/div[80]/div/li'))
+                self.obj.explicitly_wait((By.XPATH, '/html/body/div[81]/div/li'), 10)
+                self.obj.click((By.XPATH, '/html/body/div[81]/div/li'))
 
             if ul_num >= 30:
                 self.obj.click((By.CSS_SELECTOR, '#pager > div.jPag-control-front > a'))
@@ -101,8 +101,8 @@ class TestCase(unittest.TestCase):
                 self.obj.wait(5)
                 self.obj.erp_order_screenshot(myTime)
                 self.obj.switch_to_newest_window()
-                self.obj.explicitly_wait((By.XPATH, '//*[@id="order_factory"]/div[80]/div/li'), 10)
-                self.obj.click((By.XPATH, '//*[@id="order_factory"]/div[80]/div/li'))
+                self.obj.explicitly_wait((By.XPATH, '/html/body/div[81]/div/li'), 10)
+                self.obj.click((By.XPATH, '/html/body/div[81]/div/li'))
 
             print("\n第", i + 1, "笔订单")
             print("\n订单金额:", random_number, "元")
