@@ -37,7 +37,7 @@ class TestCase(unittest.TestCase):
     def test_2_filter_failed_orders(self):
         self.obj.click((By.XPATH,'//*[@id="menu"]/ul/ul/li[3]'))
         self.obj.click((By.XPATH, '/html/body/div[1]/div[2]/div[2]/div/div[1]/div[10]/div/div/div/div/input'))
-        self.obj.wait(1)
+        self.obj.wait(2)
         self.obj.get_li_value('el-scrollbar__view el-select-dropdown__list','失败')
         self.obj.click((By.XPATH,'/html/body/div[1]/div[2]/div[2]/div/div[1]/div[12]/div[3]/button[1]'))
         self.obj.wait(10)
@@ -61,24 +61,31 @@ class TestCase(unittest.TestCase):
                 order_number = self.obj.get_text((By.XPATH,xpath2))
                 print('订单号: ' + order_number + ', 失败原因: ' + failed_reason)
 
-        if 20 < failed_orders <= 40:
-            for index in range(1, 21):
-                xpath = failed_reason_xpath.format(index=index)
-                xpath2 = order_number_xpath.format(index=index)
-                failed_reason = self.obj.get_text((By.XPATH,xpath))
-                order_number = self.obj.get_text((By.XPATH,xpath2))
-                print('订单号: ' + order_number + ', 失败原因: ' + failed_reason)
+        if failed_orders > 20:
+            pages = failed_orders // 20 + (1 if failed_orders % 20 > 0 else 0)
+            twenty_left = (failed_orders % 20) + 1
 
-            """翻页处理"""
-            self.obj.explicitly_wait((By.XPATH,'/html/body/div[1]/div[2]/div[2]/div/div[3]/div/ul/li[2]'),10)
-            self.obj.click((By.XPATH,'/html/body/div[1]/div[2]/div[2]/div/div[3]/div/ul/li[2]'))
+            for page in range(1, pages):
+                """翻页处理"""
+                self.obj.wait(2)
+                for index in range(1, 21):
+                    xpath = failed_reason_xpath.format(index=index)
+                    xpath2 = order_number_xpath.format(index=index)
+                    failed_reason = self.obj.get_text((By.XPATH,xpath))
+                    order_number = self.obj.get_text((By.XPATH,xpath2))
+                    print('订单号: ' + order_number + ', 失败原因: ' + failed_reason)
 
-            failed_orders = failed_orders - 19
-            for index in range(1, failed_orders):
+                self.obj.wait(2)
+                self.obj.click((By.XPATH, '/html/body/div[1]/div[2]/div[2]/div/div[3]/div/ul/li[{page}]'.format(page=page+1)))
+                print(f"已翻至第{page + 1}页")
+
+            """最后一页的剩余订单数量"""
+            self.obj.wait(8)
+            for index in range(1, twenty_left):
                 xpath = failed_reason_xpath.format(index=index)
                 xpath2 = order_number_xpath.format(index=index)
                 failed_reason = self.obj.get_text((By.XPATH, xpath))
-                order_number = self.obj.get_text((By.XPATH,xpath2))
+                order_number = self.obj.get_text((By.XPATH, xpath2))
                 print('订单号: ' + order_number + ', 失败原因: ' + failed_reason)
 
 
