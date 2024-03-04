@@ -52,5 +52,22 @@ class ShopManagement(BasePage):
         self.click(shop_list['custom_income_confirm'])
         self.wait(2)
         self.assert_text_euqal('￥5.00', shop_list['custom_income_text'])
+        self.click(shop_list['custom_income_close_two'])
+
+    def income_code(self):
+        """查看店铺的收款码"""
+        self.explicitly_wait(shop_list['income_code'],10)
+        self.click(shop_list['income_code'])
+        self.wait(2)
+        self.assert_text_euqal('店铺收款码', shop_list['income_code_text'])
+        self.click(shop_list['income_code_close'])
+
+    def shop_code(self):
+        """查看店铺码"""
+        self.explicitly_wait(shop_list['shop_code'],10)
+        self.click(shop_list['shop_code'])
+        self.wait(2)
+        self.assert_text_euqal('店铺码', shop_list['shop_code_text'])
+        self.click(shop_list['shop_code_close'])
 
 

@@ -1,7 +1,7 @@
 import unittest
 import pytest
-from Zhujia_Factory.page_object.login_page import LoginPage
-from Zhujia_Factory.page_object.shop_management import ShopManagement
+from Zhujia_Factory.page_object.LoginPage import LoginPage
+from Zhujia_Factory.page_object.ShopManagement import ShopManagement
 from Common_File.Browser import *
 from Zhujia_Factory.data.login_page_element import *
 
@@ -52,6 +52,16 @@ class AddShop(unittest.TestCase):
     def test_5_custom_income(self):
         """自定义输入收款金额"""
         self.shoppage.custom_income()
+
+    #@unittest.skip('unittest不执行这条测试用例')
+    def test_6_income_code(self):
+        """查看店铺的收款码"""
+        self.shoppage.income_code()
+
+    #@unittest.skip('unittest不执行这条测试用例')
+    def test_7_shop_code(self):
+        """查看店铺码"""
+        self.shoppage.shop_code()
 
 
 if __name__ == '__main__':

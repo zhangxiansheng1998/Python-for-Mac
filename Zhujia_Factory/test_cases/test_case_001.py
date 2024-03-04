@@ -1,6 +1,6 @@
 import unittest
 import pytest
-from Zhujia_Factory.page_object.login_page import LoginPage
+from Zhujia_Factory.page_object.LoginPage import LoginPage
 from Zhujia_Factory.base.browser import *
 from Zhujia_Factory.data.login_page_element import *
 

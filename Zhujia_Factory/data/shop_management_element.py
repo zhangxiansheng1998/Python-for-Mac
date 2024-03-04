@@ -45,14 +45,24 @@ shop_list = {
     # 自定义收款-关闭按钮
     'custom_income_text': (By.XPATH, '/html/body/div[1]/div/div[2]/div[2]/div[2]/div[3]/div/div/div/p[2]'),
     # 自定义收款-金额
+    'custom_income_close_two': (By.XPATH, '/html/body/div[1]/div/div[2]/div[2]/div[2]/div[3]/div/div/header/button'),
+    # 自定义收款-关闭按钮（收款码页面的关闭按钮）
     'income_code': (By.XPATH,
                     '/html/body/div[1]/div/div[2]/div[2]/div[2]/div[1]/div[1]/div[3]/div/div[1]/div/table/tbody/tr['
                     '1]/td[8]/div/button[4]/span/span'),
     # 收款码
+    'income_code_text': (By.XPATH, '/html/body/div[1]/div/div[2]/div[2]/div[2]/div[3]/div/div/header/span'),
+    # 收款码-店铺收款码
+    'income_code_close': (By.XPATH, '/html/body/div[1]/div/div[2]/div[2]/div[2]/div[3]/div/div/header/button'),
+    # 收款码-关闭按钮
     'shop_code': (By.XPATH,
                   '/html/body/div[1]/div/div[2]/div[2]/div[2]/div[1]/div[1]/div[3]/div/div[1]/div/table/tbody/tr['
                   '1]/td[8]/div/button[5]/span/span'),
     # 店铺码
+    'shop_code_text': (By.XPATH,'/html/body/div[1]/div/div[2]/div[2]/div[2]/div[3]/div/div/header/span'),
+    # 店铺码-店铺码
+    'shop_code_close': (By.XPATH, '/html/body/div[1]/div/div[2]/div[2]/div[2]/div[3]/div/div/header/button'),
+    # 店铺码-关闭按钮
     'delete_shop': (By.XPATH,
                     '/html/body/div[1]/div/div[2]/div[2]/div[2]/div[1]/div[1]/div[3]/div/div[1]/div/table/tbody/tr['
                     '1]/td[8]/div/button[6]/span/span'),

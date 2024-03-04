@@ -36,7 +36,7 @@ class TestCase(unittest.TestCase):
     def test_1_login(self):
         """登录ERP系统"""
         self.obj.max()
-        self.obj.visit("http://h.thinkermen.com/wincc_xingeercc/mini2021_1.7.3/index.php?r=login")
+        self.obj.visit("http://h.thinkermen.com/wincc_xingeercc/mini2021_1.7.4/index.php?r=login")
         self.obj.input((By.ID, 'loginname'), "admin")
         self.obj.input((By.ID, 'nloginpwd'), "123456")
         self.obj.click((By.CSS_SELECTOR,
@@ -109,7 +109,7 @@ class TestCase(unittest.TestCase):
             print("\n截图时间:", myTime)
 
         print("\n总共生成", total_orders, "个订单")
-        print("\n订单地址", 'http://h.thinkermen.com/wincc_xingeercc/mini2021_1.7.3/index.php?r=order/factory')
+        print("\n订单地址", 'http://h.thinkermen.com/wincc_xingeercc/mini2021_1.7.4/index.php?r=order/factory')
 
 
 if __name__ == '__main__':
