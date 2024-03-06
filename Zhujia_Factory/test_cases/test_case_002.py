@@ -1,5 +1,4 @@
 import unittest
-import pytest
 from Zhujia_Factory.page_object.LoginPage import LoginPage
 from Zhujia_Factory.page_object.ShopManagement import ShopManagement
 from Common_File.Browser import *

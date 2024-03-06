@@ -3,6 +3,7 @@ from datetime import time
 from Zhujia_Factory.base.E_mail import *
 from Zhujia_Factory.data.login_page_element import *
 from Zhujia_Factory.runall.run_all import *
+import os
 
 now = time.strftime("%Y-%m-%d~%H-%M-%S")  # 获取当前时间
 today = datetime.today()  # 获取当前日期

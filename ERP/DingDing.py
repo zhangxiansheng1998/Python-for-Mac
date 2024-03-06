@@ -23,7 +23,6 @@ sign = urllib.parse.quote_plus(base64.b64encode(hmac_code))
 url = f'https://oapi.dingtalk.com/robot/send?access_token=4577151a48816d922f0b7973caaeef7828fd456c2a1e78cce1a85af1122aeb99&timestamp={timestamp}&sign={sign}' #钉钉群的token
 
 
-
 #利用python发送钉钉  在钉钉需要点击 查看测试报告的话 就需要把报告发送到服务器 再把地址参数传下面  就去掉jenkins所有操作
 # jenkins登录地址
 jenkins_url = "http://203.189.205.234:8888/"#Jenkins地址
@@ -47,7 +46,7 @@ report_url = job_last_build_url
 def DingTalkSend():
     # 打开prometheusData 获取需要发送的信息
     #服务器地址路径/var/lib/jenkins/workspace/Failed_Orders/result.txt
-    #本地地址路径result.txt，但是本地不能模拟发送钉钉通知
+    #本地地址路径result.txt
     with open('result.txt', 'r', encoding='utf-8') as file:
         lines = file.readlines()
 
