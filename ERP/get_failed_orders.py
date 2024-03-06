@@ -79,7 +79,7 @@ class TestCase(unittest.TestCase):
                         f.write('订单号: ' + str(order_number) + ', 失败原因: ' + str(failed_reason) + '\n')
 
                     self.obj.wait(2)
-                    self.obj.click((By.XPATH, '/html/body/div[1]/div[2]/div[2]/div/div[3]/div/ul/li[{page}]'.format(page=page+1)))
+                    self.obj.click((By.XPATH, '/html/body/div[1]/div[2]/div[2]/div/div[3]/div/ul/li[{page}]'.format(page=page)))
                     print(f"已翻至第{page + 1}页")
 
                 """最后一页的剩余订单数量"""
@@ -95,4 +95,5 @@ class TestCase(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
 
