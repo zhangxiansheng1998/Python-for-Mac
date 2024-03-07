@@ -48,7 +48,6 @@ applescript_code = """
             keystroke " " using {control down}
         end tell
     end tell
-
 """
 
 # 执行AppleScript脚本并获取结果
