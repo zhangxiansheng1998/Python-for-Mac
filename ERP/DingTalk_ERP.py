@@ -39,7 +39,7 @@ report_url = job_last_build_url
 
 '''
 钉钉推送方法：
-读取result.txt文件内的数据，循环遍历获取需要的值
+读取order.txt文件内的数据，循环遍历获取需要的值
 使用钉钉机器人的接口，拼接后推送消息
 '''
 
@@ -55,7 +55,7 @@ def DingTalkSend():
            "text": {
                "content": "ERP-成功订单"
                           "\n测试概述:" + "\n"
-                          "\n" + content +
+                          "" + content +
                           "\n构建地址：\n" + job_url +
                           "\n订单地址：\n" + "http://h.thinkermen.com/wincc_xingeercc/mini2021_1.7.4/index.php?r=order/factory\n"
            },
