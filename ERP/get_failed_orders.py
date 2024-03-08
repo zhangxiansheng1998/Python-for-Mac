@@ -13,8 +13,8 @@ class TestCase(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         print('\n程序开始')
-        #cls.driver = webdriver.Chrome(options=Browser().browser_ui()) # 带UI界面启动
-        cls.driver = webdriver.Chrome(options=Browser().browser_headless())  # 无头模式启动
+        cls.driver = webdriver.Chrome(options=Browser().browser_ui()) # 带UI界面启动
+        #cls.driver = webdriver.Chrome(options=Browser().browser_headless())  # 无头模式启动
         cls.obj = BasePage(cls.driver)
         cls.obj.implicitly_wait(15)
 
@@ -39,7 +39,7 @@ class TestCase(unittest.TestCase):
         self.obj.wait(2)
         self.obj.get_li_value('el-scrollbar__view el-select-dropdown__list','失败')
         self.obj.click((By.XPATH,'/html/body/div[1]/div[2]/div[2]/div/div[1]/div[12]/div[3]/button[1]'))
-        self.obj.wait(10)
+        self.obj.wait(5)
         failed_orders_text = self.obj.get_text((By.XPATH,'/html/body/div[1]/div[2]/div[2]/div/div[1]/div[12]/div[2]/span[2]'))
         match = re.search(r'\d+', failed_orders_text)
         if match:
@@ -60,14 +60,13 @@ class TestCase(unittest.TestCase):
                     xpath2 = order_number_xpath.format(index=index)
                     failed_reason = self.obj.get_text((By.XPATH,xpath))
                     order_number = self.obj.get_text((By.XPATH,xpath2))
-                    #print('订单号: ' + order_number + ', 失败原因: ' + failed_reason)
                     f.write('订单号: ' + str(order_number) + ', 失败原因: '+ str(failed_reason)+ '\n')
 
             if failed_orders > 20:
                 pages = failed_orders // 20 + (1 if failed_orders % 20 > 0 else 0)  # 定义页数，每20条数据为1页
-                twenty_left = (failed_orders % 20) + 1  # 定义最后一页，剩余的数据
+                final_page = (failed_orders % 20) + 1  # 最后一页剩余的数据
 
-                for page in range(1, pages):
+                for page in range(2, pages+1):
                     """翻页处理"""
                     self.obj.wait(2)
                     for index in range(1, 21):
@@ -75,21 +74,20 @@ class TestCase(unittest.TestCase):
                         xpath2 = order_number_xpath.format(index=index)
                         failed_reason = self.obj.get_text((By.XPATH,xpath))
                         order_number = self.obj.get_text((By.XPATH,xpath2))
-                        #print('订单号: ' + order_number + ', 失败原因: ' + failed_reason)
                         f.write('订单号: ' + str(order_number) + ', 失败原因: ' + str(failed_reason) + '\n')
 
-                    self.obj.wait(2)
-                    self.obj.click((By.XPATH, '/html/body/div[1]/div[2]/div[2]/div/div[3]/div/ul/li[{page}]'.format(page=page)))
-                    print(f"已翻至第{page + 1}页")
+                    self.obj.backspace_macos((By.XPATH, '/html/body/div[1]/div[2]/div[2]/div/div[3]/div/span[3]/div/div/input'))
+                    self.obj.input((By.XPATH, '/html/body/div[1]/div[2]/div[2]/div/div[3]/div/span[3]/div/div/input'), '{page}'.format(page=page))
+                    self.obj.click((By.XPATH, '/html/body/div[1]/div[2]/div[2]/div/div[1]/div[12]/div[3]/button[1]'))
+                    print(f"已翻至第{page}页")
 
-                """最后一页的剩余订单数量"""
-                self.obj.wait(8)
-                for index in range(1, twenty_left):
+                """最后一页剩余的数据"""
+                self.obj.wait(15)
+                for index in range(1, final_page):
                     xpath = failed_reason_xpath.format(index=index)
                     xpath2 = order_number_xpath.format(index=index)
                     failed_reason = self.obj.get_text((By.XPATH, xpath))
                     order_number = self.obj.get_text((By.XPATH, xpath2))
-                    #print('订单号: ' + order_number + ', 失败原因: ' + failed_reason)
                     f.write('订单号: ' + str(order_number) + ', 失败原因: ' + str(failed_reason) + '\n')
 
 
