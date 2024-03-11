@@ -49,7 +49,6 @@ class TestCase(unittest.TestCase):
         self.obj.wait(5)
         with open('order.txt', 'w') as file:
             for i in range(total_orders):
-                myTime = time.strftime("%Y-%m-%d~%H-%M-%S")
                 self.obj.click((By.ID, 'add_order'))
                 self.obj.switch_to_newest_window()
                 self.obj.explicitly_wait((By.XPATH, '/html/body/div[16]/div[2]/div[3]/ul/li[2]/div'), 10)
@@ -86,6 +85,7 @@ class TestCase(unittest.TestCase):
                     self.obj.click((By.XPATH, f'//*[@id="rows"]/div[2]/ul[{ul_num}]/li[4]/a'))
                     self.obj.switch_to_newest_window()
                     self.obj.wait(5)
+                    myTime = time.strftime("%Y-%m-%d~%H-%M-%S")
                     self.obj.erp_order_screenshot(myTime)
                     self.obj.switch_to_newest_window()
                     self.obj.explicitly_wait((By.XPATH, '/html/body/div[81]/div/li'), 10)
@@ -99,6 +99,7 @@ class TestCase(unittest.TestCase):
                     self.obj.click((By.XPATH, f'//*[@id="rows"]/div[2]/ul[{ul_num}]/li[4]/a'))
                     self.obj.switch_to_newest_window()
                     self.obj.wait(5)
+                    myTime = time.strftime("%Y-%m-%d~%H-%M-%S")
                     self.obj.erp_order_screenshot(myTime)
                     self.obj.switch_to_newest_window()
                     self.obj.explicitly_wait((By.XPATH, '/html/body/div[81]/div/li'), 10)
