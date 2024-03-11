@@ -13,8 +13,8 @@ class TestCase(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         print('\n程序开始')
-        cls.driver = webdriver.Chrome(options=Browser().browser_ui()) # 带UI界面启动
-        #cls.driver = webdriver.Chrome(options=Browser().browser_headless())  # 无头模式启动
+        #cls.driver = webdriver.Chrome(options=Browser().browser_ui()) # 带UI界面启动
+        cls.driver = webdriver.Chrome(options=Browser().browser_headless())  # 无头模式启动
         cls.obj = BasePage(cls.driver)
         cls.obj.implicitly_wait(15)
 
