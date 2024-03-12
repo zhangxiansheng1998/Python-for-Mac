@@ -5,6 +5,10 @@ from selenium.webdriver.common.by import By
 
 
 class TestCase(unittest.TestCase):
+
+    obj = None
+    driver = None
+
     while True:
         try:
             user_input = int(input("请输入要填写的身份证、银行卡信息【1】倪浩平【2】王永康【3】徐鹏: "))

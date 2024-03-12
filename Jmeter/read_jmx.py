@@ -26,7 +26,7 @@ os.system("rm -rf /Volumes/Disk/apache-jmeter-5.1.1/jmeter/jtl/1.jtl")
 os.system("rm -rf /Volumes/Disk/apache-jmeter-5.1.1/jmeter/report/1")
 
 # 使用函数
-modify_jmx_file('/Volumes/Disk/apache-jmeter-5.1.1/jmeter/jmx/jsfk.jmx', 18)
+modify_jmx_file('/Volumes/Disk/apache-jmeter-5.1.1/jmeter/jmx/jsfk.jmx', 3)
 
 # 运行修改后的jmx脚本
 os.system(
