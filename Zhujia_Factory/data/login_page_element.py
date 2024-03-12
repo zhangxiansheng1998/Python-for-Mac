@@ -2,9 +2,13 @@ from selenium.webdriver.common.by import By
 from Zhujia_Factory.config.read_ini import *
 
 
-website = {'url': get_ini_value('environment', 'Prd')}
+website = \
+{
+    'url': get_ini_value('environment', 'Prd')
+}
 
-login_element = {
+login_element = \
+{
     'username': (By.XPATH, '/html/body/div/div/div/div[2]/form/div[1]/div/div/div/input'),    # 手机号输入框
 
     'send_code': (By.XPATH, '/html/body/div/div/div/div[2]/form/div[2]/div/button'),    # 获取验证码按钮

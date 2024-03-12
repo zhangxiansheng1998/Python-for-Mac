@@ -5,13 +5,15 @@ from selenium.webdriver.common.by import By
     # 
 '''
 
-button = {
+button = \
+{
     'shop_list': (By.XPATH, '/html/body/div[1]/div/div[2]/div[1]/div/div[1]/div[2]/div/div/p[1]'),    # 店铺列表按钮
 
     'add_shop': (By.XPATH, '/html/body/div[1]/div/div[2]/div[2]/div[1]/div[2]/button[1]')    # 新增店铺按钮
 }
 
-shop_list = {
+shop_list = \
+{
     'shop_status': (By.XPATH,
                     '/html/body/div[1]/div/div[2]/div[2]/div[2]/div[1]/div[1]/div[3]/div/div[1]/div/table/tbody/tr['
                     '1]/td[5]/div/div/span'),    # 营业状态开关
@@ -83,7 +85,8 @@ shop_list = {
     'refresh_shop_button': (By.XPATH, '/html/body/div[1]/div/div[2]/div[2]/div[1]/div[2]/button[2]')    # 刷新店铺按钮
 }
 
-add_shop = {
+add_shop = \
+{
     'platform_zhujia': (By.XPATH, '/html/body/div[1]/div/div[2]/div[2]/div[2]/div/form/div[1]/div[2]/div[1]/label/span[1]'),    # 平台类型-筑家工厂
 
     'platform_erp': (By.XPATH, '/html/body/div[1]/div/div[2]/div[2]/div[2]/div/form/div[1]/div[2]/div[2]/label/span[1]'),    # 平台类型-erp
