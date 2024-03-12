@@ -1,11 +1,11 @@
 import unittest
 from Zhujia_Factory.page_object.LoginPage import LoginPage
-from Zhujia_Factory.page_object.ShopManagement import ShopManagement
+from Zhujia_Factory.page_object.GoodsManagement import GoodsManagement
 from Common_File.Browser import *
 from Zhujia_Factory.data.login_page_element import *
 
 
-class Shop(unittest.TestCase):
+class Goods(unittest.TestCase):
 
     driver = None
     loginpage = None
@@ -16,7 +16,7 @@ class Shop(unittest.TestCase):
         #cls.driver = webdriver.Chrome(options=Browser().browser_ui())         # 带UI界面启动
         cls.driver = webdriver.Chrome(options=Browser().browser_headless())  # 无头模式启动
         cls.loginpage = LoginPage(cls.driver)
-        cls.shoppage = ShopManagement(cls.driver)
+        cls.shoppage = GoodsManagement(cls.driver)
         cls.loginpage.implicitly_wait(10)
 
     @classmethod

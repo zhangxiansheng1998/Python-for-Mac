@@ -1,434 +1,737 @@
-2024-03-11 13:56:54,030 INFO o.a.j.u.JMeterUtils: Setting Locale to zh_CN
-2024-03-11 13:56:54,079 INFO o.a.j.JMeter: Loading user properties from: /Volumes/Disk/apache-jmeter-5.1.1/bin/user.properties
-2024-03-11 13:56:54,080 INFO o.a.j.JMeter: Loading system properties from: /Volumes/Disk/apache-jmeter-5.1.1/bin/system.properties
-2024-03-11 13:56:54,093 INFO o.a.j.JMeter: Copyright (c) 1998-2019 The Apache Software Foundation
-2024-03-11 13:56:54,093 INFO o.a.j.JMeter: Version 5.1.1 r1855137
-2024-03-11 13:56:54,093 INFO o.a.j.JMeter: java.version=11
-2024-03-11 13:56:54,093 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
-2024-03-11 13:56:54,094 INFO o.a.j.JMeter: os.name=Mac OS X
-2024-03-11 13:56:54,094 INFO o.a.j.JMeter: os.arch=x86_64
-2024-03-11 13:56:54,094 INFO o.a.j.JMeter: os.version=10.16
-2024-03-11 13:56:54,094 INFO o.a.j.JMeter: file.encoding=UTF-8
-2024-03-11 13:56:54,094 INFO o.a.j.JMeter: java.awt.headless=true
-2024-03-11 13:56:54,094 INFO o.a.j.JMeter: Max memory     =1073741824
-2024-03-11 13:56:54,094 INFO o.a.j.JMeter: Available Processors =8
-2024-03-11 13:56:54,102 INFO o.a.j.JMeter: Default Locale=English (EN)
-2024-03-11 13:56:54,103 INFO o.a.j.JMeter: JMeter  Locale=Chinese (China)
-2024-03-11 13:56:54,103 INFO o.a.j.JMeter: JMeterHome=/Volumes/Disk/apache-jmeter-5.1.1
-2024-03-11 13:56:54,103 INFO o.a.j.JMeter: user.dir  =/Volumes/Disk/PG4/NdhkApiGatewayTestScripts/TestScripts
-2024-03-11 13:56:54,104 INFO o.a.j.JMeter: PWD       =/Users/macbook_air/Desktop/MyProject/Jmeter
-2024-03-11 13:56:54,107 INFO o.a.j.JMeter: IP: 192.168.110.192 Name: 小平のMacBook FullName: 192.168.110.192
-2024-03-11 13:56:54,110 INFO o.a.j.JMeter: Setting property 'jmeter.reportgenerator.outputdir' to:'/Volumes/Disk/apache-jmeter-5.1.1/jmeter/report/2024-03-11~13-56-52'
-2024-03-11 13:56:54,118 INFO o.a.j.s.FileServer: Default base='/Volumes/Disk/PG4/NdhkApiGatewayTestScripts/TestScripts'
-2024-03-11 13:56:54,121 INFO o.a.j.s.FileServer: Set new base='/Volumes/Disk/apache-jmeter-5.1.1/jmeter/jmx'
-2024-03-11 13:56:54,347 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
-2024-03-11 13:56:54,372 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
-2024-03-11 13:56:54,376 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
-2024-03-11 13:56:54,379 INFO o.a.j.s.SaveService: Loading file: /Volumes/Disk/apache-jmeter-5.1.1/jmeter/jmx/jsfk.jmx
-2024-03-11 13:56:54,431 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2024-03-11 13:56:54,431 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2024-03-11 13:56:54,431 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2024-03-11 13:56:54,431 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2024-03-11 13:56:54,431 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
-2024-03-11 13:56:54,431 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
-2024-03-11 13:56:54,458 INFO o.a.j.JMeter: Creating summariser <summary>
-2024-03-11 13:56:54,462 INFO o.a.j.r.d.ReportGenerator: ReportGenerator will use for Parsing the separator: ','
-2024-03-11 13:56:54,462 INFO o.a.j.r.d.ReportGenerator: Will generate report at end of test from  results file: /Volumes/Disk/apache-jmeter-5.1.1/jmeter/jtl/2024-03-11~13-56-52.jtl
-2024-03-11 13:56:54,463 INFO o.a.j.r.d.ReportGenerator: Reading report generator properties from: /Volumes/Disk/apache-jmeter-5.1.1/bin/reportgenerator.properties
-2024-03-11 13:56:54,464 INFO o.a.j.r.d.ReportGenerator: Merging with JMeter properties
-2024-03-11 13:56:54,467 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.temp_dir' not found, using default value 'temp' instead.
-2024-03-11 13:56:54,469 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.apdex_per_transaction' not found, using default value 'null' instead.
-2024-03-11 13:56:54,469 INFO o.a.j.r.c.ReportGeneratorConfiguration: apdex_per_transaction : {} is empty, not APDEX per transaction customization
-2024-03-11 13:56:54,469 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.sample_filter' not found, using default value 'null' instead.
-2024-03-11 13:56:54,470 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.report_title' not found, using default value 'null' instead.
-2024-03-11 13:56:54,470 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.start_date' not found, using default value 'null' instead.
-2024-03-11 13:56:54,470 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.end_date' not found, using default value 'null' instead.
-2024-03-11 13:56:54,470 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.date_format' not found, using default value 'null' instead.
-2024-03-11 13:56:54,478 INFO o.a.j.r.c.ReportGeneratorConfiguration: Will use date range start date: null, end date: null
-2024-03-11 13:56:54,488 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.totalTPS.exclude_controllers' not found, using default value 'false' instead.
-2024-03-11 13:56:54,489 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.activeThreadsOverTime.exclude_controllers' not found, using default value 'false' instead.
-2024-03-11 13:56:54,489 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.timeVsThreads.exclude_controllers' not found, using default value 'false' instead.
-2024-03-11 13:56:54,489 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimeDistribution.exclude_controllers' not found, using default value 'false' instead.
-2024-03-11 13:56:54,489 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.transactionsPerSecond.exclude_controllers' not found, using default value 'false' instead.
-2024-03-11 13:56:54,490 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimePercentiles.exclude_controllers' not found, using default value 'false' instead.
-2024-03-11 13:56:54,490 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimePercentilesOverTime.exclude_controllers' not found, using default value 'false' instead.
-2024-03-11 13:56:54,490 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimesOverTime.exclude_controllers' not found, using default value 'false' instead.
-2024-03-11 13:56:54,490 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.connectTimeOverTime.exclude_controllers' not found, using default value 'false' instead.
-2024-03-11 13:56:54,491 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.latenciesOverTime.exclude_controllers' not found, using default value 'false' instead.
-2024-03-11 13:56:54,492 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.filters_only_sample_series' not found, using default value 'true' instead.
-2024-03-11 13:56:54,492 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.series_filter' not found, using default value '' instead.
-2024-03-11 13:56:54,493 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.show_controllers_only' not found, using default value 'false' instead.
-2024-03-11 13:56:54,493 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.filters_only_sample_series' not found, using default value 'true' instead.
-2024-03-11 13:56:54,493 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.series_filter' not found, using default value '' instead.
-2024-03-11 13:56:54,493 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.show_controllers_only' not found, using default value 'false' instead.
-2024-03-11 13:56:54,499 INFO o.a.j.e.StandardJMeterEngine: Running the test!
-2024-03-11 13:56:54,515 INFO o.a.j.s.SampleEvent: List of sample_variables: []
-2024-03-11 13:56:54,515 INFO o.a.j.s.SampleEvent: List of sample_variables: []
-2024-03-11 13:56:54,533 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
-2024-03-11 13:56:54,533 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
-2024-03-11 13:56:55,065 INFO o.a.j.JMeter: 正在运行的测试 (1710136615064)
-2024-03-11 13:56:55,091 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : 线程组
-2024-03-11 13:56:55,093 INFO o.a.j.e.StandardJMeterEngine: Starting 99 threads for group 线程组.
-2024-03-11 13:56:55,093 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
-2024-03-11 13:56:55,093 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=99 ramp-up=1 delayedStart=false
-2024-03-11 13:56:55,133 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-1
-2024-03-11 13:56:55,133 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-2
-2024-03-11 13:56:55,136 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-3
-2024-03-11 13:56:55,138 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-4
-2024-03-11 13:56:55,146 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-5
-2024-03-11 13:56:55,161 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-6
-2024-03-11 13:56:55,177 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-7
-2024-03-11 13:56:55,191 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-10
-2024-03-11 13:56:55,194 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-9
-2024-03-11 13:56:55,194 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-8
-2024-03-11 13:56:55,206 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-11
-2024-03-11 13:56:55,217 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-13
-2024-03-11 13:56:55,229 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-12
-2024-03-11 13:56:55,242 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-14
-2024-03-11 13:56:55,243 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-15
-2024-03-11 13:56:55,246 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-16
-2024-03-11 13:56:55,251 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = 小平のMacBook
-2024-03-11 13:56:55,260 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
-2024-03-11 13:56:55,259 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-17
-2024-03-11 13:56:55,263 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
-2024-03-11 13:56:55,263 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to utf-8
-2024-03-11 13:56:55,263 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
-2024-03-11 13:56:55,263 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
-2024-03-11 13:56:55,270 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-18
-2024-03-11 13:56:55,277 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-19
-2024-03-11 13:56:55,303 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-21
-2024-03-11 13:56:55,297 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-20
-2024-03-11 13:56:55,313 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-22
-2024-03-11 13:56:55,320 INFO o.a.j.t.ThreadGroup: Started thread group number 1
-2024-03-11 13:56:55,322 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
-2024-03-11 13:56:55,327 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-23
-2024-03-11 13:56:55,331 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-24
-2024-03-11 13:56:55,340 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-25
-2024-03-11 13:56:55,353 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-26
-2024-03-11 13:56:55,357 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-27
-2024-03-11 13:56:55,369 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-28
-2024-03-11 13:56:55,388 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-30
-2024-03-11 13:56:55,380 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-29
-2024-03-11 13:56:55,399 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-31
-2024-03-11 13:56:55,411 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-32
-2024-03-11 13:56:55,425 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-33
-2024-03-11 13:56:55,434 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-34
-2024-03-11 13:56:55,437 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-35
-2024-03-11 13:56:55,448 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-36
-2024-03-11 13:56:55,461 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-37
-2024-03-11 13:56:55,471 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-38
-2024-03-11 13:56:55,486 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-40
-2024-03-11 13:56:55,495 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-39
-2024-03-11 13:56:55,506 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-41
-2024-03-11 13:56:55,510 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-42
-2024-03-11 13:56:55,517 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-43
-2024-03-11 13:56:55,536 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-44
-2024-03-11 13:56:55,542 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-45
-2024-03-11 13:56:55,551 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-46
-2024-03-11 13:56:55,561 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-47
-2024-03-11 13:56:55,572 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-48
-2024-03-11 13:56:55,579 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-49
-2024-03-11 13:56:55,590 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-50
-2024-03-11 13:56:55,597 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-51
-2024-03-11 13:56:55,630 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-54
-2024-03-11 13:56:55,626 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-52
-2024-03-11 13:56:55,626 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-53
-2024-03-11 13:56:55,640 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-55
-2024-03-11 13:56:55,660 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-56
-2024-03-11 13:56:55,671 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-57
-2024-03-11 13:56:55,690 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-58
-2024-03-11 13:56:55,711 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-62
-2024-03-11 13:56:55,697 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-61
-2024-03-11 13:56:55,695 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-59
-2024-03-11 13:56:55,695 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-60
-2024-03-11 13:56:55,719 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-63
-2024-03-11 13:56:55,730 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-64
-2024-03-11 13:56:55,742 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-65
-2024-03-11 13:56:55,752 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-66
-2024-03-11 13:56:55,760 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-67
-2024-03-11 13:56:55,767 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-68
-2024-03-11 13:56:55,779 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-69
-2024-03-11 13:56:55,796 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-70
-2024-03-11 13:56:55,800 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-71
-2024-03-11 13:56:55,809 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-72
-2024-03-11 13:56:55,816 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-73
-2024-03-11 13:56:55,829 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-74
-2024-03-11 13:56:55,835 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-75
-2024-03-11 13:56:55,871 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-78
-2024-03-11 13:56:55,863 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-77
-2024-03-11 13:56:55,864 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-76
-2024-03-11 13:56:55,901 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-81
-2024-03-11 13:56:55,885 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-79
-2024-03-11 13:56:55,887 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-80
-2024-03-11 13:56:55,906 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-82
-2024-03-11 13:56:55,916 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-83
-2024-03-11 13:56:55,929 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-84
-2024-03-11 13:56:55,940 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-85
-2024-03-11 13:56:55,948 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-86
-2024-03-11 13:56:55,970 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-88
-2024-03-11 13:56:55,973 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-87
-2024-03-11 13:56:55,979 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-89
-2024-03-11 13:56:55,993 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-90
-2024-03-11 13:56:55,995 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-91
-2024-03-11 13:56:56,008 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-92
-2024-03-11 13:56:56,021 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-93
-2024-03-11 13:56:56,034 INFO o.a.j.p.h.s.h.LazyLayeredConnectionSocketFactory: Setting up HTTPS TrustAll Socket Factory
-2024-03-11 13:56:56,038 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-94
-2024-03-11 13:56:56,047 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-95
-2024-03-11 13:56:56,053 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-96
-2024-03-11 13:56:56,065 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-97
-2024-03-11 13:56:56,072 INFO o.a.j.u.JsseSSLManager: Using default SSL protocol: TLS
-2024-03-11 13:56:56,072 INFO o.a.j.u.JsseSSLManager: SSL session context: per-thread
-2024-03-11 13:56:56,075 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-98
-2024-03-11 13:56:56,082 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-99
-2024-03-11 13:56:56,622 INFO o.a.j.u.SSLManager: JmeterKeyStore Location:  type JKS
-2024-03-11 13:56:56,629 INFO o.a.j.u.SSLManager: KeyStore created OK
-2024-03-11 13:56:56,629 WARN o.a.j.u.SSLManager: Keystore file not found, loading empty keystore
-2024-03-11 13:56:59,372 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-11
-2024-03-11 13:56:59,372 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-11
-2024-03-11 13:56:59,387 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-45
-2024-03-11 13:56:59,389 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-45
-2024-03-11 13:56:59,486 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-86
-2024-03-11 13:56:59,486 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-86
-2024-03-11 13:56:59,495 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-66
-2024-03-11 13:56:59,495 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-53
-2024-03-11 13:56:59,497 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-53
-2024-03-11 13:56:59,497 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-66
-2024-03-11 13:56:59,655 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-63
-2024-03-11 13:56:59,656 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-63
-2024-03-11 13:56:59,753 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-37
-2024-03-11 13:56:59,754 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-37
-2024-03-11 13:56:59,782 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-43
-2024-03-11 13:56:59,782 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-43
-2024-03-11 13:56:59,979 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-46
-2024-03-11 13:56:59,980 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-46
-2024-03-11 13:56:59,998 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-51
-2024-03-11 13:56:59,998 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-51
-2024-03-11 13:57:00,006 INFO o.a.j.r.Summariser: summary +     11 in 00:00:05 =    2.2/s Avg:  3776 Min:  3418 Max:  4135 Err:     0 (0.00%) Active: 89 Started: 99 Finished: 10
-2024-03-11 13:57:00,008 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-79
-2024-03-11 13:57:00,008 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-79
-2024-03-11 13:57:00,104 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-59
-2024-03-11 13:57:00,104 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-59
-2024-03-11 13:57:00,140 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-32
-2024-03-11 13:57:00,141 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-32
-2024-03-11 13:57:00,158 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-8
-2024-03-11 13:57:00,158 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-8
-2024-03-11 13:57:00,173 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-2
-2024-03-11 13:57:00,173 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-2
-2024-03-11 13:57:00,192 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-81
-2024-03-11 13:57:00,192 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-81
-2024-03-11 13:57:00,272 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-88
-2024-03-11 13:57:00,272 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-88
-2024-03-11 13:57:00,273 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-85
-2024-03-11 13:57:00,275 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-85
-2024-03-11 13:57:00,310 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-25
-2024-03-11 13:57:00,310 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-25
-2024-03-11 13:57:00,333 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-76
-2024-03-11 13:57:00,334 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-76
-2024-03-11 13:57:00,383 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-38
-2024-03-11 13:57:00,384 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-38
-2024-03-11 13:57:00,408 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-42
-2024-03-11 13:57:00,409 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-42
-2024-03-11 13:57:00,430 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-97
-2024-03-11 13:57:00,430 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-97
-2024-03-11 13:57:00,501 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-12
-2024-03-11 13:57:00,502 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-12
-2024-03-11 13:57:00,515 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-73
-2024-03-11 13:57:00,515 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-73
-2024-03-11 13:57:00,521 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-34
-2024-03-11 13:57:00,521 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-34
-2024-03-11 13:57:00,536 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-41
-2024-03-11 13:57:00,536 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-41
-2024-03-11 13:57:00,560 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-47
-2024-03-11 13:57:00,560 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-39
-2024-03-11 13:57:00,560 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-47
-2024-03-11 13:57:00,560 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-39
-2024-03-11 13:57:00,606 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-5
-2024-03-11 13:57:00,606 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-5
-2024-03-11 13:57:00,619 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-33
-2024-03-11 13:57:00,619 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-91
-2024-03-11 13:57:00,620 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-33
-2024-03-11 13:57:00,620 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-91
-2024-03-11 13:57:00,730 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-98
-2024-03-11 13:57:00,732 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-98
-2024-03-11 13:57:00,735 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-3
-2024-03-11 13:57:00,736 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-3
-2024-03-11 13:57:00,741 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-44
-2024-03-11 13:57:00,742 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-44
-2024-03-11 13:57:00,746 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-16
-2024-03-11 13:57:00,746 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-16
-2024-03-11 13:57:00,747 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-64
-2024-03-11 13:57:00,748 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-64
-2024-03-11 13:57:00,764 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-4
-2024-03-11 13:57:00,766 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-4
-2024-03-11 13:57:00,809 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-6
-2024-03-11 13:57:00,809 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-6
-2024-03-11 13:57:00,864 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-69
-2024-03-11 13:57:00,865 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-69
-2024-03-11 13:57:00,894 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-84
-2024-03-11 13:57:00,895 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-84
-2024-03-11 13:57:00,966 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-20
-2024-03-11 13:57:00,966 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-20
-2024-03-11 13:57:00,985 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-75
-2024-03-11 13:57:00,986 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-75
-2024-03-11 13:57:01,067 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-26
-2024-03-11 13:57:01,067 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-26
-2024-03-11 13:57:01,102 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-27
-2024-03-11 13:57:01,102 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-90
-2024-03-11 13:57:01,102 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-90
-2024-03-11 13:57:01,102 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-27
-2024-03-11 13:57:01,129 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-57
-2024-03-11 13:57:01,129 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-57
-2024-03-11 13:57:01,141 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-23
-2024-03-11 13:57:01,141 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-23
-2024-03-11 13:57:01,171 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-92
-2024-03-11 13:57:01,171 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-92
-2024-03-11 13:57:01,218 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-74
-2024-03-11 13:57:01,218 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-74
-2024-03-11 13:57:01,263 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-94
-2024-03-11 13:57:01,264 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-94
-2024-03-11 13:57:01,264 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-72
-2024-03-11 13:57:01,264 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-72
-2024-03-11 13:57:01,263 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-99
-2024-03-11 13:57:01,264 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-99
-2024-03-11 13:57:01,263 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-29
-2024-03-11 13:57:01,265 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-29
-2024-03-11 13:57:01,268 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-71
-2024-03-11 13:57:01,268 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-71
-2024-03-11 13:57:01,294 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-77
-2024-03-11 13:57:01,295 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-49
-2024-03-11 13:57:01,295 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-9
-2024-03-11 13:57:01,295 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-49
-2024-03-11 13:57:01,295 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-9
-2024-03-11 13:57:01,295 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-77
-2024-03-11 13:57:01,351 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-36
-2024-03-11 13:57:01,352 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-36
-2024-03-11 13:57:01,353 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-80
-2024-03-11 13:57:01,353 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-80
-2024-03-11 13:57:01,403 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-68
-2024-03-11 13:57:01,403 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-68
-2024-03-11 13:57:01,418 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-56
-2024-03-11 13:57:01,418 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-56
-2024-03-11 13:57:01,445 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-83
-2024-03-11 13:57:01,446 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-83
-2024-03-11 13:57:01,449 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-93
-2024-03-11 13:57:01,449 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-93
-2024-03-11 13:57:01,467 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-70
-2024-03-11 13:57:01,467 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-70
-2024-03-11 13:57:01,476 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-1
-2024-03-11 13:57:01,477 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-1
-2024-03-11 13:57:01,485 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-62
-2024-03-11 13:57:01,485 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-62
-2024-03-11 13:57:01,489 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-14
-2024-03-11 13:57:01,489 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-89
-2024-03-11 13:57:01,489 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-14
-2024-03-11 13:57:01,489 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-89
-2024-03-11 13:57:01,496 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-30
-2024-03-11 13:57:01,496 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-96
-2024-03-11 13:57:01,497 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-30
-2024-03-11 13:57:01,497 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-96
-2024-03-11 13:57:01,503 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-52
-2024-03-11 13:57:01,503 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-52
-2024-03-11 13:57:01,505 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-61
-2024-03-11 13:57:01,505 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-61
-2024-03-11 13:57:01,514 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-13
-2024-03-11 13:57:01,514 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-13
-2024-03-11 13:57:01,530 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-60
-2024-03-11 13:57:01,530 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-60
-2024-03-11 13:57:01,547 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-50
-2024-03-11 13:57:01,547 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-50
-2024-03-11 13:57:01,560 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-78
-2024-03-11 13:57:01,560 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-78
-2024-03-11 13:57:01,593 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-7
-2024-03-11 13:57:01,593 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-7
-2024-03-11 13:57:01,639 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-40
-2024-03-11 13:57:01,639 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-40
-2024-03-11 13:57:01,666 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-17
-2024-03-11 13:57:01,666 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-18
-2024-03-11 13:57:01,666 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-18
-2024-03-11 13:57:01,666 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-17
-2024-03-11 13:57:01,694 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-65
-2024-03-11 13:57:01,694 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-65
-2024-03-11 13:57:01,706 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-95
-2024-03-11 13:57:01,706 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-95
-2024-03-11 13:57:01,724 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-48
-2024-03-11 13:57:01,724 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-48
-2024-03-11 13:57:01,729 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-87
-2024-03-11 13:57:01,729 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-87
-2024-03-11 13:57:01,735 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-28
-2024-03-11 13:57:01,737 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-28
-2024-03-11 13:57:01,753 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-10
-2024-03-11 13:57:01,753 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-10
-2024-03-11 13:57:01,774 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-67
-2024-03-11 13:57:01,774 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-67
-2024-03-11 13:57:01,946 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-24
-2024-03-11 13:57:01,946 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-15
-2024-03-11 13:57:01,946 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-24
-2024-03-11 13:57:01,946 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-15
-2024-03-11 13:57:01,946 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-22
-2024-03-11 13:57:01,946 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-22
-2024-03-11 13:57:01,947 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-19
-2024-03-11 13:57:01,947 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-19
-2024-03-11 13:57:01,980 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-21
-2024-03-11 13:57:01,980 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-31
-2024-03-11 13:57:01,980 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-82
-2024-03-11 13:57:01,980 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-21
-2024-03-11 13:57:01,980 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-35
-2024-03-11 13:57:01,980 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-82
-2024-03-11 13:57:01,980 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-35
-2024-03-11 13:57:01,980 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-31
-2024-03-11 13:57:02,087 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-54
-2024-03-11 13:57:02,088 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-54
-2024-03-11 13:57:03,171 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-55
-2024-03-11 13:57:03,172 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-55
-2024-03-11 13:57:04,359 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-58
-2024-03-11 13:57:04,361 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-58
-2024-03-11 13:57:04,365 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
-2024-03-11 13:57:04,424 INFO o.a.j.r.Summariser: summary +     88 in 00:00:04 =   19.9/s Avg:  5308 Min:  4210 Max:  8479 Err:    27 (30.68%) Active: 0 Started: 99 Finished: 99
-2024-03-11 13:57:04,425 INFO o.a.j.r.Summariser: summary =     99 in 00:00:09 =   10.6/s Avg:  5138 Min:  3418 Max:  8479 Err:    27 (27.27%)
-2024-03-11 13:57:04,427 INFO o.a.j.JMeter: Generating Dashboard
-2024-03-11 13:57:04,427 INFO o.a.j.r.d.ReportGenerator: Flushing result collector before report Generation
-2024-03-11 13:57:04,456 INFO o.a.j.r.p.NormalizerSampleConsumer: Using format, 'ms', to parse timeStamp field
-2024-03-11 13:57:04,599 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.AggregateConsumer#stopProducing(): beginDate produced 0 samples
-2024-03-11 13:57:04,600 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.AggregateConsumer#stopProducing(): endDate produced 0 samples
-2024-03-11 13:57:04,605 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.ApdexSummaryConsumer#stopProducing(): apdexSummary produced 0 samples
-2024-03-11 13:57:04,605 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.RequestsSummaryConsumer#stopProducing(): requestsSummary produced 0 samples
-2024-03-11 13:57:04,614 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.StatisticsSummaryConsumer#stopProducing(): statisticsSummary produced 0 samples
-2024-03-11 13:57:04,627 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.Top5ErrorsBySamplerConsumer#stopProducing(): top5ErrorsBySampler produced 0 samples
-2024-03-11 13:57:04,628 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.ErrorsSummaryConsumer#stopProducing(): errorsSummary produced 0 samples
-2024-03-11 13:57:04,628 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.HitsPerSecondGraphConsumer#stopProducing(): hitsPerSecond produced 0 samples
-2024-03-11 13:57:04,655 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.LatencyVSRequestGraphConsumer#stopProducing(): latencyVsRequest produced 0 samples
-2024-03-11 13:57:04,657 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.SyntheticResponseTimeDistributionGraphConsumer#stopProducing(): syntheticResponseTimeDistribution produced 0 samples
-2024-03-11 13:57:04,659 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.BytesThroughputGraphConsumer#stopProducing(): bytesThroughputOverTime produced 0 samples
-2024-03-11 13:57:04,659 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.CodesPerSecondGraphConsumer#stopProducing(): codesPerSecond produced 0 samples
-2024-03-11 13:57:04,667 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeVSRequestGraphConsumer#stopProducing(): responseTimeVsRequest produced 0 samples
-2024-03-11 13:57:04,668 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): startIntervalControlerFilter produced 693 samples
-2024-03-11 13:57:04,668 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TotalTPSGraphConsumer#stopProducing(): totalTPS produced 0 samples
-2024-03-11 13:57:04,668 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ActiveThreadsGraphConsumer#stopProducing(): activeThreadsOverTime produced 0 samples
-2024-03-11 13:57:04,668 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TimeVSThreadGraphConsumer#stopProducing(): timeVsThreads produced 0 samples
-2024-03-11 13:57:04,671 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeDistributionGraphConsumer#stopProducing(): responseTimeDistribution produced 0 samples
-2024-03-11 13:57:04,671 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TransactionsPerSecondGraphConsumer#stopProducing(): transactionsPerSecond produced 0 samples
-2024-03-11 13:57:04,671 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimePercentilesGraphConsumer#stopProducing(): responseTimePercentiles produced 0 samples
-2024-03-11 13:57:04,674 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimePercentilesOverTimeGraphConsumer#stopProducing(): responseTimePercentilesOverTime produced 0 samples
-2024-03-11 13:57:04,675 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeOverTimeGraphConsumer#stopProducing(): responseTimesOverTime produced 0 samples
-2024-03-11 13:57:04,675 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ConnectTimeOverTimeGraphConsumer#stopProducing(): connectTimeOverTime produced 0 samples
-2024-03-11 13:57:04,675 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.LatencyOverTimeGraphConsumer#stopProducing(): latenciesOverTime produced 0 samples
-2024-03-11 13:57:04,675 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): nameFilter produced 1485 samples
-2024-03-11 13:57:04,675 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): dateRangeFilter produced 297 samples
-2024-03-11 13:57:04,675 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.NormalizerSampleConsumer#stopProducing(): normalizer produced 99 samples
-2024-03-11 13:57:04,676 INFO o.a.j.r.p.CsvFileSampleSource: produce(): 99 samples produced in 193ms on channel 0
-2024-03-11 13:57:04,676 INFO o.a.j.r.d.ReportGenerator: Exporting data using exporter:'json' of className:'org.apache.jmeter.report.dashboard.JsonExporter'
-2024-03-11 13:57:04,684 INFO o.a.j.r.d.JsonExporter: Found data for consumer statisticsSummary in context
-2024-03-11 13:57:04,685 INFO o.a.j.r.d.JsonExporter: Creating statistics for overall
-2024-03-11 13:57:04,685 INFO o.a.j.r.d.JsonExporter: Creating statistics for other transactions
-2024-03-11 13:57:04,686 INFO o.a.j.r.d.JsonExporter: Checking output folder
-2024-03-11 13:57:04,687 INFO o.a.j.r.d.JsonExporter: Writing statistics JSON to /Volumes/Disk/apache-jmeter-5.1.1/jmeter/report/2024-03-11~13-56-52/statistics.json
-2024-03-11 13:57:04,898 INFO o.a.j.r.d.ReportGenerator: Exporting data using exporter:'html' of className:'org.apache.jmeter.report.dashboard.HtmlTemplateExporter'
-2024-03-11 13:57:04,903 INFO o.a.j.r.d.HtmlTemplateExporter: Will generate dashboard in folder: /Volumes/Disk/apache-jmeter-5.1.1/jmeter/report/2024-03-11~13-56-52
-2024-03-11 13:57:05,004 INFO o.a.j.r.d.HtmlTemplateExporter: Report will be generated in: /Volumes/Disk/apache-jmeter-5.1.1/jmeter/report/2024-03-11~13-56-52, creating folder structure
-2024-03-11 13:57:05,007 INFO o.a.j.r.d.TemplateVisitor: Copying folder from '/Volumes/Disk/apache-jmeter-5.1.1/bin/report-template' to '/Volumes/Disk/apache-jmeter-5.1.1/jmeter/report/2024-03-11~13-56-52', got message:[/Volumes/Disk/apache-jmeter-5.1.1/jmeter/report/2024-03-11~13-56-52/statistics.json, /Volumes/Disk/apache-jmeter-5.1.1/jmeter/report/2024-03-11~13-56-52/report.html], found non empty folder with following content {}, will be ignored
-2024-03-11 13:57:05,324 INFO o.a.j.JMeter: Dashboard generated
-2024-03-11 13:57:05,326 WARN o.a.j.e.StandardJMeterEngine: Error encountered during shutdown of org.apache.jmeter.JMeter$ListenToTest@6650813a
+2024-03-12 09:53:51,043 INFO o.a.j.u.JMeterUtils: Setting Locale to zh_CN
+2024-03-12 09:53:51,089 INFO o.a.j.JMeter: Loading user properties from: /Volumes/Disk/apache-jmeter-5.1.1/bin/user.properties
+2024-03-12 09:53:51,090 INFO o.a.j.JMeter: Loading system properties from: /Volumes/Disk/apache-jmeter-5.1.1/bin/system.properties
+2024-03-12 09:53:51,099 INFO o.a.j.JMeter: Copyright (c) 1998-2019 The Apache Software Foundation
+2024-03-12 09:53:51,100 INFO o.a.j.JMeter: Version 5.1.1 r1855137
+2024-03-12 09:53:51,100 INFO o.a.j.JMeter: java.version=11
+2024-03-12 09:53:51,100 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2024-03-12 09:53:51,100 INFO o.a.j.JMeter: os.name=Mac OS X
+2024-03-12 09:53:51,100 INFO o.a.j.JMeter: os.arch=x86_64
+2024-03-12 09:53:51,101 INFO o.a.j.JMeter: os.version=10.16
+2024-03-12 09:53:51,101 INFO o.a.j.JMeter: file.encoding=UTF-8
+2024-03-12 09:53:51,101 INFO o.a.j.JMeter: java.awt.headless=true
+2024-03-12 09:53:51,101 INFO o.a.j.JMeter: Max memory     =1073741824
+2024-03-12 09:53:51,101 INFO o.a.j.JMeter: Available Processors =8
+2024-03-12 09:53:51,109 INFO o.a.j.JMeter: Default Locale=English (EN)
+2024-03-12 09:53:51,109 INFO o.a.j.JMeter: JMeter  Locale=Chinese (China)
+2024-03-12 09:53:51,109 INFO o.a.j.JMeter: JMeterHome=/Volumes/Disk/apache-jmeter-5.1.1
+2024-03-12 09:53:51,109 INFO o.a.j.JMeter: user.dir  =/Volumes/Disk/PG4/NdhkApiGatewayTestScripts/TestScripts
+2024-03-12 09:53:51,110 INFO o.a.j.JMeter: PWD       =/Users/macbook_air/Desktop/MyProject/Jmeter
+2024-03-12 09:53:51,112 INFO o.a.j.JMeter: IP: 192.168.110.192 Name: 小平のMacBook FullName: xiaopingnodeair.lan
+2024-03-12 09:53:51,116 INFO o.a.j.JMeter: Setting property 'jmeter.reportgenerator.outputdir' to:'/Volumes/Disk/apache-jmeter-5.1.1/jmeter/report/2024-03-12~09-53-49'
+2024-03-12 09:53:51,123 INFO o.a.j.s.FileServer: Default base='/Volumes/Disk/PG4/NdhkApiGatewayTestScripts/TestScripts'
+2024-03-12 09:53:51,126 INFO o.a.j.s.FileServer: Set new base='/Volumes/Disk/apache-jmeter-5.1.1/jmeter/jmx'
+2024-03-12 09:53:51,342 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2024-03-12 09:53:51,369 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2024-03-12 09:53:51,374 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2024-03-12 09:53:51,377 INFO o.a.j.s.SaveService: Loading file: /Volumes/Disk/apache-jmeter-5.1.1/jmeter/jmx/jsfk.jmx
+2024-03-12 09:53:51,422 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2024-03-12 09:53:51,423 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2024-03-12 09:53:51,423 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2024-03-12 09:53:51,423 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2024-03-12 09:53:51,423 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2024-03-12 09:53:51,423 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2024-03-12 09:53:51,448 INFO o.a.j.JMeter: Creating summariser <summary>
+2024-03-12 09:53:51,453 INFO o.a.j.r.d.ReportGenerator: ReportGenerator will use for Parsing the separator: ','
+2024-03-12 09:53:51,453 INFO o.a.j.r.d.ReportGenerator: Will generate report at end of test from  results file: /Volumes/Disk/apache-jmeter-5.1.1/jmeter/jtl/2024-03-12~09-53-49.jtl
+2024-03-12 09:53:51,453 INFO o.a.j.r.d.ReportGenerator: Reading report generator properties from: /Volumes/Disk/apache-jmeter-5.1.1/bin/reportgenerator.properties
+2024-03-12 09:53:51,454 INFO o.a.j.r.d.ReportGenerator: Merging with JMeter properties
+2024-03-12 09:53:51,457 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.temp_dir' not found, using default value 'temp' instead.
+2024-03-12 09:53:51,459 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.apdex_per_transaction' not found, using default value 'null' instead.
+2024-03-12 09:53:51,459 INFO o.a.j.r.c.ReportGeneratorConfiguration: apdex_per_transaction : {} is empty, not APDEX per transaction customization
+2024-03-12 09:53:51,459 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.sample_filter' not found, using default value 'null' instead.
+2024-03-12 09:53:51,460 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.report_title' not found, using default value 'null' instead.
+2024-03-12 09:53:51,460 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.start_date' not found, using default value 'null' instead.
+2024-03-12 09:53:51,460 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.end_date' not found, using default value 'null' instead.
+2024-03-12 09:53:51,460 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.date_format' not found, using default value 'null' instead.
+2024-03-12 09:53:51,469 INFO o.a.j.r.c.ReportGeneratorConfiguration: Will use date range start date: null, end date: null
+2024-03-12 09:53:51,477 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.totalTPS.exclude_controllers' not found, using default value 'false' instead.
+2024-03-12 09:53:51,478 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.activeThreadsOverTime.exclude_controllers' not found, using default value 'false' instead.
+2024-03-12 09:53:51,478 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.timeVsThreads.exclude_controllers' not found, using default value 'false' instead.
+2024-03-12 09:53:51,478 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimeDistribution.exclude_controllers' not found, using default value 'false' instead.
+2024-03-12 09:53:51,478 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.transactionsPerSecond.exclude_controllers' not found, using default value 'false' instead.
+2024-03-12 09:53:51,478 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimePercentiles.exclude_controllers' not found, using default value 'false' instead.
+2024-03-12 09:53:51,479 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimePercentilesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2024-03-12 09:53:51,479 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2024-03-12 09:53:51,480 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.connectTimeOverTime.exclude_controllers' not found, using default value 'false' instead.
+2024-03-12 09:53:51,480 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.latenciesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2024-03-12 09:53:51,481 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.filters_only_sample_series' not found, using default value 'true' instead.
+2024-03-12 09:53:51,481 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.series_filter' not found, using default value '' instead.
+2024-03-12 09:53:51,481 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.show_controllers_only' not found, using default value 'false' instead.
+2024-03-12 09:53:51,482 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.filters_only_sample_series' not found, using default value 'true' instead.
+2024-03-12 09:53:51,482 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.series_filter' not found, using default value '' instead.
+2024-03-12 09:53:51,482 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.show_controllers_only' not found, using default value 'false' instead.
+2024-03-12 09:53:51,488 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2024-03-12 09:53:51,498 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2024-03-12 09:53:51,498 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2024-03-12 09:53:51,519 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2024-03-12 09:53:51,519 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2024-03-12 09:53:52,044 INFO o.a.j.JMeter: 正在运行的测试 (1710208432043)
+2024-03-12 09:53:52,072 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : 线程组
+2024-03-12 09:53:52,074 INFO o.a.j.e.StandardJMeterEngine: Starting 200 threads for group 线程组.
+2024-03-12 09:53:52,074 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2024-03-12 09:53:52,075 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=200 ramp-up=1 delayedStart=false
+2024-03-12 09:53:52,111 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-6
+2024-03-12 09:53:52,111 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-5
+2024-03-12 09:53:52,113 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-2
+2024-03-12 09:53:52,113 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-3
+2024-03-12 09:53:52,117 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-4
+2024-03-12 09:53:52,123 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-7
+2024-03-12 09:53:52,122 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-1
+2024-03-12 09:53:52,135 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-8
+2024-03-12 09:53:52,141 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-9
+2024-03-12 09:53:52,151 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-10
+2024-03-12 09:53:52,153 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-11
+2024-03-12 09:53:52,162 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-13
+2024-03-12 09:53:52,161 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-12
+2024-03-12 09:53:52,191 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-15
+2024-03-12 09:53:52,193 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-17
+2024-03-12 09:53:52,191 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-16
+2024-03-12 09:53:52,191 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-14
+2024-03-12 09:53:52,199 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-18
+2024-03-12 09:53:52,200 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-19
+2024-03-12 09:53:52,212 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-20
+2024-03-12 09:53:52,213 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-22
+2024-03-12 09:53:52,212 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-21
+2024-03-12 09:53:52,214 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-23
+2024-03-12 09:53:52,215 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-24
+2024-03-12 09:53:52,216 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-25
+2024-03-12 09:53:52,216 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-26
+2024-03-12 09:53:52,216 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-27
+2024-03-12 09:53:52,217 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-28
+2024-03-12 09:53:52,219 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-29
+2024-03-12 09:53:52,221 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-30
+2024-03-12 09:53:52,233 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-31
+2024-03-12 09:53:52,240 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-32
+2024-03-12 09:53:52,241 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-33
+2024-03-12 09:53:52,246 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-34
+2024-03-12 09:53:52,253 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-35
+2024-03-12 09:53:52,253 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-36
+2024-03-12 09:53:52,259 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = 小平のMacBook
+2024-03-12 09:53:52,273 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2024-03-12 09:53:52,269 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-37
+2024-03-12 09:53:52,276 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-39
+2024-03-12 09:53:52,276 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-40
+2024-03-12 09:53:52,282 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2024-03-12 09:53:52,282 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to utf-8
+2024-03-12 09:53:52,282 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2024-03-12 09:53:52,283 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2024-03-12 09:53:52,285 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-41
+2024-03-12 09:53:52,289 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-42
+2024-03-12 09:53:52,295 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-43
+2024-03-12 09:53:52,297 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-38
+2024-03-12 09:53:52,310 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-45
+2024-03-12 09:53:52,311 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-44
+2024-03-12 09:53:52,311 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-46
+2024-03-12 09:53:52,317 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-47
+2024-03-12 09:53:52,320 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-48
+2024-03-12 09:53:52,322 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-50
+2024-03-12 09:53:52,325 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-49
+2024-03-12 09:53:52,348 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-55
+2024-03-12 09:53:52,406 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-66
+2024-03-12 09:53:52,369 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-58
+2024-03-12 09:53:52,386 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-61
+2024-03-12 09:53:52,400 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-65
+2024-03-12 09:53:52,333 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-51
+2024-03-12 09:53:52,354 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-56
+2024-03-12 09:53:52,335 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-52
+2024-03-12 09:53:52,385 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-62
+2024-03-12 09:53:52,353 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-53
+2024-03-12 09:53:52,348 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-54
+2024-03-12 09:53:52,369 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-59
+2024-03-12 09:53:52,357 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-57
+2024-03-12 09:53:52,394 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-64
+2024-03-12 09:53:52,381 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-60
+2024-03-12 09:53:52,391 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-63
+2024-03-12 09:53:52,417 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-69
+2024-03-12 09:53:52,417 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-68
+2024-03-12 09:53:52,426 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-67
+2024-03-12 09:53:52,426 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-70
+2024-03-12 09:53:52,429 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-71
+2024-03-12 09:53:52,436 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-72
+2024-03-12 09:53:52,442 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-73
+2024-03-12 09:53:52,448 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-74
+2024-03-12 09:53:52,450 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-75
+2024-03-12 09:53:52,467 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-79
+2024-03-12 09:53:52,467 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-76
+2024-03-12 09:53:52,482 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-82
+2024-03-12 09:53:52,474 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-80
+2024-03-12 09:53:52,466 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-77
+2024-03-12 09:53:52,486 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-83
+2024-03-12 09:53:52,480 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-81
+2024-03-12 09:53:52,469 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-78
+2024-03-12 09:53:52,493 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-84
+2024-03-12 09:53:52,504 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-85
+2024-03-12 09:53:52,512 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-87
+2024-03-12 09:53:52,512 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-88
+2024-03-12 09:53:52,536 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-89
+2024-03-12 09:53:52,528 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-90
+2024-03-12 09:53:52,535 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-91
+2024-03-12 09:53:52,534 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-92
+2024-03-12 09:53:52,537 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-93
+2024-03-12 09:53:52,536 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-86
+2024-03-12 09:53:52,545 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-94
+2024-03-12 09:53:52,571 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-95
+2024-03-12 09:53:52,571 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-96
+2024-03-12 09:53:52,572 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-99
+2024-03-12 09:53:52,570 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-98
+2024-03-12 09:53:52,573 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-97
+2024-03-12 09:53:52,575 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-100
+2024-03-12 09:53:52,580 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-101
+2024-03-12 09:53:52,587 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-103
+2024-03-12 09:53:52,586 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-102
+2024-03-12 09:53:52,603 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-104
+2024-03-12 09:53:52,605 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-105
+2024-03-12 09:53:52,610 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-106
+2024-03-12 09:53:52,614 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-107
+2024-03-12 09:53:52,617 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-108
+2024-03-12 09:53:52,628 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-109
+2024-03-12 09:53:52,630 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-110
+2024-03-12 09:53:52,635 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-111
+2024-03-12 09:53:52,635 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-112
+2024-03-12 09:53:52,637 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2024-03-12 09:53:52,637 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2024-03-12 09:53:52,643 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-113
+2024-03-12 09:53:52,658 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-116
+2024-03-12 09:53:52,660 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-117
+2024-03-12 09:53:52,664 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-118
+2024-03-12 09:53:52,667 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-114
+2024-03-12 09:53:52,678 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-119
+2024-03-12 09:53:52,691 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-122
+2024-03-12 09:53:52,691 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-124
+2024-03-12 09:53:52,675 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-115
+2024-03-12 09:53:52,694 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-121
+2024-03-12 09:53:52,691 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-120
+2024-03-12 09:53:52,691 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-123
+2024-03-12 09:53:52,748 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-133
+2024-03-12 09:53:52,739 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-130
+2024-03-12 09:53:52,739 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-131
+2024-03-12 09:53:52,739 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-129
+2024-03-12 09:53:52,715 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-125
+2024-03-12 09:53:52,729 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-127
+2024-03-12 09:53:52,770 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-135
+2024-03-12 09:53:52,769 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-137
+2024-03-12 09:53:52,753 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-134
+2024-03-12 09:53:52,774 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-136
+2024-03-12 09:53:52,769 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-132
+2024-03-12 09:53:52,783 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-126
+2024-03-12 09:53:52,786 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-141
+2024-03-12 09:53:52,784 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-140
+2024-03-12 09:53:52,800 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-145
+2024-03-12 09:53:52,784 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-128
+2024-03-12 09:53:52,785 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-138
+2024-03-12 09:53:52,795 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-143
+2024-03-12 09:53:52,795 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-144
+2024-03-12 09:53:52,789 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-139
+2024-03-12 09:53:52,830 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-151
+2024-03-12 09:53:52,830 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-147
+2024-03-12 09:53:52,822 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-149
+2024-03-12 09:53:52,822 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-148
+2024-03-12 09:53:52,844 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-150
+2024-03-12 09:53:52,839 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-153
+2024-03-12 09:53:52,835 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-146
+2024-03-12 09:53:52,860 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-157
+2024-03-12 09:53:52,848 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-155
+2024-03-12 09:53:52,866 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-158
+2024-03-12 09:53:52,846 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-154
+2024-03-12 09:53:52,835 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-152
+2024-03-12 09:53:52,855 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-156
+2024-03-12 09:53:52,871 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-159
+2024-03-12 09:53:52,871 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-160
+2024-03-12 09:53:52,885 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-162
+2024-03-12 09:53:52,892 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-163
+2024-03-12 09:53:52,896 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-164
+2024-03-12 09:53:52,898 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-142
+2024-03-12 09:53:52,879 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-161
+2024-03-12 09:53:52,921 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-169
+2024-03-12 09:53:52,901 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-165
+2024-03-12 09:53:52,911 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-167
+2024-03-12 09:53:52,936 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-173
+2024-03-12 09:53:52,945 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-174
+2024-03-12 09:53:52,928 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-170
+2024-03-12 09:53:52,928 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-171
+2024-03-12 09:53:52,915 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-168
+2024-03-12 09:53:52,951 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-175
+2024-03-12 09:53:52,902 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-166
+2024-03-12 09:53:52,975 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-178
+2024-03-12 09:53:52,974 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-179
+2024-03-12 09:53:52,947 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-172
+2024-03-12 09:53:52,977 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-176
+2024-03-12 09:53:52,978 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-177
+2024-03-12 09:53:52,976 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-180
+2024-03-12 09:53:52,990 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-183
+2024-03-12 09:53:52,989 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-181
+2024-03-12 09:53:52,989 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-182
+2024-03-12 09:53:52,995 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-184
+2024-03-12 09:53:52,997 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-185
+2024-03-12 09:53:53,010 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-187
+2024-03-12 09:53:53,010 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-186
+2024-03-12 09:53:53,012 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-188
+2024-03-12 09:53:53,017 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-189
+2024-03-12 09:53:53,021 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-190
+2024-03-12 09:53:53,032 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-191
+2024-03-12 09:53:53,036 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-192
+2024-03-12 09:53:53,039 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-193
+2024-03-12 09:53:53,045 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-194
+2024-03-12 09:53:53,050 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-195
+2024-03-12 09:53:53,056 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-197
+2024-03-12 09:53:53,056 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-196
+2024-03-12 09:53:53,061 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-198
+2024-03-12 09:53:53,070 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-199
+2024-03-12 09:53:53,075 INFO o.a.j.t.JMeterThread: Thread started: 线程组 1-200
+2024-03-12 09:53:54,138 INFO o.a.j.p.h.s.h.LazyLayeredConnectionSocketFactory: Setting up HTTPS TrustAll Socket Factory
+2024-03-12 09:53:54,151 INFO o.a.j.u.JsseSSLManager: Using default SSL protocol: TLS
+2024-03-12 09:53:54,151 INFO o.a.j.u.JsseSSLManager: SSL session context: per-thread
+2024-03-12 09:53:54,436 INFO o.a.j.u.SSLManager: JmeterKeyStore Location:  type JKS
+2024-03-12 09:53:54,534 INFO o.a.j.u.SSLManager: KeyStore created OK
+2024-03-12 09:53:54,535 WARN o.a.j.u.SSLManager: Keystore file not found, loading empty keystore
+2024-03-12 09:54:02,047 INFO o.a.j.r.Summariser: summary +      1 in 00:00:10 =    0.1/s Avg:  8210 Min:  8210 Max:  8210 Err:     0 (0.00%) Active: 200 Started: 200 Finished: 0
+2024-03-12 09:54:02,052 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-90
+2024-03-12 09:54:02,052 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-90
+2024-03-12 09:54:02,278 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-110
+2024-03-12 09:54:02,278 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-110
+2024-03-12 09:54:02,579 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-162
+2024-03-12 09:54:02,579 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-138
+2024-03-12 09:54:02,579 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-162
+2024-03-12 09:54:02,579 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-138
+2024-03-12 09:54:02,647 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-136
+2024-03-12 09:54:02,648 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-136
+2024-03-12 09:54:02,661 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-46
+2024-03-12 09:54:02,661 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-46
+2024-03-12 09:54:02,695 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-80
+2024-03-12 09:54:02,696 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-80
+2024-03-12 09:54:02,699 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-54
+2024-03-12 09:54:02,699 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-54
+2024-03-12 09:54:02,746 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-177
+2024-03-12 09:54:02,746 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-177
+2024-03-12 09:54:02,758 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-16
+2024-03-12 09:54:02,760 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-16
+2024-03-12 09:54:02,799 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-111
+2024-03-12 09:54:02,800 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-111
+2024-03-12 09:54:02,807 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-135
+2024-03-12 09:54:02,808 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-135
+2024-03-12 09:54:02,808 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-41
+2024-03-12 09:54:02,808 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-41
+2024-03-12 09:54:02,903 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-145
+2024-03-12 09:54:02,904 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-145
+2024-03-12 09:54:02,907 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-75
+2024-03-12 09:54:02,906 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-15
+2024-03-12 09:54:02,907 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-75
+2024-03-12 09:54:02,907 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-15
+2024-03-12 09:54:02,907 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-171
+2024-03-12 09:54:02,908 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-171
+2024-03-12 09:54:02,916 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-122
+2024-03-12 09:54:02,917 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-122
+2024-03-12 09:54:02,932 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-51
+2024-03-12 09:54:02,931 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-53
+2024-03-12 09:54:02,933 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-53
+2024-03-12 09:54:02,934 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-51
+2024-03-12 09:54:02,935 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-4
+2024-03-12 09:54:02,935 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-182
+2024-03-12 09:54:02,935 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-4
+2024-03-12 09:54:02,935 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-182
+2024-03-12 09:54:02,949 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-82
+2024-03-12 09:54:02,950 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-82
+2024-03-12 09:54:02,957 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-59
+2024-03-12 09:54:02,957 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-59
+2024-03-12 09:54:02,958 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-32
+2024-03-12 09:54:02,958 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-32
+2024-03-12 09:54:02,958 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-175
+2024-03-12 09:54:02,958 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-175
+2024-03-12 09:54:02,961 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-121
+2024-03-12 09:54:02,961 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-121
+2024-03-12 09:54:02,965 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-70
+2024-03-12 09:54:02,965 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-70
+2024-03-12 09:54:02,968 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-26
+2024-03-12 09:54:02,968 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-26
+2024-03-12 09:54:02,992 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-144
+2024-03-12 09:54:02,992 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-191
+2024-03-12 09:54:02,993 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-144
+2024-03-12 09:54:02,993 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-191
+2024-03-12 09:54:03,000 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-112
+2024-03-12 09:54:03,000 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-112
+2024-03-12 09:54:03,001 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-102
+2024-03-12 09:54:03,001 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-94
+2024-03-12 09:54:03,001 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-102
+2024-03-12 09:54:03,001 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-94
+2024-03-12 09:54:03,026 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-101
+2024-03-12 09:54:03,026 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-200
+2024-03-12 09:54:03,026 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-188
+2024-03-12 09:54:03,026 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-101
+2024-03-12 09:54:03,026 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-200
+2024-03-12 09:54:03,026 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-188
+2024-03-12 09:54:03,031 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-163
+2024-03-12 09:54:03,031 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-163
+2024-03-12 09:54:03,033 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-45
+2024-03-12 09:54:03,033 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-55
+2024-03-12 09:54:03,033 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-31
+2024-03-12 09:54:03,033 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-55
+2024-03-12 09:54:03,033 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-31
+2024-03-12 09:54:03,033 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-45
+2024-03-12 09:54:03,034 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-49
+2024-03-12 09:54:03,034 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-129
+2024-03-12 09:54:03,034 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-49
+2024-03-12 09:54:03,034 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-117
+2024-03-12 09:54:03,034 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-24
+2024-03-12 09:54:03,034 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-87
+2024-03-12 09:54:03,034 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-24
+2024-03-12 09:54:03,034 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-129
+2024-03-12 09:54:03,034 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-87
+2024-03-12 09:54:03,034 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-117
+2024-03-12 09:54:03,036 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-198
+2024-03-12 09:54:03,036 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-20
+2024-03-12 09:54:03,036 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-65
+2024-03-12 09:54:03,036 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-198
+2024-03-12 09:54:03,036 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-20
+2024-03-12 09:54:03,036 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-65
+2024-03-12 09:54:03,036 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-99
+2024-03-12 09:54:03,036 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-99
+2024-03-12 09:54:03,034 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-120
+2024-03-12 09:54:03,037 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-120
+2024-03-12 09:54:03,067 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-38
+2024-03-12 09:54:03,067 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-38
+2024-03-12 09:54:03,074 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-11
+2024-03-12 09:54:03,074 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-11
+2024-03-12 09:54:03,077 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-159
+2024-03-12 09:54:03,077 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-103
+2024-03-12 09:54:03,077 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-116
+2024-03-12 09:54:03,077 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-159
+2024-03-12 09:54:03,077 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-103
+2024-03-12 09:54:03,077 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-116
+2024-03-12 09:54:03,084 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-85
+2024-03-12 09:54:03,084 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-66
+2024-03-12 09:54:03,084 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-73
+2024-03-12 09:54:03,085 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-85
+2024-03-12 09:54:03,085 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-66
+2024-03-12 09:54:03,085 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-73
+2024-03-12 09:54:03,086 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-190
+2024-03-12 09:54:03,086 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-190
+2024-03-12 09:54:03,088 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-8
+2024-03-12 09:54:03,090 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-8
+2024-03-12 09:54:03,146 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-3
+2024-03-12 09:54:03,146 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-61
+2024-03-12 09:54:03,146 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-3
+2024-03-12 09:54:03,146 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-61
+2024-03-12 09:54:03,148 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-76
+2024-03-12 09:54:03,148 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-76
+2024-03-12 09:54:03,151 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-60
+2024-03-12 09:54:03,151 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-60
+2024-03-12 09:54:03,176 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-6
+2024-03-12 09:54:03,176 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-167
+2024-03-12 09:54:03,176 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-6
+2024-03-12 09:54:03,176 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-167
+2024-03-12 09:54:03,341 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-194
+2024-03-12 09:54:03,342 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-194
+2024-03-12 09:54:03,411 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-95
+2024-03-12 09:54:03,411 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-95
+2024-03-12 09:54:03,491 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-151
+2024-03-12 09:54:03,491 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-92
+2024-03-12 09:54:03,491 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-173
+2024-03-12 09:54:03,491 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-151
+2024-03-12 09:54:03,491 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-173
+2024-03-12 09:54:03,491 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-92
+2024-03-12 09:54:03,681 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-199
+2024-03-12 09:54:03,681 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-199
+2024-03-12 09:54:03,788 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-187
+2024-03-12 09:54:03,788 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-119
+2024-03-12 09:54:03,788 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-187
+2024-03-12 09:54:03,788 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-119
+2024-03-12 09:54:03,789 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-91
+2024-03-12 09:54:03,789 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-91
+2024-03-12 09:54:03,797 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-118
+2024-03-12 09:54:03,797 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-170
+2024-03-12 09:54:03,799 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-118
+2024-03-12 09:54:03,799 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-128
+2024-03-12 09:54:03,799 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-128
+2024-03-12 09:54:03,799 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-170
+2024-03-12 09:54:03,831 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-178
+2024-03-12 09:54:03,831 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-178
+2024-03-12 09:54:03,833 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-165
+2024-03-12 09:54:03,833 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-74
+2024-03-12 09:54:03,833 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-165
+2024-03-12 09:54:03,834 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-57
+2024-03-12 09:54:03,834 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-74
+2024-03-12 09:54:03,834 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-57
+2024-03-12 09:54:03,863 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-18
+2024-03-12 09:54:03,863 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-134
+2024-03-12 09:54:03,863 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-156
+2024-03-12 09:54:03,864 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-193
+2024-03-12 09:54:03,865 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-134
+2024-03-12 09:54:03,865 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-131
+2024-03-12 09:54:03,866 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-156
+2024-03-12 09:54:03,866 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-193
+2024-03-12 09:54:03,865 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-18
+2024-03-12 09:54:03,869 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-131
+2024-03-12 09:54:03,882 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-168
+2024-03-12 09:54:03,882 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-176
+2024-03-12 09:54:03,882 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-35
+2024-03-12 09:54:03,882 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-196
+2024-03-12 09:54:03,883 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-168
+2024-03-12 09:54:03,883 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-176
+2024-03-12 09:54:03,883 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-196
+2024-03-12 09:54:03,883 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-35
+2024-03-12 09:54:04,002 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-161
+2024-03-12 09:54:04,002 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-139
+2024-03-12 09:54:04,002 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-107
+2024-03-12 09:54:04,002 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-56
+2024-03-12 09:54:04,002 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-179
+2024-03-12 09:54:04,004 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-107
+2024-03-12 09:54:04,004 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-179
+2024-03-12 09:54:04,004 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-139
+2024-03-12 09:54:04,006 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-161
+2024-03-12 09:54:04,007 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-56
+2024-03-12 09:54:04,047 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-39
+2024-03-12 09:54:04,047 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-39
+2024-03-12 09:54:04,047 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-1
+2024-03-12 09:54:04,047 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-1
+2024-03-12 09:54:04,048 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-96
+2024-03-12 09:54:04,048 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-96
+2024-03-12 09:54:04,048 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-93
+2024-03-12 09:54:04,048 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-93
+2024-03-12 09:54:04,047 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-12
+2024-03-12 09:54:04,048 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-12
+2024-03-12 09:54:04,047 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-186
+2024-03-12 09:54:04,050 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-186
+2024-03-12 09:54:04,049 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-184
+2024-03-12 09:54:04,050 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-184
+2024-03-12 09:54:04,049 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-30
+2024-03-12 09:54:04,050 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-30
+2024-03-12 09:54:04,048 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-21
+2024-03-12 09:54:04,050 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-21
+2024-03-12 09:54:04,062 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-42
+2024-03-12 09:54:04,062 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-172
+2024-03-12 09:54:04,067 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-50
+2024-03-12 09:54:04,066 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-42
+2024-03-12 09:54:04,066 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-89
+2024-03-12 09:54:04,066 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-172
+2024-03-12 09:54:04,066 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-63
+2024-03-12 09:54:04,066 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-83
+2024-03-12 09:54:04,066 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-109
+2024-03-12 09:54:04,061 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-153
+2024-03-12 09:54:04,062 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-64
+2024-03-12 09:54:04,066 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-19
+2024-03-12 09:54:04,066 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-141
+2024-03-12 09:54:04,066 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-52
+2024-03-12 09:54:04,066 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-105
+2024-03-12 09:54:04,066 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-84
+2024-03-12 09:54:04,066 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-124
+2024-03-12 09:54:04,080 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-62
+2024-03-12 09:54:04,106 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-19
+2024-03-12 09:54:04,105 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-83
+2024-03-12 09:54:04,108 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-124
+2024-03-12 09:54:04,105 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-63
+2024-03-12 09:54:04,108 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-84
+2024-03-12 09:54:04,105 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-27
+2024-03-12 09:54:04,105 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-153
+2024-03-12 09:54:04,105 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-109
+2024-03-12 09:54:04,107 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-52
+2024-03-12 09:54:04,108 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-62
+2024-03-12 09:54:04,105 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-89
+2024-03-12 09:54:04,105 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-64
+2024-03-12 09:54:04,105 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-50
+2024-03-12 09:54:04,105 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-158
+2024-03-12 09:54:04,105 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-141
+2024-03-12 09:54:04,107 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-105
+2024-03-12 09:54:04,113 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-27
+2024-03-12 09:54:04,114 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-158
+2024-03-12 09:54:04,148 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-189
+2024-03-12 09:54:04,148 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-189
+2024-03-12 09:54:04,151 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-181
+2024-03-12 09:54:04,151 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-181
+2024-03-12 09:54:04,173 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-183
+2024-03-12 09:54:04,173 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-155
+2024-03-12 09:54:04,173 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-183
+2024-03-12 09:54:04,173 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-71
+2024-03-12 09:54:04,173 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-155
+2024-03-12 09:54:04,173 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-2
+2024-03-12 09:54:04,173 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-2
+2024-03-12 09:54:04,173 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-71
+2024-03-12 09:54:04,173 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-174
+2024-03-12 09:54:04,173 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-174
+2024-03-12 09:54:04,174 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-137
+2024-03-12 09:54:04,174 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-86
+2024-03-12 09:54:04,174 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-69
+2024-03-12 09:54:04,174 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-137
+2024-03-12 09:54:04,174 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-86
+2024-03-12 09:54:04,174 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-69
+2024-03-12 09:54:04,178 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-127
+2024-03-12 09:54:04,178 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-185
+2024-03-12 09:54:04,178 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-127
+2024-03-12 09:54:04,178 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-185
+2024-03-12 09:54:04,178 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-126
+2024-03-12 09:54:04,178 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-126
+2024-03-12 09:54:04,178 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-104
+2024-03-12 09:54:04,178 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-197
+2024-03-12 09:54:04,178 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-195
+2024-03-12 09:54:04,178 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-197
+2024-03-12 09:54:04,178 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-195
+2024-03-12 09:54:04,179 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-104
+2024-03-12 09:54:04,178 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-17
+2024-03-12 09:54:04,179 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-17
+2024-03-12 09:54:04,179 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-154
+2024-03-12 09:54:04,179 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-154
+2024-03-12 09:54:04,179 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-180
+2024-03-12 09:54:04,179 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-180
+2024-03-12 09:54:04,179 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-98
+2024-03-12 09:54:04,179 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-98
+2024-03-12 09:54:04,181 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-143
+2024-03-12 09:54:04,181 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-130
+2024-03-12 09:54:04,181 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-23
+2024-03-12 09:54:04,181 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-143
+2024-03-12 09:54:04,181 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-13
+2024-03-12 09:54:04,181 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-146
+2024-03-12 09:54:04,181 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-148
+2024-03-12 09:54:04,181 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-7
+2024-03-12 09:54:04,181 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-7
+2024-03-12 09:54:04,181 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-130
+2024-03-12 09:54:04,181 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-13
+2024-03-12 09:54:04,181 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-23
+2024-03-12 09:54:04,181 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-77
+2024-03-12 09:54:04,181 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-36
+2024-03-12 09:54:04,182 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-36
+2024-03-12 09:54:04,182 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-77
+2024-03-12 09:54:04,182 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-146
+2024-03-12 09:54:04,182 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-148
+2024-03-12 09:54:04,189 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-81
+2024-03-12 09:54:04,189 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-147
+2024-03-12 09:54:04,189 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-192
+2024-03-12 09:54:04,189 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-81
+2024-03-12 09:54:04,189 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-192
+2024-03-12 09:54:04,189 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-67
+2024-03-12 09:54:04,189 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-67
+2024-03-12 09:54:04,189 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-147
+2024-03-12 09:54:04,189 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-22
+2024-03-12 09:54:04,190 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-22
+2024-03-12 09:54:04,204 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-72
+2024-03-12 09:54:04,204 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-43
+2024-03-12 09:54:04,204 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-79
+2024-03-12 09:54:04,207 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-43
+2024-03-12 09:54:04,207 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-166
+2024-03-12 09:54:04,207 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-125
+2024-03-12 09:54:04,208 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-125
+2024-03-12 09:54:04,208 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-166
+2024-03-12 09:54:04,209 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-72
+2024-03-12 09:54:04,208 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-79
+2024-03-12 09:54:04,211 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-164
+2024-03-12 09:54:04,211 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-164
+2024-03-12 09:54:04,211 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-169
+2024-03-12 09:54:04,212 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-169
+2024-03-12 09:54:04,212 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-123
+2024-03-12 09:54:04,212 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-123
+2024-03-12 09:54:04,213 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-14
+2024-03-12 09:54:04,213 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-14
+2024-03-12 09:54:04,213 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-88
+2024-03-12 09:54:04,213 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-88
+2024-03-12 09:54:04,213 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-28
+2024-03-12 09:54:04,213 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-28
+2024-03-12 09:54:04,213 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-68
+2024-03-12 09:54:04,213 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-68
+2024-03-12 09:54:04,213 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-157
+2024-03-12 09:54:04,213 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-157
+2024-03-12 09:54:04,214 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-149
+2024-03-12 09:54:04,214 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-149
+2024-03-12 09:54:04,214 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-9
+2024-03-12 09:54:04,214 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-9
+2024-03-12 09:54:04,217 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-25
+2024-03-12 09:54:04,217 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-25
+2024-03-12 09:54:04,231 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-108
+2024-03-12 09:54:04,231 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-115
+2024-03-12 09:54:04,231 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-115
+2024-03-12 09:54:04,231 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-108
+2024-03-12 09:54:04,231 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-152
+2024-03-12 09:54:04,231 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-152
+2024-03-12 09:54:04,232 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-113
+2024-03-12 09:54:04,234 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-113
+2024-03-12 09:54:04,245 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-47
+2024-03-12 09:54:04,245 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-106
+2024-03-12 09:54:04,245 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-133
+2024-03-12 09:54:04,248 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-132
+2024-03-12 09:54:04,252 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-106
+2024-03-12 09:54:04,245 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-10
+2024-03-12 09:54:04,248 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-33
+2024-03-12 09:54:04,248 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-47
+2024-03-12 09:54:04,256 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-132
+2024-03-12 09:54:04,248 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-5
+2024-03-12 09:54:04,256 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-133
+2024-03-12 09:54:04,259 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-33
+2024-03-12 09:54:04,261 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-10
+2024-03-12 09:54:04,260 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-5
+2024-03-12 09:54:04,245 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-114
+2024-03-12 09:54:04,261 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-114
+2024-03-12 09:54:04,264 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-78
+2024-03-12 09:54:04,264 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-78
+2024-03-12 09:54:04,272 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-97
+2024-03-12 09:54:04,272 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-97
+2024-03-12 09:54:04,272 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-37
+2024-03-12 09:54:04,272 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-58
+2024-03-12 09:54:04,272 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-58
+2024-03-12 09:54:04,272 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-37
+2024-03-12 09:54:04,291 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-29
+2024-03-12 09:54:04,292 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-29
+2024-03-12 09:54:04,302 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-140
+2024-03-12 09:54:04,302 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-140
+2024-03-12 09:54:04,308 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-44
+2024-03-12 09:54:04,309 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-44
+2024-03-12 09:54:04,331 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-40
+2024-03-12 09:54:04,331 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-160
+2024-03-12 09:54:04,331 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-40
+2024-03-12 09:54:04,331 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-160
+2024-03-12 09:54:04,360 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-142
+2024-03-12 09:54:04,360 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-142
+2024-03-12 09:54:04,376 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-100
+2024-03-12 09:54:04,376 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-100
+2024-03-12 09:54:04,384 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-48
+2024-03-12 09:54:04,384 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-48
+2024-03-12 09:54:04,403 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-150
+2024-03-12 09:54:04,403 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-150
+2024-03-12 09:54:04,416 INFO o.a.j.t.JMeterThread: Thread is done: 线程组 1-34
+2024-03-12 09:54:04,416 INFO o.a.j.t.JMeterThread: Thread finished: 线程组 1-34
+2024-03-12 09:54:04,418 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2024-03-12 09:54:04,422 INFO o.a.j.r.Summariser: summary +    199 in 00:00:02 =   83.6/s Avg:  9882 Min:  8409 Max: 10594 Err:   159 (79.90%) Active: 0 Started: 200 Finished: 200
+2024-03-12 09:54:04,423 INFO o.a.j.r.Summariser: summary =    200 in 00:00:12 =   16.2/s Avg:  9874 Min:  8210 Max: 10594 Err:   159 (79.50%)
+2024-03-12 09:54:04,423 INFO o.a.j.JMeter: Generating Dashboard
+2024-03-12 09:54:04,423 INFO o.a.j.r.d.ReportGenerator: Flushing result collector before report Generation
+2024-03-12 09:54:04,448 INFO o.a.j.r.p.NormalizerSampleConsumer: Using format, 'ms', to parse timeStamp field
+2024-03-12 09:54:04,669 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.AggregateConsumer#stopProducing(): beginDate produced 0 samples
+2024-03-12 09:54:04,669 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.AggregateConsumer#stopProducing(): endDate produced 0 samples
+2024-03-12 09:54:04,671 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.ApdexSummaryConsumer#stopProducing(): apdexSummary produced 0 samples
+2024-03-12 09:54:04,671 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.RequestsSummaryConsumer#stopProducing(): requestsSummary produced 0 samples
+2024-03-12 09:54:04,675 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.StatisticsSummaryConsumer#stopProducing(): statisticsSummary produced 0 samples
+2024-03-12 09:54:04,681 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.Top5ErrorsBySamplerConsumer#stopProducing(): top5ErrorsBySampler produced 0 samples
+2024-03-12 09:54:04,681 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.ErrorsSummaryConsumer#stopProducing(): errorsSummary produced 0 samples
+2024-03-12 09:54:04,681 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.HitsPerSecondGraphConsumer#stopProducing(): hitsPerSecond produced 0 samples
+2024-03-12 09:54:04,697 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.LatencyVSRequestGraphConsumer#stopProducing(): latencyVsRequest produced 0 samples
+2024-03-12 09:54:04,698 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.SyntheticResponseTimeDistributionGraphConsumer#stopProducing(): syntheticResponseTimeDistribution produced 0 samples
+2024-03-12 09:54:04,698 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.BytesThroughputGraphConsumer#stopProducing(): bytesThroughputOverTime produced 0 samples
+2024-03-12 09:54:04,698 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.CodesPerSecondGraphConsumer#stopProducing(): codesPerSecond produced 0 samples
+2024-03-12 09:54:04,704 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeVSRequestGraphConsumer#stopProducing(): responseTimeVsRequest produced 0 samples
+2024-03-12 09:54:04,705 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): startIntervalControlerFilter produced 1400 samples
+2024-03-12 09:54:04,705 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TotalTPSGraphConsumer#stopProducing(): totalTPS produced 0 samples
+2024-03-12 09:54:04,705 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ActiveThreadsGraphConsumer#stopProducing(): activeThreadsOverTime produced 0 samples
+2024-03-12 09:54:04,705 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TimeVSThreadGraphConsumer#stopProducing(): timeVsThreads produced 0 samples
+2024-03-12 09:54:04,705 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeDistributionGraphConsumer#stopProducing(): responseTimeDistribution produced 0 samples
+2024-03-12 09:54:04,705 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TransactionsPerSecondGraphConsumer#stopProducing(): transactionsPerSecond produced 0 samples
+2024-03-12 09:54:04,705 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimePercentilesGraphConsumer#stopProducing(): responseTimePercentiles produced 0 samples
+2024-03-12 09:54:04,708 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimePercentilesOverTimeGraphConsumer#stopProducing(): responseTimePercentilesOverTime produced 0 samples
+2024-03-12 09:54:04,708 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeOverTimeGraphConsumer#stopProducing(): responseTimesOverTime produced 0 samples
+2024-03-12 09:54:04,708 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ConnectTimeOverTimeGraphConsumer#stopProducing(): connectTimeOverTime produced 0 samples
+2024-03-12 09:54:04,708 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.LatencyOverTimeGraphConsumer#stopProducing(): latenciesOverTime produced 0 samples
+2024-03-12 09:54:04,708 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): nameFilter produced 3000 samples
+2024-03-12 09:54:04,708 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): dateRangeFilter produced 600 samples
+2024-03-12 09:54:04,708 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.NormalizerSampleConsumer#stopProducing(): normalizer produced 200 samples
+2024-03-12 09:54:04,709 INFO o.a.j.r.p.CsvFileSampleSource: produce(): 200 samples produced in 217ms on channel 0
+2024-03-12 09:54:04,709 INFO o.a.j.r.d.ReportGenerator: Exporting data using exporter:'json' of className:'org.apache.jmeter.report.dashboard.JsonExporter'
+2024-03-12 09:54:04,711 INFO o.a.j.r.d.JsonExporter: Found data for consumer statisticsSummary in context
+2024-03-12 09:54:04,712 INFO o.a.j.r.d.JsonExporter: Creating statistics for overall
+2024-03-12 09:54:04,712 INFO o.a.j.r.d.JsonExporter: Creating statistics for other transactions
+2024-03-12 09:54:04,713 INFO o.a.j.r.d.JsonExporter: Checking output folder
+2024-03-12 09:54:04,714 INFO o.a.j.r.d.JsonExporter: Writing statistics JSON to /Volumes/Disk/apache-jmeter-5.1.1/jmeter/report/2024-03-12~09-53-49/statistics.json
+2024-03-12 09:54:05,019 INFO o.a.j.r.d.ReportGenerator: Exporting data using exporter:'html' of className:'org.apache.jmeter.report.dashboard.HtmlTemplateExporter'
+2024-03-12 09:54:05,043 INFO o.a.j.r.d.HtmlTemplateExporter: Will generate dashboard in folder: /Volumes/Disk/apache-jmeter-5.1.1/jmeter/report/2024-03-12~09-53-49
+2024-03-12 09:54:05,179 INFO o.a.j.r.d.HtmlTemplateExporter: Report will be generated in: /Volumes/Disk/apache-jmeter-5.1.1/jmeter/report/2024-03-12~09-53-49, creating folder structure
+2024-03-12 09:54:05,186 INFO o.a.j.r.d.TemplateVisitor: Copying folder from '/Volumes/Disk/apache-jmeter-5.1.1/bin/report-template' to '/Volumes/Disk/apache-jmeter-5.1.1/jmeter/report/2024-03-12~09-53-49', got message:[/Volumes/Disk/apache-jmeter-5.1.1/jmeter/report/2024-03-12~09-53-49/statistics.json, /Volumes/Disk/apache-jmeter-5.1.1/jmeter/report/2024-03-12~09-53-49/report.html], found non empty folder with following content {}, will be ignored
+2024-03-12 09:54:05,481 INFO o.a.j.JMeter: Dashboard generated
+2024-03-12 09:54:05,482 WARN o.a.j.e.StandardJMeterEngine: Error encountered during shutdown of org.apache.jmeter.JMeter$ListenToTest@38d5b107
 java.lang.NullPointerException: null
 	at org.apache.jmeter.JMeter$ListenToTest.testEnded(JMeter.java:1538) ~[ApacheJMeter_core.jar:5.1.1 r1855137]
 	at org.apache.jmeter.engine.StandardJMeterEngine.notifyTestListenersOfEnd(StandardJMeterEngine.java:218) [ApacheJMeter_core.jar:5.1.1 r1855137]
