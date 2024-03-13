@@ -13,8 +13,8 @@ class TestCase(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         print('\n程序开始')
-        #cls.driver = webdriver.Chrome(options=Browser().browser_ui()) # 带UI界面启动
-        cls.driver = webdriver.Chrome(options=Browser().browser_headless())  # 无头模式启动
+        cls.driver = webdriver.Chrome(options=Browser().browser_ui()) # 带UI界面启动
+        #cls.driver = webdriver.Chrome(options=Browser().browser_headless())  # 无头模式启动
         cls.obj = BasePage(cls.driver)
         cls.obj.implicitly_wait(15)
 
@@ -39,7 +39,7 @@ class TestCase(unittest.TestCase):
         self.obj.wait(2)
         self.obj.get_li_value('el-scrollbar__view el-select-dropdown__list', '失败')
         self.obj.click((By.XPATH, '/html/body/div[1]/div[2]/div[2]/div/div[1]/div[12]/div[3]/button[1]'))
-        self.obj.wait(5)
+        self.obj.wait(8)
         failed_orders_text = self.obj.get_text((By.XPATH, '/html/body/div[1]/div[2]/div[2]/div/div[1]/div[12]/div[2]/span[2]'))
         match = re.search(r'\d+', failed_orders_text)
         if match:
@@ -55,7 +55,7 @@ class TestCase(unittest.TestCase):
         """将结果保存到result.txt文件中"""
         with open('result.txt', 'w', encoding='utf-8') as f:
             if 0 < failed_orders <= 20:
-                for index in range(1, failed_orders+1):
+                for index in range(1, failed_orders + 1):
                     xpath = failed_reason_xpath.format(index=index)
                     xpath2 = order_number_xpath.format(index=index)
                     failed_reason = self.obj.get_text((By.XPATH, xpath))

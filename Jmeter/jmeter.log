@@ -132,15 +132,4 @@
 2024-03-12 17:07:44,877 INFO o.a.j.r.d.JsonExporter: Creating statistics for overall
 2024-03-12 17:07:44,878 INFO o.a.j.r.d.JsonExporter: Creating statistics for other transactions
 2024-03-12 17:07:44,878 INFO o.a.j.r.d.JsonExporter: Checking output folder
-2024-03-12 17:07:44,878 INFO o.a.j.r.d.JsonExporter: Writing statistics JSON to /Volumes/Disk/apache-jmeter-5.1.1/jmeter/report/1/statistics.json
-2024-03-12 17:07:45,088 INFO o.a.j.r.d.ReportGenerator: Exporting data using exporter:'html' of className:'org.apache.jmeter.report.dashboard.HtmlTemplateExporter'
-2024-03-12 17:07:45,091 INFO o.a.j.r.d.HtmlTemplateExporter: Will generate dashboard in folder: /Volumes/Disk/apache-jmeter-5.1.1/jmeter/report/1
-2024-03-12 17:07:45,196 INFO o.a.j.r.d.HtmlTemplateExporter: Report will be generated in: /Volumes/Disk/apache-jmeter-5.1.1/jmeter/report/1, creating folder structure
-2024-03-12 17:07:45,199 INFO o.a.j.r.d.TemplateVisitor: Copying folder from '/Volumes/Disk/apache-jmeter-5.1.1/bin/report-template' to '/Volumes/Disk/apache-jmeter-5.1.1/jmeter/report/1', got message:[/Volumes/Disk/apache-jmeter-5.1.1/jmeter/report/1/statistics.json, /Volumes/Disk/apache-jmeter-5.1.1/jmeter/report/1/report.html], found non empty folder with following content {}, will be ignored
-2024-03-12 17:07:45,507 INFO o.a.j.JMeter: Dashboard generated
-2024-03-12 17:07:45,507 WARN o.a.j.e.StandardJMeterEngine: Error encountered during shutdown of org.apache.jmeter.JMeter$ListenToTest@38d5b107
-java.lang.NullPointerException: null
-	at org.apache.jmeter.JMeter$ListenToTest.testEnded(JMeter.java:1538) ~[ApacheJMeter_core.jar:5.1.1 r1855137]
-	at org.apache.jmeter.engine.StandardJMeterEngine.notifyTestListenersOfEnd(StandardJMeterEngine.java:218) [ApacheJMeter_core.jar:5.1.1 r1855137]
-	at org.apache.jmeter.engine.StandardJMeterEngine.run(StandardJMeterEngine.java:492) [ApacheJMeter_core.jar:5.1.1 r1855137]
-	at java.lang.Thread.run(Thread.java:834) [?:?]
+
