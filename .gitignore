@@ -1,11 +1,12 @@
 # Project exclude paths
 /venv/
-/ERP/picture
-/Appium/report
-/Appium/report_email
+/Appium/report/
+/Appium/report_email/
 /Zhujia_Factory/report/
 /Zhujia_Factory/report_email/
-/ERP/dist/
 /ERP/build/
-/Common_File/dist/
+/ERP/dist/
+/ERP/picture/
 /Common_File/build/
+/Common_File/dist/
+
