@@ -8,7 +8,6 @@
 |_| \_\__,_|_.__/|_.__/|_|\__|_|  |_|\__,_|___/_|\_\
 '''
 import argparse
-
 from config.config_logging import loglog
 from multiprocessing import Pool, Manager
 from poc.index import *

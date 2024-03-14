@@ -1,3 +1,2 @@
 fake_useragent==0.1.11
 requests==2.23.0
-#python3.8 WeblogicScan.py -u 47.96.196.116 -p 443
