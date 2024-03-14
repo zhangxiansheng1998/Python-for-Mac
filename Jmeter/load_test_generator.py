@@ -4,7 +4,7 @@ import time
 from pathlib import Path
 
 
-def modify_jmx_file(file_path, new_num_threads):
+def modify_jmx_thread(file_path, new_num_threads):
     """修改jmx文件中的线程数"""
     with open(file_path, 'r') as file:
         jmx_content = file.read()
@@ -21,7 +21,7 @@ def modify_jmx_file(file_path, new_num_threads):
     print(f"已成功将线程数量修改为：{new_num_threads}")
 
 
-def read_jmx_tread(file_path):
+def read_jmx_thread(file_path):
     """读取jmx文件中的线程数"""
     with open(file_path, 'r') as file:
         jmx_content = file.read()
@@ -45,14 +45,14 @@ def run(filename):
             # 尝试获取用户输入的数字
             num_threads = int(input("请输入新的线程数："))
             # 如果输入成功，则更新线程数
-            modify_jmx_file(filename, num_threads)
+            modify_jmx_thread(filename, num_threads)
         except ValueError:
             # 如果输入的不是数字，则捕获异常并打印错误信息
             print("输入的不是一个有效的数字，线程数保持不变。")
     elif answer == "否":
         # 如果用户输入否，则不修改线程数，并打印信息
         print("不修改线程数")
-        read_jmx_tread(filename)
+        read_jmx_thread(filename)
     else:
         # 如果用户输入既不是是也不是否，则打印提示信息
         print("输入有误，请输入是或否")
@@ -81,14 +81,14 @@ def run(filename):
                             # 尝试获取用户输入的数字
                             num_threads = int(input("请输入新的线程数："))
                             # 如果输入成功，则更新线程数
-                            modify_jmx_file(filename, num_threads)
+                            modify_jmx_thread(filename, num_threads)
                         except ValueError:
                             # 如果输入的不是数字，则捕获异常并打印错误信息
                             print("输入的不是一个有效的数字，线程数保持不变。")
                     elif answer == "否":
                         # 如果用户输入否，则不修改线程数，并打印信息
                         print("不修改线程数")
-                        read_jmx_tread(filename)
+                        read_jmx_thread(filename)
                     else:
                         # 如果用户输入既不是是也不是否，则打印提示信息
                         print("输入有误，请输入是或否")
