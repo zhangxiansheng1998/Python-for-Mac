@@ -5,7 +5,7 @@ from pathlib import Path
 
 
 def modify_jmx_file(file_path, new_num_threads):
-    # 读取JMX文件内容
+    """修改jmx文件中的线程数"""
     with open(file_path, 'r') as file:
         jmx_content = file.read()
 
@@ -19,6 +19,22 @@ def modify_jmx_file(file_path, new_num_threads):
         file.write(modified_content)
 
     print(f"已成功将线程数量修改为：{new_num_threads}")
+
+
+def read_jmx_tread(file_path):
+    """读取jmx文件中的线程数"""
+    with open(file_path, 'r') as file:
+        jmx_content = file.read()
+
+    # 使用正则表达式匹配并替换数字
+    pattern = r'<stringProp name="ThreadGroup.num_threads">(\d+)</stringProp>'
+    match = re.search(pattern, jmx_content)
+
+    if match:
+        thread_count = match.group(1)  # group(1) 提取括号中的匹配内容
+        print(f"当前文件线程数为: {thread_count}")
+    else:
+        print("未找到线程数")
 
 
 def run(filename):
@@ -36,6 +52,7 @@ def run(filename):
     elif answer == "否":
         # 如果用户输入否，则不修改线程数，并打印信息
         print("不修改线程数")
+        read_jmx_tread(filename)
     else:
         # 如果用户输入既不是是也不是否，则打印提示信息
         print("输入有误，请输入是或否")
@@ -71,6 +88,7 @@ def run(filename):
                     elif answer == "否":
                         # 如果用户输入否，则不修改线程数，并打印信息
                         print("不修改线程数")
+                        read_jmx_tread(filename)
                     else:
                         # 如果用户输入既不是是也不是否，则打印提示信息
                         print("输入有误，请输入是或否")
@@ -86,15 +104,17 @@ def run(filename):
                         print("已生成测试报告，具体内容可点击超链接", linkName)
                         report_path = Path('/Volumes/Disk/apache-jmeter-5.1.1/jmeter/report/' + new_Mytime).as_uri()
                         print("测试报告路径：", report_path)
-                        keyword = input("您是否需要继续运行【是/否】")
+
                     else:
                         print("当前目录下不存在{}.jmx文件".format(filename))
+
+                    keyword = input("您是否需要继续运行【是/否】")
 
                 if keyword == '否':
                     print("程序已结束,即将关闭窗口")
                     break
 
-                if keyword != '是' or '否':
+                if keyword != '是' and '否':
                     keyword = input("输入有误，请重新输入【是/否】")
             break
 
