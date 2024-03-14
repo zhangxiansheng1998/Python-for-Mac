@@ -26,7 +26,6 @@ class PaymentCodePage(BasePage):
         self.click((By.NAME, '保存收款码'))
         print(f'店铺:ABCD对应的收款码已保存至相册')
 
-
     def clear_amount(self):
         """清除金额"""
         self.click((By.NAME, '清除金额'))
