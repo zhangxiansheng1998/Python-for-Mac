@@ -40,22 +40,25 @@ def read_jmx_thread(file_path):
 def run(filename):
     print("程序开始运行")
     answer = input("是否需要修改线程数【是/否】")
-    if answer == "是":
-        try:
-            # 尝试获取用户输入的数字
-            num_threads = int(input("请输入新的线程数："))
-            # 如果输入成功，则更新线程数
-            modify_jmx_thread(filename, num_threads)
-        except ValueError:
-            # 如果输入的不是数字，则捕获异常并打印错误信息
-            print("输入的不是一个有效的数字，线程数保持不变。")
-    elif answer == "否":
-        # 如果用户输入否，则不修改线程数，并打印信息
-        print("不修改线程数")
-        read_jmx_thread(filename)
-    else:
-        # 如果用户输入既不是是也不是否，则打印提示信息
-        print("输入有误，请输入是或否")
+    while True:
+        if answer == "是":
+            try:
+                # 尝试获取用户输入的数字
+                num_threads = int(input("请输入新的线程数："))
+                # 如果输入成功，则更新线程数
+                modify_jmx_thread(filename, num_threads)
+                break
+            except ValueError:
+                # 如果输入的不是数字，则捕获异常并打印错误信息
+                print("输入的不是一个有效的数字，线程数保持不变。")
+        elif answer == "否":
+            # 如果用户输入否，则不修改线程数，并打印信息
+            print("不修改线程数")
+            read_jmx_thread(filename)
+        else:
+            # 如果用户输入既不是是也不是否，则给出提示
+            answer = input("输入有误，请重新输入【是/否】")
+
 
     Mytime = time.strftime("%Y-%m-%d~%H-%M-%S")
     path = "{}".format(filename)
@@ -76,22 +79,24 @@ def run(filename):
             while True:
                 if keyword == '是':
                     answer = input("是否需要修改线程数【是/否】")
-                    if answer == "是":
-                        try:
-                            # 尝试获取用户输入的数字
-                            num_threads = int(input("请输入新的线程数："))
-                            # 如果输入成功，则更新线程数
-                            modify_jmx_thread(filename, num_threads)
-                        except ValueError:
-                            # 如果输入的不是数字，则捕获异常并打印错误信息
-                            print("输入的不是一个有效的数字，线程数保持不变。")
-                    elif answer == "否":
-                        # 如果用户输入否，则不修改线程数，并打印信息
-                        print("不修改线程数")
-                        read_jmx_thread(filename)
-                    else:
-                        # 如果用户输入既不是是也不是否，则打印提示信息
-                        print("输入有误，请输入是或否")
+                    while True:
+                        if answer == "是":
+                            try:
+                                # 尝试获取用户输入的数字
+                                num_threads = int(input("请输入新的线程数："))
+                                # 如果输入成功，则更新线程数
+                                modify_jmx_thread(filename, num_threads)
+                                break
+                            except ValueError:
+                                # 如果输入的不是数字，则捕获异常并打印错误信息
+                                print("输入的不是一个有效的数字，线程数保持不变。")
+                        elif answer == "否":
+                            # 如果用户输入否，则不修改线程数，并打印信息
+                            print("不修改线程数")
+                            read_jmx_thread(filename)
+                        else:
+                            # 如果用户输入既不是是也不是否，则给出提示
+                            answer = input("输入有误，请重新输入【是/否】")
 
                     new_Mytime = time.strftime("%Y-%m-%d~%H-%M-%S")
                     new_path = "{}".format(filename)

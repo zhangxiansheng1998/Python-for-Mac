@@ -4,8 +4,8 @@ from selenium import webdriver
 class Browser(object):
 
     def __init__(self):
-        self.Chrome_options_headless = None
         self.Chrome_options_ui = None
+        self.Chrome_options_headless = None
 
     def browser_ui(self):
         """设置浏览器的属性，去掉“chrome正受到自动化测试软件的控制”的提示文字"""
