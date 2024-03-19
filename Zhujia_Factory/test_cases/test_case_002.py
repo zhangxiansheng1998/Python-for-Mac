@@ -30,7 +30,7 @@ class Shop(unittest.TestCase):
         """使用万能验证码的手机号登录系统"""
         self.loginpage.login_without_sending_code('18662832373', '111111')
         self.loginpage.wait(1)
-        self.loginpage.assert_text_euqal('登录成功', login_element['assert_box'])
+        self.loginpage.assert_text_equal('登录成功', login_element['assert_box'])
 
     #@unittest.skip('unittest不执行这条测试用例')
     def test_2_add_shop(self):

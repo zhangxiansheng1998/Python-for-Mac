@@ -22,7 +22,7 @@ class ShopManagement(BasePage):
         self.wait(1)
         self.click(add_shop['submit'])
         self.wait(2)
-        self.assert_text_euqal('新增店铺成功', (By.ID,'message_1'))
+        self.assert_text_equal('新增店铺成功', (By.ID,'message_1'))
 
     def add_erp_shop(self):
         """新增ERP店铺"""
@@ -33,7 +33,7 @@ class ShopManagement(BasePage):
         self.explicitly_wait(shop_list['shop_details'],10)
         self.click(shop_list['shop_details'])
         self.wait(2)
-        self.assert_text_euqal('店铺详情',(By.ID,'page-title'))
+        self.assert_text_equal('店铺详情',(By.ID,'page-title'))
         self.click(shop_list['shop_details_return'])
 
     def today_income(self):
@@ -41,7 +41,7 @@ class ShopManagement(BasePage):
         self.explicitly_wait(shop_list['today_income'],10)
         self.click(shop_list['today_income'])
         self.wait(2)
-        self.assert_text_euqal('店铺今日统计', shop_list['today_income_text'])
+        self.assert_text_equal('店铺今日统计', shop_list['today_income_text'])
         self.click(shop_list['today_income_close'])
 
     def custom_income(self):
@@ -51,7 +51,7 @@ class ShopManagement(BasePage):
         self.input(shop_list['enter_amount'],'5')
         self.click(shop_list['custom_income_confirm'])
         self.wait(2)
-        self.assert_text_euqal('￥5.00', shop_list['custom_income_text'])
+        self.assert_text_equal('￥5.00', shop_list['custom_income_text'])
         self.click(shop_list['custom_income_close_two'])
 
     def income_code(self):
@@ -59,7 +59,7 @@ class ShopManagement(BasePage):
         self.explicitly_wait(shop_list['income_code'],10)
         self.click(shop_list['income_code'])
         self.wait(2)
-        self.assert_text_euqal('店铺收款码', shop_list['income_code_text'])
+        self.assert_text_equal('店铺收款码', shop_list['income_code_text'])
         self.click(shop_list['income_code_close'])
 
     def shop_code(self):
@@ -67,7 +67,7 @@ class ShopManagement(BasePage):
         self.explicitly_wait(shop_list['shop_code'],10)
         self.click(shop_list['shop_code'])
         self.wait(2)
-        self.assert_text_euqal('店铺码', shop_list['shop_code_text'])
+        self.assert_text_equal('店铺码', shop_list['shop_code_text'])
         self.click(shop_list['shop_code_close'])
 
 
