@@ -1,5 +1,5 @@
 import time
-from Common_File.base_page import BasePage
+from Zhujia_Factory.base.base_page import BasePage
 from Zhujia_Factory.data.goods_management_element import *
 
 

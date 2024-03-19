@@ -1,7 +1,7 @@
 import unittest
 from Zhujia_Factory.page_object.LoginPage import LoginPage
 from Zhujia_Factory.page_object.GoodsManagement import GoodsManagement
-from Common_File.Browser import *
+from Zhujia_Factory.base.browser import *
 from Zhujia_Factory.data.login_page_element import *
 
 

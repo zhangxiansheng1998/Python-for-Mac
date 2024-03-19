@@ -1,4 +1,4 @@
-from Common_File.base_page import BasePage
+from Zhujia_Factory.base.base_page import BasePage
 from Zhujia_Factory.data.login_page_element import *
 
 
