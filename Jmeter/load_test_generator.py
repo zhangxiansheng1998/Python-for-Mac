@@ -60,7 +60,6 @@ def run(filename):
             # 如果用户输入既不是是也不是否，则给出提示
             answer = input("输入有误，请重新输入【是/否】")
 
-
     Mytime = time.strftime("%Y-%m-%d~%H-%M-%S")
     path = "{}".format(filename)
 

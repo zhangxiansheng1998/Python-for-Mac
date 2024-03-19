@@ -169,20 +169,19 @@ class BasePage:
         try:
             new_reality = self.get_text(reality)
             assert expectation == new_reality
-            print("\n断言成功!")
+            print("\n断言成功! 预期值'{}'与实际值'{}'一致".format(expectation, new_reality))
         except Exception as e:
-            print("\n断言失败!预期值'{}'与实际值'{}'，请重新输入".format(expectation,new_reality))
+            print("\n断言失败! 预期值'{}'与实际值'{}'不一致".format(expectation, new_reality))
             assert False
 
     def assert_value_equal(self, expectation, reality):
         """断言元素value属性中的文本内容   expectation：预期值   reality：实际值（传入元素）"""
-
         try:
             new_reality = self.get_value(reality)
             assert expectation == new_reality
-            print("\n断言成功!")
+            print("\n断言成功! 预期值'{}'与实际值'{}'一致".format(expectation, new_reality))
         except Exception as e:
-            print("\n断言失败!预期值'{}'与实际值'{}'，请重新输入".format(expectation,new_reality))
+            print("\n断言失败! 预期值'{}'与实际值'{}'不一致".format(expectation, new_reality))
             assert False
 
     def imitate_two_keyboard(self):

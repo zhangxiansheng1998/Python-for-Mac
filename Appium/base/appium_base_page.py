@@ -1,13 +1,13 @@
 """"
 BasePage类是POM中的基类，主要用于提供常用的函数为页面对象进行服务
 """
-import pyautogui
-from selenium.common.exceptions import NoSuchElementException
+# import pyautogui
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.wait import WebDriverWait
 import time
 from selenium.webdriver.common.by import By
-
+import os
+from datetime import datetime
 
 
 class BasePage:
@@ -15,6 +15,7 @@ class BasePage:
     def __init__(self, driver):
         self.driver = driver
         self.timeformate = time.strftime("%Y-%m-%d~%H-%M-%S")
+        self.current_date = datetime.now().strftime("%Y-%m-%d")
 
     def visit(self, url):
         """访问网页"""
@@ -40,9 +41,9 @@ class BasePage:
         """点击某个元素"""
         return self.locator(loc).click()
 
-    def wait(self, seconds):
+    def wait(self, second):
         """强制等待"""
-        time.sleep(seconds)
+        time.sleep(second)
 
     def implicitly_wait(self, seconds):
         """隐式等待，只需设置一次，全局有效，每隔0.5s查询一次"""
@@ -56,21 +57,38 @@ class BasePage:
         """放大窗口"""
         self.driver.maximize_window()
 
-    def select_all(self, loc):
+    def select_all_windows(self, loc):
         """全选"""
         self.driver.find_element(*loc).send_keys(Keys.CONTROL, 'a')
 
-    def copy(self, loc):
+    def copy_windows(self, loc):
         """复制"""
         self.driver.find_element(*loc).send_keys(Keys.CONTROL, 'c')
 
-    def paste(self, loc):
+    def paste_windows(self, loc):
         """粘贴"""
         self.driver.find_element(*loc).send_keys(Keys.CONTROL, 'v')
 
-    def backspace(self, loc):
+    def backspace_windows(self, loc):
         """删除"""
-        self.select_all(loc)
+        self.select_all_windows(loc)
+        self.driver.find_element(*loc).send_keys(Keys.BACKSPACE)
+
+    def select_all_macos(self, loc):
+        """全选"""
+        self.driver.find_element(*loc).send_keys(Keys.COMMAND, 'a')
+
+    def copy_macos(self, loc):
+        """复制"""
+        self.driver.find_element(*loc).send_keys(Keys.COMMAND, 'c')
+
+    def paste_macos(self, loc):
+        """粘贴"""
+        self.driver.find_element(*loc).send_keys(Keys.COMMAND, 'v')
+
+    def backspace_macos(self, loc):
+        """删除"""
+        self.select_all_macos(loc)
         self.driver.find_element(*loc).send_keys(Keys.BACKSPACE)
 
     def js_scroll_bottom(self):
@@ -95,9 +113,9 @@ class BasePage:
         """获取元素value属性中文本内容(元素本身没有内容，但是value值有内容)"""
         return self.locator(loc).get_attribute("value")
 
-    def get_li_value(self,ul_class,value):
+    def get_li_value(self, ul_class, value):
         """点击下拉框中某个特定的值   ul_class：ul的class值   value：要查询的值"""
-        self.driver.find_element_by_xpath('//ul[@class="{}"]/li/span[contains(text(),"{}")]'.format(ul_class,value)).click()
+        self.driver.find_element_by_xpath('//ul[@class="{}"]/li/span[contains(text(),"{}")]'.format(ul_class, value)).click()
 
     def screen_template(self, loc):
         """定位失败时，截图并关闭浏览器"""
@@ -145,33 +163,33 @@ class BasePage:
         self.wait(1)
         self.driver.quit()
 
-    def assert_text_euqal(self, expectation, reality):
+    def assert_text_equal(self, expectation, reality):
         """断言元素本身对应的文本内容   expectation：预期值   reality：实际值（传入元素）"""
         try:
-            assert expectation == self.get_text(reality)
-            print("\n断言成功!")
-        except NoSuchElementException:
-            print(f'当前页面上不存在{reality}元素')
+            new_reality = self.get_text(reality)
+            assert expectation == new_reality
+            print("\n断言成功! 预期值'{}'与实际值'{}'一致".format(expectation, new_reality))
         except Exception as e:
-            print("\n断言失败!预期值'{}'与实际值'{}'，请重新输入".format(expectation,self.get_text(reality)))
+            print("\n断言失败! 预期值'{}'与实际值'{}'不一致".format(expectation, new_reality))
+            assert False
 
-    def assert_value_euqal(self, expectation, reality):
+    def assert_value_equal(self, expectation, reality):
         """断言元素value属性中的文本内容   expectation：预期值   reality：实际值（传入元素）"""
-
         try:
             new_reality = self.get_value(reality)
             assert expectation == new_reality
-            print("\n断言成功!")
+            print("\n断言成功! 预期值'{}'与实际值'{}'一致".format(expectation, new_reality))
         except Exception as e:
-            print("\n断言失败!预期值'{}'与实际值'{}'，请重新输入".format(expectation,new_reality))
+            print("\n断言失败! 预期值'{}'与实际值'{}'不一致".format(expectation, new_reality))
             assert False
 
     def imitate_two_keyboard(self):
         """模拟键盘按键"""
         try:
-            pyautogui.press('f12')
+            # pyautogui.press('f12')
+            print('暂未使用')
         except Exception as e:
-            print("\n按键失败!捕获到相应的异常为：",e)
+            print("\n按键失败!捕获到相应的异常为：", e)
             assert False
 
     def switch_to_newest_window(self):
@@ -180,5 +198,30 @@ class BasePage:
             windows = self.driver.window_handles
             self.driver.switch_to.window(windows[-1])
         except Exception as e:
-            print("\n窗口切换失败!捕获到相应的异常为：",e)
+            print("\n窗口切换失败!捕获到相应的异常为：", e)
             assert False
+
+    def get_ul_number(self, ul):
+        """获取ul列表的个数"""
+        try:
+            ul_list = self.locator(ul)
+            li_list = ul_list.find_elements(By.TAG_NAME, 'ul')
+            return len(li_list)
+        except Exception as e:
+            print("\n元素定位失败!捕获到相应的异常为：", e)
+            assert False
+
+    def erp_order_screenshot(self, myTime):
+        """截图"""
+        screenshot_root = "picture"
+        # 设置截图保存的根目录
+        screenshot_folder = os.path.join(screenshot_root, self.current_date)
+        # 拼接保存截图的文件夹路径
+        os.makedirs(screenshot_folder, exist_ok=True)
+        # 创建文件夹（如果不存在）
+        screenshot_path = os.path.join(screenshot_folder, f"{myTime}.png")
+        self.driver.save_screenshot(screenshot_path)
+
+    def close(self):
+        """关闭浏览器窗口"""
+        self.driver.close()
