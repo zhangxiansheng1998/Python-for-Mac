@@ -24,3 +24,4 @@ if __name__ == '__main__':
     # 筑家工厂-python3.8 WeblogicScan.py -u 47.103.201.199 -p 80
     # 近视防控-python3.8 WeblogicScan.py -u 47.96.196.116 -p 443
     # Jenkins-python3.8 WeblogicScan.py -u 203.189.205.234 -p 8888
+    # python3.8 WeblogicScan.py -u 111.231.103.117 -p 8083

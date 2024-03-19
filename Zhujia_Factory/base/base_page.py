@@ -21,6 +21,7 @@ class Basepage:
     def visit(self, url):
         log.info('正在打开{}网址'.format(url))
         self.driver.get(url)
+        self.driver.set_page_load_timeout(10)
 
     # 元素定位失败后，截图的通用模板
     def screen_template(self, loc):

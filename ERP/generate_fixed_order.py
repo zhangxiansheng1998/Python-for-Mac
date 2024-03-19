@@ -71,9 +71,11 @@ class TestCase(unittest.TestCase):
                                 'div > div > div.system_overlay_btn > button.sbt_white.fr.mr10.group_orders'))
                 self.obj.switch_to_newest_window()
                 self.obj.explicitly_wait((By.XPATH, '//*[@id="rows"]/div[2]'), 10)
-                ul_num = self.obj.get_ul_number((By.XPATH, '//*[@id="rows"]/div[2]'))
-                """翻页处理"""
-                if 0 < ul_num < 30:
+                ul_num = int(self.obj.get_text((By.XPATH, '/html/body/div[80]/div[2]/p/span[11]/b')))
+
+                """翻页逻辑处理"""
+                if 0 < ul_num <= 30:
+                    print('\n当前页面订单小于等于30个，不会跳转页面')
                     self.obj.click((By.XPATH, f'//*[@id="rows"]/div[2]/ul[{ul_num}]/li[4]/a'))
                     self.obj.switch_to_newest_window()
                     self.obj.wait(5)
@@ -83,9 +85,9 @@ class TestCase(unittest.TestCase):
                     self.obj.explicitly_wait((By.XPATH, '/html/body/div[81]/div/li'), 10)
                     self.obj.click((By.XPATH, '/html/body/div[81]/div/li'))
 
-                if ul_num >= 30:
-                    self.obj.click((By.CSS_SELECTOR, '#pager > div.jPag-control-front > a'))
+                if ul_num > 30:
                     print('\n当前页面订单大于30个，正在跳转最新页面')
+                    self.obj.click((By.CSS_SELECTOR, '#pager > div.jPag-control-front > a'))
                     self.obj.explicitly_wait((By.XPATH, '//*[@id="rows"]/div[2]'), 10)
                     ul_num = self.obj.get_ul_number((By.XPATH, '//*[@id="rows"]/div[2]'))
                     self.obj.click((By.XPATH, f'//*[@id="rows"]/div[2]/ul[{ul_num}]/li[4]/a'))
