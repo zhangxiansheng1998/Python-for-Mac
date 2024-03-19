@@ -55,6 +55,7 @@ def run(filename):
             # 如果用户输入否，则不修改线程数，并打印信息
             print("不修改线程数")
             read_jmx_thread(filename)
+            break
         else:
             # 如果用户输入既不是是也不是否，则给出提示
             answer = input("输入有误，请重新输入【是/否】")
@@ -94,6 +95,7 @@ def run(filename):
                             # 如果用户输入否，则不修改线程数，并打印信息
                             print("不修改线程数")
                             read_jmx_thread(filename)
+                            break
                         else:
                             # 如果用户输入既不是是也不是否，则给出提示
                             answer = input("输入有误，请重新输入【是/否】")
