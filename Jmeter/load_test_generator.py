@@ -39,7 +39,9 @@ def read_jmx_thread(file_path):
 
 def run(filename):
     print("程序开始运行")
+    Mytime = time.strftime("%Y-%m-%d~%H-%M-%S")
     answer = input("是否需要修改线程数【是/否】")
+
     while True:
         if answer == "是":
             try:
@@ -48,85 +50,73 @@ def run(filename):
                 # 如果输入成功，则更新线程数
                 modify_jmx_thread(filename, num_threads)
                 break
+
             except ValueError:
                 # 如果输入的不是数字，则捕获异常并打印错误信息
                 print("输入的不是一个有效的数字，线程数保持不变。")
+
         elif answer == "否":
             # 如果用户输入否，则不修改线程数，并打印信息
             print("不修改线程数")
             read_jmx_thread(filename)
             break
+
         else:
             # 如果用户输入既不是是也不是否，则给出提示
             answer = input("输入有误，请重新输入【是/否】")
 
-    Mytime = time.strftime("%Y-%m-%d~%H-%M-%S")
-    path = "{}".format(filename)
+    os.system(
+        "jmeter -n -t {} -l /Volumes/Disk/apache-jmeter-5.1.1/jmeter/jtl/{}.jtl -e -o /Volumes/Disk/apache-jmeter-5.1.1/jmeter/report/{}"
+        .format(filename, Mytime, Mytime))
+    linkName = Path('/Volumes/Disk/apache-jmeter-5.1.1/jmeter/report/' + Mytime + '/index.html').as_uri()
+    print("已生成测试报告，具体内容可点击超链接", linkName)
+    report_path = Path('/Volumes/Disk/apache-jmeter-5.1.1/jmeter/report/' + Mytime).as_uri()
+    print("测试报告路径：", report_path)
+    keyword = input("您是否需要继续运行【是/否】")
 
-    # 判断文件是否存在
     while True:
-        if os.path.exists(path):
-            os.system(
-                "jmeter -n -t {} -l /Volumes/Disk/apache-jmeter-5.1.1/jmeter/jtl/{}.jtl -e -o /Volumes/Disk/apache-jmeter-5.1.1/jmeter/report/{}"
-                .format(filename, Mytime, Mytime))
-            linkName = Path('/Volumes/Disk/apache-jmeter-5.1.1/jmeter/report/' + Mytime + '/index.html').as_uri()
-            print("已生成测试报告，具体内容可点击超链接", linkName)
-            report_path = Path('/Volumes/Disk/apache-jmeter-5.1.1/jmeter/report/' + Mytime).as_uri()
-            print("测试报告路径：", report_path)
-
-            keyword = input("您是否需要继续运行【是/否】")
-
+        if keyword == '是':
+            answer = input("是否需要修改线程数【是/否】")
             while True:
-                if keyword == '是':
-                    answer = input("是否需要修改线程数【是/否】")
-                    while True:
-                        if answer == "是":
-                            try:
-                                # 尝试获取用户输入的数字
-                                num_threads = int(input("请输入新的线程数："))
-                                # 如果输入成功，则更新线程数
-                                modify_jmx_thread(filename, num_threads)
-                                break
-                            except ValueError:
-                                # 如果输入的不是数字，则捕获异常并打印错误信息
-                                print("输入的不是一个有效的数字，线程数保持不变。")
-                        elif answer == "否":
-                            # 如果用户输入否，则不修改线程数，并打印信息
-                            print("不修改线程数")
-                            read_jmx_thread(filename)
-                            break
-                        else:
-                            # 如果用户输入既不是是也不是否，则给出提示
-                            answer = input("输入有误，请重新输入【是/否】")
+                if answer == "是":
+                    try:
+                        # 尝试获取用户输入的数字
+                        num_threads = int(input("请输入新的线程数："))
+                        # 如果输入成功，则更新线程数
+                        modify_jmx_thread(filename, num_threads)
+                        break
 
-                    new_Mytime = time.strftime("%Y-%m-%d~%H-%M-%S")
-                    new_path = "{}".format(filename)
-                    if os.path.exists(new_path):
-                        os.system(
-                            "jmeter -n -t {} -l /Volumes/Disk/apache-jmeter-5.1.1/jmeter/jtl/{}.jtl -e -o /Volumes/Disk/apache-jmeter-5.1.1/jmeter/report/{}"
-                            .format(filename, new_Mytime, new_Mytime))
-                        linkName = Path(
-                            '/Volumes/Disk/apache-jmeter-5.1.1/jmeter/report/' + new_Mytime + '/index.html').as_uri()
-                        print("已生成测试报告，具体内容可点击超链接", linkName)
-                        report_path = Path('/Volumes/Disk/apache-jmeter-5.1.1/jmeter/report/' + new_Mytime).as_uri()
-                        print("测试报告路径：", report_path)
+                    except ValueError:
+                        # 如果输入的不是数字，则捕获异常并打印错误信息
+                        print("输入的不是一个有效的数字，线程数保持不变。")
 
-                    else:
-                        print("当前目录下不存在{}.jmx文件".format(filename))
-
-                    keyword = input("您是否需要继续运行【是/否】")
-
-                if keyword == '否':
-                    print("程序已结束,即将关闭窗口")
+                elif answer == "否":
+                    # 如果用户输入否，则不修改线程数，并打印信息
+                    print("不修改线程数")
+                    read_jmx_thread(filename)
                     break
 
-                if keyword != '是' and '否':
-                    keyword = input("输入有误，请重新输入【是/否】")
+                else:
+                    # 如果用户输入既不是是也不是否，则给出提示
+                    answer = input("输入有误，请重新输入【是/否】")
+
+            new_Mytime = time.strftime("%Y-%m-%d~%H-%M-%S")
+            os.system(
+                "jmeter -n -t {} -l /Volumes/Disk/apache-jmeter-5.1.1/jmeter/jtl/{}.jtl -e -o /Volumes/Disk/apache-jmeter-5.1.1/jmeter/report/{}"
+                .format(filename, new_Mytime, new_Mytime))
+            linkName = Path(
+                '/Volumes/Disk/apache-jmeter-5.1.1/jmeter/report/' + new_Mytime + '/index.html').as_uri()
+            print("已生成测试报告，具体内容可点击超链接", linkName)
+            report_path = Path('/Volumes/Disk/apache-jmeter-5.1.1/jmeter/report/' + new_Mytime).as_uri()
+            print("测试报告路径：", report_path)
+            keyword = input("您是否需要继续运行【是/否】")
+
+        if keyword == '否':
+            print("程序已结束,即将关闭窗口")
             break
 
-        else:
-            filename = input("当前目录下不存在{}文件，请重新输入：".format(filename))
-            path = "{}".format(filename)
+        if keyword != '是' and '否':
+            keyword = input("输入有误，请重新输入【是/否】")
 
 
 # 运行的脚本路径

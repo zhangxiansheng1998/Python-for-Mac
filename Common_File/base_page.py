@@ -166,6 +166,7 @@ class BasePage:
 
     def assert_text_equal(self, expectation, reality):
         """断言元素本身对应的文本内容   expectation：预期值   reality：实际值（传入元素）"""
+        global new_reality
         try:
             new_reality = self.get_text(reality)
             assert expectation == new_reality
@@ -176,6 +177,7 @@ class BasePage:
 
     def assert_value_equal(self, expectation, reality):
         """断言元素value属性中的文本内容   expectation：预期值   reality：实际值（传入元素）"""
+        global new_reality
         try:
             new_reality = self.get_value(reality)
             assert expectation == new_reality

@@ -59,11 +59,13 @@ def DingTalkSend():
                           "\n构建地址：\n" + job_url +
                           "\n订单地址：\n" + "http://h.thinkermen.com/wincc_xingeercc/mini2021_1.7.4/index.php?r=order/factory\n"
            },
-
+           "at": {
                "atMobiles": [
                    "15180381485"  # 如果需要@某人，这里写他的手机号
                ],
                "isAtAll": 1  # 如果需要@所有人，这些写1
+           }
+
            }
     try:
         urllib3.disable_warnings()
