@@ -14,26 +14,34 @@ def create_folder_for_today():
     # 获取当前日期
     today = datetime.today()
     # 格式化日期为字符串，例如："2024-01-12"
+    month_formatted_date = today.strftime("%Y-%m")
     formatted_date = today.strftime("%Y-%m-%d")
+
     # 构建目录路径
-    folder_path = os.path.join('../report', formatted_date)
+    month_folder_path = os.path.join('../report', month_formatted_date)
+    folder_path = os.path.join('../report', month_formatted_date, formatted_date)
+
     # 检查目录是否已经存在，如果不存在则创建
+    if not os.path.exists(month_folder_path):
+        os.makedirs(month_folder_path)
+        print(f"文件夹'{month_formatted_date}'创建成功")
+
     if not os.path.exists(folder_path):
         os.makedirs(folder_path)
         print(f"文件夹'{formatted_date}'创建成功")
-
 
 def Runall():
     """生成测试报告"""
     create_folder_for_today()
     # now = time.strftime("%Y-%m-%d~%H-%M-%S")  # 获取当前时间
     today = datetime.today()  # 获取当前日期
+    month_formatted_date = today.strftime("%Y-%m")
     formatted_date = today.strftime("%Y-%m-%d")  # 格式化日期为字符串，例如："2024-01-12"
     suite_tests = unittest.defaultTestLoader.discover(case_path, pattern="test*.py")
     # "*tests.py"匹配当前目录下所有tests.py结尾的用例
     BeautifulReport(suite_tests).report(filename='{htmlname}.html'.format(htmlname=now),
                                         description='WEB自动化测试报告',
-                                        report_dir=f'../report/{formatted_date}')
+                                        report_dir=f'../report/{month_formatted_date}/{formatted_date}')
     # description 对应html文件中的用例名称，log_path 表示html文件存放的位置
 
 

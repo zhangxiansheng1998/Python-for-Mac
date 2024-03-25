@@ -15,16 +15,21 @@ def create_folder_for_today_two():
     # 获取当前日期
     today = datetime.today()
     # 格式化日期为字符串，例如："2024-01-12"
+    month_formatted_date1 = today.strftime("%Y-%m")
     formatted_date1 = today.strftime("%Y-%m-%d")
 
     # 构建目录路径
-    folder_path = os.path.join('../report_email', formatted_date1)
+    month_folder_path = os.path.join('../report_email', month_formatted_date1)
+    folder_path = os.path.join('../report', month_formatted_date1, formatted_date1)
 
     # 检查目录是否已经存在，如果不存在则创建
+    if not os.path.exists(month_folder_path):
+        os.makedirs(month_folder_path)
+        print(f"文件夹'{month_formatted_date1}'创建成功")
+
     if not os.path.exists(folder_path):
         os.makedirs(folder_path)
         print(f"文件夹'{formatted_date1}'创建成功")
-
 
 def extract_test_summary_with_regex(html_file):
     with open(html_file, 'r', encoding='utf-8') as file:
@@ -77,9 +82,8 @@ def generate_html(data):
     <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>饼状图</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
-        <title>WEB自动化测试报告</title>
+        <title>筑家工厂-WEB自动化测试报告</title>
     </head>
     <body>
 
@@ -123,6 +127,6 @@ def generate_html(data):
     return html_content
 
 
-def save_html(html_content, filename=f'{project_path}/report_email/{formatted_date}/{now}.html'):
+def save_html(html_content, filename=f'{project_path}/report_email/{month_formatted_date}/{formatted_date}/{now}.html'):
     with open(filename, 'w') as file:
         file.write(html_content)

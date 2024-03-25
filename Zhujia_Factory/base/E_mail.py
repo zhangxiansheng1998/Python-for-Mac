@@ -28,7 +28,7 @@ def send_mail(report):
     receivers = ["m15180381485@163.com", '596137586@qq.com']  # 收件人邮箱
 
     msg = MIMEMultipart(_subtype='html', _charset='utf-8')
-    email_att = MIMEApplication(open('{B}/{C}'.format(B=report_path, C=reportname), 'rb').read())
+    email_att = MIMEApplication(open('{B}{C}'.format(B=report_path, C=reportname), 'rb').read())
     email_att.add_header('Content-Disposition', 'attachment', filename=reportname)
     msg.attach(email_att)
 

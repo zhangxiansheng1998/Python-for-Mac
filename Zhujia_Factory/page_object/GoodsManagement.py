@@ -10,7 +10,7 @@ class GoodsManagement(BasePage):
         self.click(button['goods_list'])
         self.input(goods_list['search_input_box'], '测试上传视频后，编辑时能否看到视频')
         self.click(goods_list['search_button'])
-        self.wait(2)
+        self.wait(5)
         self.assert_text_equal('测试上传视频后，编辑时能否看到视频', goods_list['goods_text'])
         self.click(goods_list['reset_button'])
 

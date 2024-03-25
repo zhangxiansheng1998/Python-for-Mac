@@ -84,7 +84,7 @@ class TestCase(unittest.TestCase):
                 """翻页逻辑处理"""
                 if 0 < ul_num <= 30:
                     print('\n当前页面订单小于等于30个，不会跳转页面')
-                    self.obj.click((By.XPATH, f'//*[@id="rows"]/div[2]/ul[{ul_num}]/li[4]/a'))
+                    self.obj.click((By.XPATH, f'//*[@id="rows"]/div[2]/ul[{ul_num}]/li[11]/a'))
                     self.obj.switch_to_newest_window()
                     self.obj.wait(5)
                     myTime = time.strftime("%Y-%m-%d~%H-%M-%S")
@@ -98,7 +98,7 @@ class TestCase(unittest.TestCase):
                     self.obj.click((By.CSS_SELECTOR, '#pager > div.jPag-control-front > a'))
                     self.obj.explicitly_wait((By.XPATH, '//*[@id="rows"]/div[2]'), 10)
                     ul_num = self.obj.get_ul_number((By.XPATH, '//*[@id="rows"]/div[2]'))
-                    self.obj.click((By.XPATH, f'//*[@id="rows"]/div[2]/ul[{ul_num}]/li[4]/a'))
+                    self.obj.click((By.XPATH, f'//*[@id="rows"]/div[2]/ul[{ul_num}]/li[11]/a'))
                     self.obj.switch_to_newest_window()
                     self.obj.wait(5)
                     myTime = time.strftime("%Y-%m-%d~%H-%M-%S")
