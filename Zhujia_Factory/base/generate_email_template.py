@@ -4,6 +4,7 @@ from Zhujia_Factory.base.E_mail import *
 from Zhujia_Factory.data.login_page_element import *
 from Zhujia_Factory.runall.run_all import *
 import os
+from bs4 import BeautifulSoup
 
 now = time.strftime("%Y-%m-%d~%H-%M-%S")  # 获取当前时间
 today = datetime.today()  # 获取当前日期
@@ -20,7 +21,7 @@ def create_folder_for_today_two():
 
     # 构建目录路径
     month_folder_path = os.path.join('../report_email', month_formatted_date1)
-    folder_path = os.path.join('../report', month_formatted_date1, formatted_date1)
+    folder_path = os.path.join('../report_email', month_formatted_date1, formatted_date1)
 
     # 检查目录是否已经存在，如果不存在则创建
     if not os.path.exists(month_folder_path):
@@ -130,3 +131,22 @@ def generate_html(data):
 def save_html(html_content, filename=f'{project_path}/report_email/{month_formatted_date}/{formatted_date}/{now}.html'):
     with open(filename, 'w') as file:
         file.write(html_content)
+
+def generate_summary(filename=f'{project_path}/report_email/{month_formatted_date}/{formatted_date}/{now}.html'):
+    if os.path.isfile(filename):
+        # 打开文件并读取内容
+        with open(filename, 'r', encoding='utf-8') as file:
+            content = file.read()
+
+        # 使用BeautifulSoup解析HTML
+        soup = BeautifulSoup(content, 'html.parser')
+
+        with open("/Users/macbook_air/Desktop/MyProject/ERP/summary.txt", "w", encoding="utf-8") as file:
+            # 找到所有的文本并打印
+            for text in soup.stripped_strings:
+                if text!='筑家工厂-WEB自动化测试报告' and text!='本邮件为自动发送，无需回复。如需查看详细内容，请下载附件！' and text!='提示：预览附件时，邮箱没有加载CSS样式，导致数据显示错乱！':
+                    #print(text)
+                    text_to_save = str(text) + "\n"
+                    file.write(text_to_save)
+    else:
+        print("文件不存在")

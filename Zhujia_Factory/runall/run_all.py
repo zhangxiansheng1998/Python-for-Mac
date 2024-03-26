@@ -42,7 +42,7 @@ def Runall():
     BeautifulReport(suite_tests).report(filename='{htmlname}.html'.format(htmlname=now),
                                         description='WEB自动化测试报告',
                                         report_dir=f'../report/{month_formatted_date}/{formatted_date}')
-    # description 对应html文件中的用例名称，log_path 表示html文件存放的位置
+    # description 对应html文件中的用例名称，report_dir 表示html文件存放的位置
 
 
 def Create_Email():
@@ -52,7 +52,7 @@ def Create_Email():
     data = extract_test_summary_with_regex(NewReport)
     html_content = generate_html(data)
     save_html(html_content)
-
+    generate_summary()
 
 def Send_Email():
     """发送邮件"""
