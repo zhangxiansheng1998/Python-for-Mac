@@ -55,7 +55,7 @@ class TestCase(unittest.TestCase):
                 self.obj.click((By.XPATH, '/html/body/div[16]/div[2]/div[3]/ul/li[2]/div'))
                 self.obj.switch_to_newest_window()
                 self.obj.explicitly_wait((By.ID, 'customer_name'), 10)
-                self.obj.input((By.ID, 'customer_name'), "倪浩平")
+                self.obj.input((By.ID, 'customer_name'), "陈军")
                 self.obj.wait(2)
                 self.obj.click((By.XPATH, '/html/body/form/div[1]/div/div[1]/div[1]/div[2]/div/dl[2]/dd/div/ul/li'))
                 self.obj.explicitly_wait((By.NAME, 'zonggao'), 10)

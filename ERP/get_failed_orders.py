@@ -34,6 +34,7 @@ class TestCase(unittest.TestCase):
 
     # @unittest.skip('unittest不执行这条测试用例')
     def test_2_filter_failed_orders(self):
+        global failed_orders
         self.obj.click((By.XPATH, '//*[@id="menu"]/ul/ul/li[3]'))
         self.obj.click((By.XPATH, '/html/body/div[1]/div[2]/div[2]/div/div[1]/div[10]/div/div/div/div/input'))
         self.obj.wait(2)

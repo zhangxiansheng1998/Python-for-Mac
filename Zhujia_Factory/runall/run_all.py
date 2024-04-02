@@ -30,6 +30,7 @@ def create_folder_for_today():
         os.makedirs(folder_path)
         print(f"文件夹'{formatted_date}'创建成功")
 
+
 def Runall():
     """生成测试报告"""
     create_folder_for_today()
@@ -53,6 +54,7 @@ def Create_Email():
     html_content = generate_html(data)
     save_html(html_content)
     generate_summary()
+
 
 def Send_Email():
     """发送邮件"""
