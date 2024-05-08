@@ -27,7 +27,7 @@ url = f'https://oapi.dingtalk.com/robot/send?access_token=4577151a48816d922f0b79
 
 #利用python发送钉钉  在钉钉需要点击 查看测试报告的话 就需要把报告发送到服务器 再把地址参数传下面  就去掉jenkins所有操作
 # jenkins登录地址
-jenkins_url = "http://203.189.205.234:8888/"#Jenkins地址
+jenkins_url = "http://127.0.0.1:8080/"#Jenkins地址
 # 获取jenkins对象
 server = jenkins.Jenkins(jenkins_url, username='admin', password='3c778ef3c32842d9b386502915031ab5') #Jenkins登录名 ，密码
 # job名称

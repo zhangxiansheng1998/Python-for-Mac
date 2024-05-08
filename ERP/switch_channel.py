@@ -30,6 +30,7 @@ class TestCase(unittest.TestCase):
 
     @classmethod
     def tearDownClass(cls):
+        print('\n程序结束')
         cls.driver.quit()
 
     # @unittest.skip('unittest不执行这条测试用例')
@@ -52,6 +53,7 @@ class TestCase(unittest.TestCase):
         self.obj.click((By.XPATH, '//*[@id="main"]/div/div[1]/div[2]/button[1]'))
 
         current_channel = self.obj.get_text((By.XPATH, '//*[@id="main"]/div/div[2]/div[1]/div[3]/div/div[1]/div/table/tbody/tr[1]/td[6]/div'))
+
         """渠道不同，修改渠道的按钮位置也有所不同，需要进行判断"""
         if current_channel == '中金':
             self.obj.click((By.XPATH, '//*[@id="main"]/div/div[2]/div[1]/div[3]/div/div[1]/div/table/tbody/tr[1]/td[9]/div/button[4]/span/span'))
@@ -62,20 +64,20 @@ class TestCase(unittest.TestCase):
         
         if self.channel == 1:
             self.obj.get_li_value('el-scrollbar__view el-select-dropdown__list', '中金')
-            new_current_channel = '【中金】'
+            self.new_current_channel = '【中金】'
 
         elif self.channel == 2:
             self.obj.get_li_value('el-scrollbar__view el-select-dropdown__list', '江南农商行-必答')
-            new_current_channel = '【江南农商行-必答】'
+            self.new_current_channel = '【江南农商行-必答】'
 
         elif self.channel == 3:
             self.obj.get_li_value('el-scrollbar__view el-select-dropdown__list', '江南农商行-汇锦微')
-            new_current_channel = '【江南农商行-汇锦微】'
+            self.new_current_channel = '【江南农商行-汇锦微】'
 
         self.obj.wait(1)
         self.obj.click((By.XPATH, '/html/body/div[1]/div[2]/div[2]/div/div[4]/div/div/footer/button'))
         self.obj.wait(1)
-        print(f'支付渠道已切换成{new_current_channel}')
+        print(f'支付渠道已切换成{self.new_current_channel}')
 
 
 if __name__ == '__main__':

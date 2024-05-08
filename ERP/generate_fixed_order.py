@@ -77,13 +77,17 @@ class TestCase(unittest.TestCase):
                 if 0 < ul_num <= 30:
                     print('\n当前页面订单小于等于30个，不会跳转页面')
                     self.obj.click((By.XPATH, f'//*[@id="rows"]/div[2]/ul[{ul_num}]/li[11]/a'))
+                    print('step 1, no errors')
                     self.obj.switch_to_newest_window()
+                    print('step 2, no errors')
                     self.obj.wait(5)
                     myTime = time.strftime("%Y-%m-%d~%H-%M-%S")
                     self.obj.erp_order_screenshot(myTime)
-                    self.obj.switch_to_newest_window()
-                    self.obj.explicitly_wait((By.XPATH, '/html/body/div[81]/div/li'), 10)
-                    self.obj.click((By.XPATH, '/html/body/div[81]/div/li'))
+                    print('step 3, no errors')
+                    self.obj.wait(2)
+                    print('step 4, no errors')
+                    self.obj.click((By.XPATH, '//*[@id="order_factory"]/div[81]/div/li'))
+                    print('step 5, no errors')
 
                 if ul_num > 30:
                     print('\n当前页面订单大于30个，正在跳转最新页面')
@@ -95,7 +99,6 @@ class TestCase(unittest.TestCase):
                     self.obj.wait(5)
                     myTime = time.strftime("%Y-%m-%d~%H-%M-%S")
                     self.obj.erp_order_screenshot(myTime)
-                    self.obj.switch_to_newest_window()
                     self.obj.explicitly_wait((By.XPATH, '/html/body/div[81]/div/li'), 10)
                     self.obj.click((By.XPATH, '/html/body/div[81]/div/li'))
 

@@ -229,3 +229,19 @@
 2024-03-19 13:12:08,462 [-] [111.231.103.117:8083] weblogic not detected CVE-2018-2894
 2024-03-19 13:12:08,598 [-] [111.231.103.117:8083] weblogic not detected CVE-2019-2725
 2024-03-19 13:12:10,841 [-] [111.231.103.117:8083] weblogic not detected CVE-2019-2729
+2024-04-07 11:25:56,941 [-] [requests==2.23.0:7001] weblogic not detected CVE-2017-10271
+2024-04-07 11:25:56,941 [-] [fake_useragent==0.1.11:7001] weblogic not detected CVE-2017-10271
+2024-04-07 11:25:56,945 [-] [requests==2.23.0:7001] weblogic not detected CVE-2017-3506
+2024-04-07 11:25:56,945 [-] [fake_useragent==0.1.11:7001] weblogic not detected CVE-2017-3506
+2024-04-07 11:26:36,668 [-] [requests==2.23.0:7001] weblogic not detected CVE-2017-10271
+2024-04-07 11:26:36,668 [-] [fake_useragent==0.1.11:7001] weblogic not detected CVE-2017-10271
+2024-04-07 11:26:36,671 [-] [requests==2.23.0:7001] weblogic not detected CVE-2017-3506
+2024-04-07 11:26:36,671 [-] [fake_useragent==0.1.11:7001] weblogic not detected CVE-2017-3506
+2024-04-07 11:27:02,040 [-] [139.224.119.170:9090] Weblogic Version Recognition Failed
+2024-04-07 11:27:02,107 [-] [139.224.119.170:9090] Weblogic console address not found!
+2024-04-07 11:27:02,155 [-] [139.224.119.170:9090] Weblogic UDDI module default path does not exist!
+2024-04-07 11:27:08,283 [-] [139.224.119.170:9090] weblogic not detected CVE-2017-10271
+2024-04-07 11:27:11,371 [-] [139.224.119.170:9090] weblogic not detected CVE-2017-3506
+2024-04-07 11:27:17,714 [-] [139.224.119.170:9090] weblogic not detected CVE-2018-2894
+2024-04-07 11:27:17,868 [-] [139.224.119.170:9090] weblogic not detected CVE-2019-2725
+2024-04-07 11:27:20,110 [-] [139.224.119.170:9090] weblogic not detected CVE-2019-2729
