@@ -24,13 +24,13 @@ class Login(unittest.TestCase):
         print('程序结束')
         cls.driver.quit()
 
-    @unittest.skip("Skip the case")
+    #@unittest.skip("Skip the case")
     def test_1_login_success(self):
         """登录成功"""
         self.loginpage.check_login_out_status()
         self.loginpage.login_success_with_code('13321105094')
 
-    @unittest.skip("Skip the case")
+    #@unittest.skip("Skip the case")
     def test_2_login_fail(self):
         """登录失败"""
         self.loginpage.check_login_out_status()

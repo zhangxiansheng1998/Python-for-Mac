@@ -21,5 +21,6 @@ def run():
         if keyword != '是' or '否':
             keyword = input("输入有误，请重新输入[是/否]")
 
+
 run()
 
