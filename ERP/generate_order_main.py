@@ -35,7 +35,7 @@ class TestCase(unittest.TestCase):
     def test_1_login(self):
         """登录ERP系统"""
         self.obj.max()
-        self.obj.visit("http://h.thinkermen.com/wincc_xingeercc/mini2021_1.7.4/index.php?r=login")
+        self.obj.visit("http://h.thinkermen.com/wincc_xingeercc/mini2021_1.7.7/index.php?r=login")
         self.obj.input((By.ID, 'loginname'), "admin")
         self.obj.input((By.ID, 'nloginpwd'), "123456")
         self.obj.click((By.CSS_SELECTOR,
@@ -79,7 +79,7 @@ class TestCase(unittest.TestCase):
                                 'div > div > div.system_overlay_btn > button.sbt_white.fr.mr10.group_orders'))
                 self.obj.switch_to_newest_window()
                 self.obj.explicitly_wait((By.XPATH, '//*[@id="rows"]/div[2]'), 10)
-                ul_num = int(self.obj.get_text((By.XPATH, '/html/body/div[80]/div[2]/p/span[11]/b')))
+                ul_num = int(self.obj.get_text((By.XPATH, '/html/body/div[79]/div[2]/p/span[11]/b')))
 
                 """翻页逻辑处理"""
                 if 0 < ul_num <= 30:
@@ -90,8 +90,8 @@ class TestCase(unittest.TestCase):
                     myTime = time.strftime("%Y-%m-%d~%H-%M-%S")
                     self.obj.erp_order_screenshot(myTime)
                     self.obj.switch_to_newest_window()
-                    self.obj.explicitly_wait((By.XPATH, '/html/body/div[81]/div/li'), 10)
-                    self.obj.click((By.XPATH, '/html/body/div[81]/div/li'))
+                    self.obj.explicitly_wait((By.XPATH, '/html/body/div[80]/div/li'), 10)
+                    self.obj.click((By.XPATH, '/html/body/div[80]/div/li'))
 
                 if ul_num > 30:
                     print('\n当前页面订单大于30个，正在跳转最新页面')
@@ -104,8 +104,8 @@ class TestCase(unittest.TestCase):
                     myTime = time.strftime("%Y-%m-%d~%H-%M-%S")
                     self.obj.erp_order_screenshot(myTime)
                     self.obj.switch_to_newest_window()
-                    self.obj.explicitly_wait((By.XPATH, '/html/body/div[81]/div/li'), 10)
-                    self.obj.click((By.XPATH, '/html/body/div[81]/div/li'))
+                    self.obj.explicitly_wait((By.XPATH, '/html/body/div[80]/div/li'), 10)
+                    self.obj.click((By.XPATH, '/html/body/div[80]/div/li'))
 
                 print("\n第", i + 1, "笔订单")
                 print("\n订单金额:", random_number, "元")
@@ -114,7 +114,7 @@ class TestCase(unittest.TestCase):
                 file.write(f"\n第{i + 1}笔订单\n订单金额: {random_number}元\n截图时间: {myTime}\n")
 
         print("\n总共生成", total_orders, "个订单")
-        print("\n订单地址", 'http://h.thinkermen.com/wincc_xingeercc/mini2021_1.7.4/index.php?r=order/factory')
+        print("\n订单地址", 'http://h.thinkermen.com/wincc_xingeercc/mini2021_1.7.7/index.php?r=order/factory')
 
 
 if __name__ == '__main__':
