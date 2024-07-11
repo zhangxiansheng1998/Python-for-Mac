@@ -64,7 +64,7 @@ class TestCase(unittest.TestCase):
                 self.obj.input((By.NAME, 'shuliang'), "1")
                 self.obj.input((By.NAME, 'yanse'), "黑色")
                 # 生成1到3元之间的随机浮点数,保留小数点后2位
-                random_number = round(random.uniform(1, 3), 2)
+                random_number = round(random.uniform(20, 30), 0)
                 self.obj.input((By.NAME, 'danjia'), "{}".format(random_number))
                 self.obj.click((By.ID, 'start_count'))
                 self.obj.explicitly_wait((By.ID, 'save_order'), 10)
@@ -89,7 +89,6 @@ class TestCase(unittest.TestCase):
                     self.obj.wait(5)
                     myTime = time.strftime("%Y-%m-%d~%H-%M-%S")
                     self.obj.erp_order_screenshot(myTime)
-                    self.obj.switch_to_newest_window()
                     self.obj.explicitly_wait((By.XPATH, '/html/body/div[80]/div/li'), 10)
                     self.obj.click((By.XPATH, '/html/body/div[80]/div/li'))
 
