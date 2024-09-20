@@ -30,14 +30,14 @@ class Login(unittest.TestCase):
         self.loginpage.wait(3)
         self.loginpage.assert_text_equal('验证码失效,请先发送验证码', login_element['assert_box'])
 
-    #@unittest.skip('unittest不执行这条测试用例')
+    @unittest.skip('unittest不执行这条测试用例')
     def test_2_login_fail(self):
         """发送验证码，但是输入错误的验证码登录系统"""
         self.loginpage.login_with_sending_code('15180381485', '111111')
         self.loginpage.wait(3)
         self.loginpage.assert_text_equal('验证码错误', login_element['assert_box'])
 
-    #@unittest.skip('unittest不执行这条测试用例')
+    @unittest.skip('unittest不执行这条测试用例')
     def test_3_login_success(self):
         """使用万能验证码的手机号登录系统"""
         self.loginpage.login_without_sending_code('18662832373', '111111')

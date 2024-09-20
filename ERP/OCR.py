@@ -31,6 +31,7 @@ def code_verify(x,y,width,height):
             break
         else:
             print("OCR识别失败，正在重新识别")
+            break
 
 
 code_verify(824, 742,140, 48)

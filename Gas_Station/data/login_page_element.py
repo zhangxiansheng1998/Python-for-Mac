@@ -8,5 +8,6 @@ website = \
 
 login_element = \
     {
-
+        'keyword': (By.ID, 'kw'),
+        'search': (By.ID, 'su'),
     }

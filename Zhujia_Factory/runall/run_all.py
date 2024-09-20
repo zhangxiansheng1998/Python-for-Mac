@@ -33,8 +33,7 @@ def create_folder_for_today():
 
 def Runall():
     """生成测试报告"""
-    create_folder_for_today()
-    # now = time.strftime("%Y-%m-%d~%H-%M-%S")  # 获取当前时间
+    create_folder_for_today() # 生成当前日期对应的文件夹
     today = datetime.today()  # 获取当前日期
     month_formatted_date = today.strftime("%Y-%m")
     formatted_date = today.strftime("%Y-%m-%d")  # 格式化日期为字符串，例如："2024-01-12"

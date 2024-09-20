@@ -36,17 +36,17 @@ class TestCase(unittest.TestCase):
     def test_2_filter_failed_orders(self):
         global failed_orders
         self.obj.click((By.XPATH, '//*[@id="menu"]/ul/ul/li[3]'))
-        self.obj.click((By.XPATH, '/html/body/div[1]/div[2]/div[2]/div/div[1]/div[10]/div/div/div/div/input'))
+        self.obj.click((By.XPATH, '/html/body/div[1]/div[2]/div[2]/div[2]/div[1]/div[10]/div/div/div[1]/div[2]'))
         self.obj.wait(2)
         self.obj.get_li_value('el-scrollbar__view el-select-dropdown__list', '失败')
-        self.obj.click((By.XPATH, '/html/body/div[1]/div[2]/div[2]/div/div[1]/div[12]/div[3]/button[1]'))
+        self.obj.click((By.XPATH, '/html/body/div[1]/div[2]/div[2]/div[2]/div[1]/button[1]'))
         self.obj.wait(8)
-        failed_orders_text = self.obj.get_text((By.XPATH, '/html/body/div[1]/div[2]/div[2]/div/div[1]/div[12]/div[2]/span[2]'))
+        failed_orders_text = self.obj.get_text((By.XPATH, '/html/body/div[1]/div[2]/div[2]/div[2]/div[1]/div[14]/span[8]'))
         match = re.search(r'\d+', failed_orders_text)
         if match:
             # 将匹配到的字符串转换为整数
             failed_orders = int(match.group())
-            print("失败订单总数:", failed_orders)
+            print("失败订单数:", failed_orders)
         else:
             print("匹配失败")
 
@@ -79,7 +79,7 @@ class TestCase(unittest.TestCase):
 
                     self.obj.backspace_macos((By.XPATH, '/html/body/div[1]/div[2]/div[2]/div/div[3]/div/span[3]/div/div/input'))
                     self.obj.input((By.XPATH, '/html/body/div[1]/div[2]/div[2]/div/div[3]/div/span[3]/div/div/input'), '{page}'.format(page=page))
-                    self.obj.click((By.XPATH, '/html/body/div[1]/div[2]/div[2]/div/div[1]/div[12]/div[3]/button[1]'))
+                    self.obj.click((By.XPATH, '/html/body/div[1]/div[2]/div[2]/div[2]/div[1]/button[1]'))
                     print(f"已翻至第{page}页")
 
                 """最后一页剩余的数据"""
