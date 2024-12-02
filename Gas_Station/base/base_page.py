@@ -1,14 +1,14 @@
 """"
 BasePage类是POM中的基类，主要用于提供常用的函数为页面对象进行服务
 """
-#import pyautogui
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.wait import WebDriverWait
 import time
 from selenium.webdriver.common.by import By
 import os
 from datetime import datetime
-
+from PIL import Image
+import io
 
 
 class BasePage:
@@ -224,6 +224,28 @@ class BasePage:
         # 创建文件夹（如果不存在）
         screenshot_path = os.path.join(screenshot_folder, f"{myTime}.png")
         self.driver.save_screenshot(screenshot_path)
+
+    def partial_screenshot(self,left,upper,right,lower):
+        screenshot = self.driver.get_screenshot_as_png()
+        screenshot_img = Image.open(io.BytesIO(screenshot))
+        partial_screenshot = screenshot_img.crop((left, upper, right, lower))
+        today = datetime.today()
+        month_formatted_date = today.strftime("%Y-%m")
+        formatted_date = today.strftime("%Y-%m-%d")
+        month_folder_path = os.path.join('../report', month_formatted_date)
+        folder_path = os.path.join('../report', month_formatted_date, formatted_date)
+
+        # 检查目录是否已经存在，如果不存在则创建
+        if not os.path.exists(month_folder_path):
+            os.makedirs(month_folder_path)
+            print(f"文件夹'{month_formatted_date}'创建成功")
+
+        if not os.path.exists(folder_path):
+            os.makedirs(folder_path)
+            print(f"文件夹'{formatted_date}'创建成功")
+
+
+        partial_screenshot.save(f"../report{month_formatted_date}/{formatted_date}/partial_screenshot.png")
 
     def close(self):
         """关闭浏览器窗口"""

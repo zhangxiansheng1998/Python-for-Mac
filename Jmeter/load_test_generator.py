@@ -66,8 +66,7 @@ def run(filename):
             answer = input("输入有误，请重新输入【是/否】")
 
     os.system(
-        "jmeter -n -t {} -l /Volumes/Disk/apache-jmeter-5.1.1/jmeter/jtl/{}.jtl -e -o /Volumes/Disk/apache-jmeter-5.1.1/jmeter/report/{}"
-        .format(filename, Mytime, Mytime))
+        "jmeter -n -t {} -l /Volumes/Disk/apache-jmeter-5.1.1/jmeter/jtl/{}.jtl -e -o /Volumes/Disk/apache-jmeter-5.1.1/jmeter/report/{}".format(filename, Mytime, Mytime))
     linkName = Path('/Volumes/Disk/apache-jmeter-5.1.1/jmeter/report/' + Mytime + '/index.html').as_uri()
     print("已生成测试报告，具体内容可点击超链接", linkName)
     report_path = Path('/Volumes/Disk/apache-jmeter-5.1.1/jmeter/report/' + Mytime).as_uri()
@@ -102,8 +101,7 @@ def run(filename):
 
             new_Mytime = time.strftime("%Y-%m-%d~%H-%M-%S")
             os.system(
-                "jmeter -n -t {} -l /Volumes/Disk/apache-jmeter-5.1.1/jmeter/jtl/{}.jtl -e -o /Volumes/Disk/apache-jmeter-5.1.1/jmeter/report/{}"
-                .format(filename, new_Mytime, new_Mytime))
+                "jmeter -n -t {} -l /Volumes/Disk/apache-jmeter-5.1.1/jmeter/jtl/{}.jtl -e -o /Volumes/Disk/apache-jmeter-5.1.1/jmeter/report/{}".format(filename, new_Mytime, new_Mytime))
             linkName = Path(
                 '/Volumes/Disk/apache-jmeter-5.1.1/jmeter/report/' + new_Mytime + '/index.html').as_uri()
             print("已生成测试报告，具体内容可点击超链接", linkName)
@@ -120,4 +118,4 @@ def run(filename):
 
 
 # 运行的脚本路径
-run('/Volumes/Disk/apache-jmeter-5.1.1/jmeter/jmx/jsfk.jmx')
+run('/Volumes/Disk/PG4/NdhkApiGatewayTestScripts/TestData/PG-100.jmx')

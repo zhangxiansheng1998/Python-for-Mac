@@ -16,10 +16,10 @@
       <excludeFolder url="file://$MODULE_DIR$/venv" />
       <excludeFolder url="file://$MODULE_DIR$/Appium/report/2024-01-16" />
       <excludeFolder url="file://$MODULE_DIR$/Appium/report/2024-01-19" />
-      <excludeFolder url="file://$MODULE_DIR$/ERP/picture/2024-01-24" />
-      <excludeFolder url="file://$MODULE_DIR$/ERP/picture/2024-01-22" />
       <excludeFolder url="file://$MODULE_DIR$/Zhujia_Factory/report/2024-01/2024-01-22" />
       <excludeFolder url="file://$MODULE_DIR$/Zhujia_Factory/report_email/2024-01/2024-01-22" />
+      <excludeFolder url="file://$MODULE_DIR$/ERP/picture/2024-01/2024-01-22" />
+      <excludeFolder url="file://$MODULE_DIR$/ERP/picture/2024-01/2024-01-24" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.8" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

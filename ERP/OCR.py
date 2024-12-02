@@ -31,10 +31,11 @@ def code_verify(x,y,width,height):
             break
         else:
             print("OCR识别失败，正在重新识别")
-            break
 
 
-code_verify(824, 742,140, 48)
+
+
+code_verify(830, 832,180, 90)
 
 # 关闭浏览器
 driver.quit()

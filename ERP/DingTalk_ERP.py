@@ -37,6 +37,7 @@ job_last_build_url = server.get_info(job_name)['lastBuild']['url']
 # 报告地址
 report_url = job_last_build_url
 
+
 '''
 钉钉推送方法：
 读取order.txt文件内的数据，循环遍历获取需要的值
@@ -50,6 +51,7 @@ def DingTalkSend():
         # 读取文件内容
         content = file.read()
 
+    picURL = "https://q5.itc.cn/q_70/images03/20240612/5e4ff010635c4a0389e03a305271f8b2.jpeg"
     # 钉钉推送
     con = {"msgtype": "text",
            "text": {
@@ -59,6 +61,7 @@ def DingTalkSend():
                           "\n构建地址：\n" + job_url +
                           "\n订单地址：\n" + "http://h.thinkermen.com/wincc_xingeercc/mini2021_1.7.4/index.php?r=order/factory\n"
            },
+           "photoUrl":"https://q5.itc.cn/q_70/images03/20240612/5e4ff010635c4a0389e03a305271f8b2.jpeg",
            "at": {
                "atMobiles": [
                    "15180381485"  # 如果需要@某人，这里写他的手机号

@@ -5,19 +5,8 @@ from selenium.webdriver.common.by import By
 
 
 class TestCase(unittest.TestCase):
-
     obj = None
     driver = None
-
-    while True:
-        try:
-            user_input = int(input("请输入要填写的身份证、银行卡信息【1】倪浩平【2】王永康【3】徐鹏: "))
-            if user_input in [1, 2, 3]:
-                break  # 如果输入合法数字，退出循环
-            else:
-                print("输入错误，请重新输入！")
-        except ValueError:
-            print("输入错误，请重新输入！")
 
     @classmethod
     def setUpClass(cls):
@@ -26,6 +15,7 @@ class TestCase(unittest.TestCase):
         cls.driver = webdriver.Chrome(options=Browser().browser_headless())  # 无头模式启动
         cls.obj = BasePage(cls.driver)
         cls.obj.implicitly_wait(15)
+        cls.user = int(os.getenv('user', 1))  # 定义环境变量，可以动态的传递user的值，默认为1
 
     @classmethod
     def tearDownClass(cls):
@@ -49,27 +39,30 @@ class TestCase(unittest.TestCase):
         self.obj.explicitly_wait((By.ID, 'bank_card'), 10)
         self.obj.backspace_macos((By.ID, 'bank_card'))
         print("\n页面上身份证和银行卡信息已清空！")
-        if self.user_input == 1:
+        if self.user == 1:
             self.obj.input((By.ID, 'id_card'), '36233019980509119X')
             self.obj.input((By.ID, 'bank_card'), '6217002000088747870')
             self.obj.click(
                 (By.XPATH, '/html/body/div/div/section[2]/div/div/div/form/div[2]/div[2]/div[1]/button'))
+            print('\n姓名：倪浩平')
             print('\n身份证信息：', self.obj.get_value((By.ID, 'id_card')))
             print('\n银行卡信息：', self.obj.get_value((By.ID, 'bank_card')))
 
-        elif self.user_input == 2:
+        elif self.user == 2:
             self.obj.input((By.ID, 'id_card'), '410225199804123432')
             self.obj.input((By.ID, 'bank_card'), '6236682430004532667')
             self.obj.click(
                 (By.XPATH, '/html/body/div/div/section[2]/div/div/div/form/div[2]/div[2]/div[1]/button'))
+            print('\n姓名：王永康')
             print('\n身份证信息：', self.obj.get_value((By.ID, 'id_card')))
             print('\n银行卡信息：', self.obj.get_value((By.ID, 'bank_card')))
 
-        elif self.user_input == 3:
+        elif self.user == 3:
             self.obj.input((By.ID, 'id_card'), '320482199610284613')
             self.obj.input((By.ID, 'bank_card'), '6217993000422695224')
             self.obj.click(
                 (By.XPATH, '/html/body/div/div/section[2]/div/div/div/form/div[2]/div[2]/div[1]/button'))
+            print('\n姓名：徐鹏')
             print('\n身份证信息：', self.obj.get_value((By.ID, 'id_card')))
             print('\n银行卡信息：', self.obj.get_value((By.ID, 'bank_card')))
 

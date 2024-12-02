@@ -37,7 +37,7 @@ class TestCase(unittest.TestCase):
         self.obj.max()
         self.obj.visit("http://mt-hwc.thinkermen.com/wincc_xingeercc/mini2021_1.7.7/index.php?r=main/index")
         self.obj.input((By.ID, 'loginname'), "倪浩")
-        self.obj.input((By.ID, 'nloginpwd'), "123123")
+        self.obj.input((By.ID, 'nloginpwd'), "123654")
         self.obj.click((By.CSS_SELECTOR,
                         "body > div.lbl_login_bg > div.new_login_r > div.login_form.clb > div:nth-child(1) > "
                         "div > div:nth-child(3) > button"))
@@ -63,8 +63,8 @@ class TestCase(unittest.TestCase):
                 self.obj.input((By.NAME, 'zongkuan'), "200")
                 self.obj.input((By.NAME, 'shuliang'), "1")
                 self.obj.input((By.NAME, 'yanse'), "黑色")
-                # 生成1到3元之间的随机金额,保留小数点后2位
-                random_number = round(random.uniform(1, 3), 2)
+                # 生成1到10元之间的随机金额,保留小数点后2位
+                random_number = round(random.uniform(1, 10),2)
                 self.obj.input((By.NAME, 'danjia'), "{}".format(random_number))
                 self.obj.click((By.ID, 'start_count'))
                 self.obj.explicitly_wait((By.ID, 'save_order'), 10)

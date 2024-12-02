@@ -30,7 +30,7 @@ class TestCase(unittest.TestCase):
         self.obj.max()
         self.obj.visit("http://mt-hwc.thinkermen.com/wincc_xingeercc/mini2021_1.7.7/index.php?r=main/index")
         self.obj.input((By.ID, 'loginname'), "倪浩")
-        self.obj.input((By.ID, 'nloginpwd'), "123123")
+        self.obj.input((By.ID, 'nloginpwd'), "123654")
         self.obj.click((By.CSS_SELECTOR,
                         "body > div.lbl_login_bg > div.new_login_r > div.login_form.clb > div:nth-child(1) > "
                         "div > div:nth-child(3) > button"))
@@ -59,7 +59,7 @@ class TestCase(unittest.TestCase):
 
                 if self.amount_choices == 'random_amount':
                     # 生成1到3元之间的随机金额,保留小数点后2位
-                    random_amount = round(random.uniform(1, 3), 2)
+                    random_amount = round(random.uniform(1, 10), 2)
                     self.obj.input((By.NAME, 'danjia'), "{}".format(random_amount))
                 elif self.amount_choices == 'specific_amount':
                     # 生成固定金额
