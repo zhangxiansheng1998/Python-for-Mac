@@ -63,8 +63,10 @@ class TestCase(unittest.TestCase):
                 self.obj.input((By.NAME, 'zongkuan'), "200")
                 self.obj.input((By.NAME, 'shuliang'), "1")
                 self.obj.input((By.NAME, 'yanse'), "黑色")
+                self.obj.input((By.NAME, 'lashouyanse'), "黑色")
+                self.obj.input((By.NAME, 'kaixiang'), "上")
                 # 生成1到10元之间的随机金额,保留小数点后2位
-                random_number = round(random.uniform(1, 10),2)
+                random_number = round(random.uniform(10, 30))
                 self.obj.input((By.NAME, 'danjia'), "{}".format(random_number))
                 self.obj.click((By.ID, 'start_count'))
                 self.obj.explicitly_wait((By.ID, 'save_order'), 10)
@@ -85,7 +87,7 @@ class TestCase(unittest.TestCase):
                 """翻页逻辑处理"""
                 if 0 < ul_num <= 30:
                     print('\n当前页面订单小于等于30个，不会跳转页面')
-                    self.obj.click((By.XPATH, f'//*[@id="rows"]/div[2]/ul[{ul_num}]/li[11]/a'))
+                    self.obj.click((By.XPATH, f'//*[@id="rows"]/div[2]/ul[{ul_num}]/li[15]/a'))
                     self.obj.switch_to_newest_window()
                     self.obj.wait(5)
                     myTime = time.strftime("%Y-%m-%d~%H-%M-%S")
@@ -98,7 +100,7 @@ class TestCase(unittest.TestCase):
                     self.obj.click((By.CSS_SELECTOR, '#pager > div.jPag-control-front > a'))
                     self.obj.explicitly_wait((By.XPATH, '//*[@id="rows"]/div[2]'), 10)
                     ul_num = self.obj.get_ul_number((By.XPATH, '//*[@id="rows"]/div[2]'))
-                    self.obj.click((By.XPATH, f'//*[@id="rows"]/div[2]/ul[{ul_num}]/li[11]/a'))
+                    self.obj.click((By.XPATH, f'//*[@id="rows"]/div[2]/ul[{ul_num}]/li[15]/a'))
                     self.obj.switch_to_newest_window()
                     self.obj.wait(5)
                     myTime = time.strftime("%Y-%m-%d~%H-%M-%S")

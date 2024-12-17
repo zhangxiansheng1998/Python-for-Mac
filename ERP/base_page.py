@@ -4,11 +4,11 @@ BasePage类是POM中的基类，主要用于提供常用的函数为页面对象
 import io
 from PIL import Image
 from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support.wait import WebDriverWait
 import time
 from selenium.webdriver.common.by import By
 import os
 from datetime import datetime
+from selenium.webdriver.support.ui import WebDriverWait
 
 
 class BasePage:
@@ -115,8 +115,18 @@ class BasePage:
         return self.locator(loc).get_attribute("value")
 
     def get_li_value(self, ul_class, value):
-        """点击下拉框中某个特定的值   ul_class：ul的class值   value：要查询的值"""
+        """用于获取非Select类型的下拉框某个特定的值  ul_class：ul的class值   value：要查询的值"""
         self.driver.find_element_by_xpath('//ul[@class="{}"]/li/span[contains(text(),"{}")]'.format(ul_class, value)).click()
+
+    def get_option_value(self, li_xpath, value):
+        """用于获取非Select类型的下拉框某个特定的值  当get_li_value函数不起作用时，可以用这个函数
+           ul_xpath：li列表的xpath路径   value：要查询的值
+        """
+        options = self.driver.find_elements(By.XPATH,li_xpath)
+        for option in options:
+            if value == option.text:
+                option.click()
+                break
 
     def screen_template(self, loc):
         """定位失败时，截图并关闭浏览器"""
@@ -243,9 +253,10 @@ class BasePage:
             print(f"文件夹'{formatted_date}'创建成功")
 
         myTime = time.strftime("%Y-%m-%d~%H-%M-%S")
-
         partial_screenshot.save(f"./picture/{month_formatted_date}/{formatted_date}/{myTime}.png")
 
     def close(self):
         """关闭浏览器窗口"""
         self.driver.close()
+
+

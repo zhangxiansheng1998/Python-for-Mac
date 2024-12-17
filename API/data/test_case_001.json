@@ -1,0 +1,22 @@
+[
+    {
+        "Url": "https://jsfk-api-test.bigvisiontech.com/api/v1/account/login",
+        "Method": "POST",
+        "RequestBody": {
+            "username": "platform",
+            "password": "bv123456"
+        },
+        "ExpectCode": "200",
+        "ExpectResult": {"message": "账号未注册","status": "500"}
+    },
+    {
+        "Url": "https://jsfk-api-test.bigvisiontech.com/api/v1/account/login",
+        "Method": "POST",
+        "RequestBody": {
+            "username": "test111",
+            "password": "bv123456"
+        },
+        "ExpectCode": "200",
+        "ExpectResult": {"message": "账号未注册","status": "500"}
+    }
+]

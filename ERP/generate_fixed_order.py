@@ -13,7 +13,7 @@ class TestCase(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         print('\n程序开始')
-        # cls.driver = webdriver.Chrome(options=Browser().browser_ui()) # 带UI界面启动
+        #cls.driver = webdriver.Chrome(options=Browser().browser_ui()) # 带UI界面启动
         cls.driver = webdriver.Chrome(options=Browser().browser_headless())  # 无头模式启动
         cls.obj = BasePage(cls.driver)
         cls.obj.implicitly_wait(15)
@@ -56,10 +56,12 @@ class TestCase(unittest.TestCase):
                 self.obj.input((By.NAME, 'zongkuan'), "200")
                 self.obj.input((By.NAME, 'shuliang'), "1")
                 self.obj.input((By.NAME, 'yanse'), "黑色")
+                self.obj.input((By.NAME, 'lashouyanse'), "黑色")
+                self.obj.input((By.NAME, 'kaixiang'), "上")
 
                 if self.amount_choices == 'random_amount':
                     # 生成1到3元之间的随机金额,保留小数点后2位
-                    random_amount = round(random.uniform(1, 10), 2)
+                    random_amount = round(random.uniform(10, 30))
                     self.obj.input((By.NAME, 'danjia'), "{}".format(random_amount))
                 elif self.amount_choices == 'specific_amount':
                     # 生成固定金额
@@ -85,7 +87,7 @@ class TestCase(unittest.TestCase):
                 """翻页逻辑处理"""
                 if 0 < ul_num <= 30:
                     print('\n当前页面订单小于等于30个，不会跳转页面')
-                    self.obj.click((By.XPATH, f'//*[@id="rows"]/div[2]/ul[{ul_num}]/li[11]/a'))
+                    self.obj.click((By.XPATH, f'//*[@id="rows"]/div[2]/ul[{ul_num}]/li[15]/a'))
                     self.obj.switch_to_newest_window()
                     self.obj.wait(5)
                     myTime = time.strftime("%Y-%m-%d~%H-%M-%S")
@@ -98,7 +100,7 @@ class TestCase(unittest.TestCase):
                     self.obj.click((By.CSS_SELECTOR, '#pager > div.jPag-control-front > a'))
                     self.obj.explicitly_wait((By.XPATH, '//*[@id="rows"]/div[2]'), 10)
                     ul_num = self.obj.get_ul_number((By.XPATH, '//*[@id="rows"]/div[2]'))
-                    self.obj.click((By.XPATH, f'//*[@id="rows"]/div[2]/ul[{ul_num}]/li[11]/a'))
+                    self.obj.click((By.XPATH, f'//*[@id="rows"]/div[2]/ul[{ul_num}]/li[15]/a'))
                     self.obj.switch_to_newest_window()
                     self.obj.wait(5)
                     myTime = time.strftime("%Y-%m-%d~%H-%M-%S")

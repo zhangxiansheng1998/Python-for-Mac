@@ -8,14 +8,16 @@ while True:
         while True:
             try:
                 # 定义命令选项
-                print("===========命令选项================")
+                print("===========命令选项===================")
                 print("【1】生成erp订单")
                 print("【2】筑房人测试收款账号修改为徐鹏")
                 print("【3】筑房人测试收款账号修改为倪浩平")
                 print("【4】获取材神金服失败的订单")
-                print("===================================")
+                print("【5】「必答」全部切成「汇锦微」")
+                print("【6】「汇锦微」全部切成「必答」")
+                print("======================================")
                 command_choice = int(input("请输入您要运行的命令选项:"))
-                if command_choice not in [1, 2, 3, 4]:
+                if command_choice not in [1, 2, 3, 4, 5, 6]:
                     print("输入的数字有误，请重新输入！")
                 else:
                     break
@@ -65,6 +67,30 @@ while True:
                 result = subprocess.run(command, shell=True, capture_output=True, text=True, check=True)
                 print("失败订单:\n", result.stdout)
                 print("命令【4】已执行！\n")
+            except subprocess.CalledProcessError as e:
+                print('\n命令执行过程中发生异常，异常信息如下：', e)
+                print("stdout:", e.stdout)
+                print("stderr:", e.stderr)
+            keyword = input("是否需要继续运行【是/否】")
+
+        elif command_choice == 5:
+            try:
+                command = 'cd /Users/macbook_air/Desktop/MyProject/ERP && python3.8 switch_channel_all.py'
+                os.putenv('channel', '1')  # 修改环境变量的值
+                result = subprocess.run(command, shell=True, capture_output=True, text=True, check=True)
+                print("命令【5】已执行！\n")
+            except subprocess.CalledProcessError as e:
+                print('\n命令执行过程中发生异常，异常信息如下：', e)
+                print("stdout:", e.stdout)
+                print("stderr:", e.stderr)
+            keyword = input("是否需要继续运行【是/否】")
+
+        elif command_choice == 6:
+            try:
+                command = 'cd /Users/macbook_air/Desktop/MyProject/ERP && python3.8 switch_channel_all.py'
+                os.putenv('channel', '2')  # 修改环境变量的值
+                result = subprocess.run(command, shell=True, capture_output=True, text=True, check=True)
+                print("命令【6】已执行！\n")
             except subprocess.CalledProcessError as e:
                 print('\n命令执行过程中发生异常，异常信息如下：', e)
                 print("stdout:", e.stdout)
