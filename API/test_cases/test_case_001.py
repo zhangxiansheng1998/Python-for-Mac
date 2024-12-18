@@ -1,3 +1,7 @@
+import os
+
+import allure
+import pytest
 import requests
 import json
 from prettytable import PrettyTable
@@ -44,49 +48,61 @@ def compare_results(expect_result, actual_result):
     return "结果一致"
 
 
-def run_test():
-    file = '../data/test_case_001.json'
+@pytest.fixture(scope="function")
+def login():
+    print("正在运行程序")
 
-    # 读取JSON文件中的数据
-    with open(file, 'r') as file:
-        requests_data = json.load(file)
+file = '../data/test_case_001.json'
+# 读取JSON文件中的数据
+with open(file, 'r') as file:
+    requests_data = json.load(file)
+
+# @pytest.mark.skip("跳过")
+@allure.feature("开始发送请求")
+@pytest.mark.parametrize("request_data", requests_data)
+def test001(request_data):
 
     # 初始化计数器
     request_count = 0
 
-    # 循环遍历每个请求数据并发送请求
-    for req_data in requests_data:
-        request_count += 1  # 每次循环递增计数器
-        url = req_data['Url']
-        method = req_data['Method']
-        dataformat = req_data['DataFormat']
-        requestbody = req_data['RequestBody']
-        rsp_data = send_request(url, method, dataformat, requestbody)
+    request_count += 1  # 每次循环递增计数器
+    url = request_data['Url']
+    method = request_data['Method']
+    dataformat = request_data['DataFormat']
+    requestbody = request_data['RequestBody']
+    rsp_data = send_request(url, method, dataformat, requestbody)
 
-        # 针对响应内容进行判断
-        ExpectResult = req_data['ExpectResult']
-        ActualResult = json.loads(rsp_data.text)
+    # 针对响应内容进行判断
+    ExpectResult = request_data['ExpectResult']
+    ActualResult = json.loads(rsp_data.text)
 
-        # 针对失败的订单进行打印
-        Failed_Results = PrettyTable(["Number", "Url", "Method", "RequestBody", "ExpectCode", "ActualCode"])
-        Failed_Results.align["Number"] = "l"
-        Failed_Results.padding_width = 1
-        Failed_Results.add_row([request_count, req_data['Url'], req_data['Method'], req_data['RequestBody'], req_data['ExpectCode'], rsp_data.status_code])
+    # 针对失败的订单进行打印
+    Failed_Results = PrettyTable(["Number", "ExpectCode", "ActualCode"])
+    Failed_Results.align["Number"] = "l"
+    Failed_Results.padding_width = 1
+    Failed_Results.add_row([request_count, request_data['ExpectCode'], rsp_data.status_code])
 
-        if rsp_data.status_code == int(req_data['ExpectCode']) and compare_results(ExpectResult, ActualResult) == "结果一致":
-            print(f"断言成功：实际结果与预期结果一致！")
-        elif rsp_data.status_code == int(req_data['ExpectCode']) and compare_results(ExpectResult, ActualResult) == "结果不一致":
-            print(f"断言失败：实际结果与预期结果不一致！")
-            print("ExpectResult:", ExpectResult)
-            print("ActualResult:", ActualResult)
-        elif rsp_data.status_code != int(req_data['ExpectCode']) and compare_results(ExpectResult, ActualResult) == "结果一致":
-            print(f"断言失败：ExpectCode与ActualCode不一致！")
-            print(Failed_Results)
-        else:
-            print(f"断言失败：实际结果与ActualCode都不一致！")
-            print(Failed_Results)
-            print("ExpectResult:", ExpectResult)
-            print("ActualResult:", ActualResult)
+    if rsp_data.status_code == int(request_data['ExpectCode']) and compare_results(ExpectResult, ActualResult) == "结果一致":
+        print(f"\n断言成功：预期结果与实际结果一致！")
+    elif rsp_data.status_code == int(request_data['ExpectCode']) and compare_results(ExpectResult, ActualResult) == "结果不一致":
+        print(f"\n断言失败：预期结果与实际结果不一致！")
+        print("ExpectResult:", ExpectResult)
+        print("ActualResult:", ActualResult)
+    elif rsp_data.status_code != int(request_data['ExpectCode']) and compare_results(ExpectResult, ActualResult) == "结果一致":
+        print(f"\n断言失败：ExpectCode与ActualCode不一致！")
+        print(Failed_Results)
+    else:
+        print(f"\n断言失败：预期结果与实际结果、ExpectCode与ActualCode都不一致！")
+        print(Failed_Results)
+        print("ExpectResult:", ExpectResult)
+        print("ActualResult:", ActualResult)
 
 
-run_test()
+if __name__ == '__main__':
+    xml_path = "/Users/macbook_air/Desktop/MyProject/API/report/xml"
+    html_path = "/Users/macbook_air/Desktop/MyProject/API/report/html"
+    # '-s'会打印输出信息   '--sw'不会打印输出信息
+    # '-q'会打印详细信息
+    pytest.main(['--sw', '-q', '../test_cases/test_case_001.py', '--alluredir', xml_path])
+    os.system(f'/Users/macbook_air/Desktop/Allure/bin/allure generate {xml_path} -o {html_path} --clean')
+

@@ -7,7 +7,7 @@
             "username": "platform",
             "password": "bv123456"
         },
-        "ExpectCode": "200",
+        "ExpectCode": "1200",
         "ExpectResult": {"expire": 43200}
     },
     {

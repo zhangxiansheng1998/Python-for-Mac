@@ -1,0 +1,73 @@
+{
+  "uid" : "9a2bd776fb661d6b",
+  "name" : "test001[request_data1]",
+  "fullName" : "test_cases.test_case_001#test001",
+  "historyId" : "53df6672498fe831196bf2ece53817b3",
+  "time" : {
+    "start" : 1734511967105,
+    "stop" : 1734511967259,
+    "duration" : 154
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "ccd134c8748c3349",
+      "name" : "stdout",
+      "source" : "ccd134c8748c3349.txt",
+      "type" : "text/plain",
+      "size" : 53
+    } ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 0,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "开始发送请求"
+  }, {
+    "name" : "parentSuite",
+    "value" : "test_cases"
+  }, {
+    "name" : "suite",
+    "value" : "test_case_001"
+  }, {
+    "name" : "host",
+    "value" : "小平のMacBook"
+  }, {
+    "name" : "thread",
+    "value" : "11646-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_cases.test_case_001"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "request_data",
+    "value" : "{'Url': 'https://jsfk-api-test.bigvisiontech.com/api/v1/account/login', 'Method': 'POST', 'DataFormat': 'JSON', 'RequestBody': {'username': 'test111', 'password': 'bv123456'}, 'ExpectCode': '500', 'ExpectResult': {'message': '账号未注册', 'status': '500'}}"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "9a2bd776fb661d6b.json",
+  "parameterValues" : [ "{'Url': 'https://jsfk-api-test.bigvisiontech.com/api/v1/account/login', 'Method': 'POST', 'DataFormat': 'JSON', 'RequestBody': {'username': 'test111', 'password': 'bv123456'}, 'ExpectCode': '500', 'ExpectResult': {'message': '账号未注册', 'status': '500'}}" ]
+}

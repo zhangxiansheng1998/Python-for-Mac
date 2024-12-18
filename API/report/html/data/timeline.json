@@ -1,0 +1,353 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "children" : [ {
+    "name" : "小平のMacBook",
+    "children" : [ {
+      "name" : "12017-MainThread",
+      "children" : [ {
+        "name" : "test001[request_data2]",
+        "uid" : "3254d961627e34c1",
+        "parentUid" : "9be231adcb8cda09e4b644b61d81f632",
+        "status" : "passed",
+        "time" : {
+          "start" : 1734512256475,
+          "stop" : 1734512256616,
+          "duration" : 141
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'Url': 'https://pay.thinkerx.com/cms/login/in', 'Method': 'POST', 'DataFormat': 'FORM', 'RequestBody': {'account': 'nihaoping', 'password': '0c98adac760bd840c30d2d143fbb38a4', 'loading': 'true'}, 'ExpectCode': '200', 'ExpectResult': {'code': 0, 'msg': '成功！'}}" ]
+      }, {
+        "name" : "test001[request_data1]",
+        "uid" : "bda0a094b138ffc3",
+        "parentUid" : "9be231adcb8cda09e4b644b61d81f632",
+        "status" : "passed",
+        "time" : {
+          "start" : 1734512256325,
+          "stop" : 1734512256473,
+          "duration" : 148
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'Url': 'https://jsfk-api-test.bigvisiontech.com/api/v1/account/login', 'Method': 'POST', 'DataFormat': 'JSON', 'RequestBody': {'username': 'test111', 'password': 'bv123456'}, 'ExpectCode': '500', 'ExpectResult': {'message': '账号未注册', 'status': '500'}}" ]
+      }, {
+        "name" : "test001[request_data0]",
+        "uid" : "ac73618d3d2fa83a",
+        "parentUid" : "9be231adcb8cda09e4b644b61d81f632",
+        "status" : "passed",
+        "time" : {
+          "start" : 1734512256051,
+          "stop" : 1734512256323,
+          "duration" : 272
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'Url': 'https://jsfk-api-test.bigvisiontech.com/api/v1/account/login', 'Method': 'POST', 'DataFormat': 'JSON', 'RequestBody': {'username': 'platform', 'password': 'bv123456'}, 'ExpectCode': '1200', 'ExpectResult': {'expire': 43200}}" ]
+      } ],
+      "uid" : "9be231adcb8cda09e4b644b61d81f632"
+    }, {
+      "name" : "11926-MainThread",
+      "children" : [ {
+        "name" : "test001[request_data0]",
+        "uid" : "843c8277d72a83d3",
+        "parentUid" : "e509dc7303a0790694f0d2de66f5ebc3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1734512202926,
+          "stop" : 1734512203214,
+          "duration" : 288
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'Url': 'https://jsfk-api-test.bigvisiontech.com/api/v1/account/login', 'Method': 'POST', 'DataFormat': 'JSON', 'RequestBody': {'username': 'platform', 'password': 'bv123456'}, 'ExpectCode': '1200', 'ExpectResult': {'expire': 43200}}" ]
+      }, {
+        "name" : "test001[request_data2]",
+        "uid" : "78a1c2765e8abef4",
+        "parentUid" : "e509dc7303a0790694f0d2de66f5ebc3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1734512203375,
+          "stop" : 1734512203509,
+          "duration" : 134
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'Url': 'https://pay.thinkerx.com/cms/login/in', 'Method': 'POST', 'DataFormat': 'FORM', 'RequestBody': {'account': 'nihaoping', 'password': '0c98adac760bd840c30d2d143fbb38a4', 'loading': 'true'}, 'ExpectCode': '200', 'ExpectResult': {'code': 0, 'msg': '成功！'}}" ]
+      }, {
+        "name" : "test001[request_data1]",
+        "uid" : "713c1d1a3bba0624",
+        "parentUid" : "e509dc7303a0790694f0d2de66f5ebc3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1734512203218,
+          "stop" : 1734512203372,
+          "duration" : 154
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'Url': 'https://jsfk-api-test.bigvisiontech.com/api/v1/account/login', 'Method': 'POST', 'DataFormat': 'JSON', 'RequestBody': {'username': 'test111', 'password': 'bv123456'}, 'ExpectCode': '500', 'ExpectResult': {'message': '账号未注册', 'status': '500'}}" ]
+      } ],
+      "uid" : "e509dc7303a0790694f0d2de66f5ebc3"
+    }, {
+      "name" : "11972-MainThread",
+      "children" : [ {
+        "name" : "test001[request_data1]",
+        "uid" : "75ca6039096d770d",
+        "parentUid" : "ba8f6eb2c27ce4a3dc3bcb32a4edabe2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1734512246337,
+          "stop" : 1734512246479,
+          "duration" : 142
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'Url': 'https://jsfk-api-test.bigvisiontech.com/api/v1/account/login', 'Method': 'POST', 'DataFormat': 'JSON', 'RequestBody': {'username': 'test111', 'password': 'bv123456'}, 'ExpectCode': '500', 'ExpectResult': {'message': '账号未注册', 'status': '500'}}" ]
+      }, {
+        "name" : "test001[request_data0]",
+        "uid" : "1dc96f7629acc986",
+        "parentUid" : "ba8f6eb2c27ce4a3dc3bcb32a4edabe2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1734512246091,
+          "stop" : 1734512246333,
+          "duration" : 242
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'Url': 'https://jsfk-api-test.bigvisiontech.com/api/v1/account/login', 'Method': 'POST', 'DataFormat': 'JSON', 'RequestBody': {'username': 'platform', 'password': 'bv123456'}, 'ExpectCode': '1200', 'ExpectResult': {'expire': 43200}}" ]
+      }, {
+        "name" : "test001[request_data2]",
+        "uid" : "6c435ac3fdd3e2a7",
+        "parentUid" : "ba8f6eb2c27ce4a3dc3bcb32a4edabe2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1734512246482,
+          "stop" : 1734512246637,
+          "duration" : 155
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'Url': 'https://pay.thinkerx.com/cms/login/in', 'Method': 'POST', 'DataFormat': 'FORM', 'RequestBody': {'account': 'nihaoping', 'password': '0c98adac760bd840c30d2d143fbb38a4', 'loading': 'true'}, 'ExpectCode': '200', 'ExpectResult': {'code': 0, 'msg': '成功！'}}" ]
+      } ],
+      "uid" : "ba8f6eb2c27ce4a3dc3bcb32a4edabe2"
+    }, {
+      "name" : "11727-MainThread",
+      "children" : [ {
+        "name" : "test001[request_data2]",
+        "uid" : "de9e49927ce3ab8a",
+        "parentUid" : "90b8c97409befbe983f7e38856e75394",
+        "status" : "passed",
+        "time" : {
+          "start" : 1734512105962,
+          "stop" : 1734512106108,
+          "duration" : 146
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'Url': 'https://pay.thinkerx.com/cms/login/in', 'Method': 'POST', 'DataFormat': 'FORM', 'RequestBody': {'account': 'nihaoping', 'password': '0c98adac760bd840c30d2d143fbb38a4', 'loading': 'true'}, 'ExpectCode': '200', 'ExpectResult': {'code': 0, 'msg': '成功！'}}" ]
+      }, {
+        "name" : "test001[request_data1]",
+        "uid" : "a39a1626059a186",
+        "parentUid" : "90b8c97409befbe983f7e38856e75394",
+        "status" : "passed",
+        "time" : {
+          "start" : 1734512105751,
+          "stop" : 1734512105958,
+          "duration" : 207
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'Url': 'https://jsfk-api-test.bigvisiontech.com/api/v1/account/login', 'Method': 'POST', 'DataFormat': 'JSON', 'RequestBody': {'username': 'test111', 'password': 'bv123456'}, 'ExpectCode': '500', 'ExpectResult': {'message': '账号未注册', 'status': '500'}}" ]
+      }, {
+        "name" : "test001[request_data0]",
+        "uid" : "de4020edd3489dc1",
+        "parentUid" : "90b8c97409befbe983f7e38856e75394",
+        "status" : "passed",
+        "time" : {
+          "start" : 1734512105479,
+          "stop" : 1734512105747,
+          "duration" : 268
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'Url': 'https://jsfk-api-test.bigvisiontech.com/api/v1/account/login', 'Method': 'POST', 'DataFormat': 'JSON', 'RequestBody': {'username': 'platform', 'password': 'bv123456'}, 'ExpectCode': '1200', 'ExpectResult': {'expire': 43200}}" ]
+      } ],
+      "uid" : "90b8c97409befbe983f7e38856e75394"
+    }, {
+      "name" : "11646-MainThread",
+      "children" : [ {
+        "name" : "test001[request_data2]",
+        "uid" : "dd478b7f375068fc",
+        "parentUid" : "f771503e58ced75867fc084e4ec6db41",
+        "status" : "passed",
+        "time" : {
+          "start" : 1734511967263,
+          "stop" : 1734511967451,
+          "duration" : 188
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'Url': 'https://pay.thinkerx.com/cms/login/in', 'Method': 'POST', 'DataFormat': 'FORM', 'RequestBody': {'account': 'nihaoping', 'password': '0c98adac760bd840c30d2d143fbb38a4', 'loading': 'true'}, 'ExpectCode': '200', 'ExpectResult': {'code': 0, 'msg': '成功！'}}" ]
+      }, {
+        "name" : "test001[request_data1]",
+        "uid" : "9a2bd776fb661d6b",
+        "parentUid" : "f771503e58ced75867fc084e4ec6db41",
+        "status" : "passed",
+        "time" : {
+          "start" : 1734511967105,
+          "stop" : 1734511967259,
+          "duration" : 154
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'Url': 'https://jsfk-api-test.bigvisiontech.com/api/v1/account/login', 'Method': 'POST', 'DataFormat': 'JSON', 'RequestBody': {'username': 'test111', 'password': 'bv123456'}, 'ExpectCode': '500', 'ExpectResult': {'message': '账号未注册', 'status': '500'}}" ]
+      }, {
+        "name" : "test001[request_data0]",
+        "uid" : "c8d5de601487662f",
+        "parentUid" : "f771503e58ced75867fc084e4ec6db41",
+        "status" : "passed",
+        "time" : {
+          "start" : 1734511966827,
+          "stop" : 1734511967101,
+          "duration" : 274
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'Url': 'https://jsfk-api-test.bigvisiontech.com/api/v1/account/login', 'Method': 'POST', 'DataFormat': 'JSON', 'RequestBody': {'username': 'platform', 'password': 'bv123456'}, 'ExpectCode': '1200', 'ExpectResult': {'expire': 43200}}" ]
+      } ],
+      "uid" : "f771503e58ced75867fc084e4ec6db41"
+    }, {
+      "name" : "11784-MainThread",
+      "children" : [ {
+        "name" : "test001[request_data1]",
+        "uid" : "e376d9ebd829587c",
+        "parentUid" : "71dede2ea86b3bc22ed0d75feedc63f8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1734512125024,
+          "stop" : 1734512125168,
+          "duration" : 144
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'Url': 'https://jsfk-api-test.bigvisiontech.com/api/v1/account/login', 'Method': 'POST', 'DataFormat': 'JSON', 'RequestBody': {'username': 'test111', 'password': 'bv123456'}, 'ExpectCode': '500', 'ExpectResult': {'message': '账号未注册', 'status': '500'}}" ]
+      }, {
+        "name" : "test001[request_data0]",
+        "uid" : "d650ccf590236fb5",
+        "parentUid" : "71dede2ea86b3bc22ed0d75feedc63f8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1734512124729,
+          "stop" : 1734512125021,
+          "duration" : 292
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'Url': 'https://jsfk-api-test.bigvisiontech.com/api/v1/account/login', 'Method': 'POST', 'DataFormat': 'JSON', 'RequestBody': {'username': 'platform', 'password': 'bv123456'}, 'ExpectCode': '1200', 'ExpectResult': {'expire': 43200}}" ]
+      }, {
+        "name" : "test001[request_data2]",
+        "uid" : "e79b834592e6dd27",
+        "parentUid" : "71dede2ea86b3bc22ed0d75feedc63f8",
+        "status" : "passed",
+        "time" : {
+          "start" : 1734512125171,
+          "stop" : 1734512125334,
+          "duration" : 163
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'Url': 'https://pay.thinkerx.com/cms/login/in', 'Method': 'POST', 'DataFormat': 'FORM', 'RequestBody': {'account': 'nihaoping', 'password': '0c98adac760bd840c30d2d143fbb38a4', 'loading': 'true'}, 'ExpectCode': '200', 'ExpectResult': {'code': 0, 'msg': '成功！'}}" ]
+      } ],
+      "uid" : "71dede2ea86b3bc22ed0d75feedc63f8"
+    }, {
+      "name" : "11818-MainThread",
+      "children" : [ {
+        "name" : "test001[request_data2]",
+        "uid" : "687f9759429e0d8a",
+        "parentUid" : "5a18da749f985c7ca979e11b554b29b3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1734512137569,
+          "stop" : 1734512137703,
+          "duration" : 134
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'Url': 'https://pay.thinkerx.com/cms/login/in', 'Method': 'POST', 'DataFormat': 'FORM', 'RequestBody': {'account': 'nihaoping', 'password': '0c98adac760bd840c30d2d143fbb38a4', 'loading': 'true'}, 'ExpectCode': '200', 'ExpectResult': {'code': 0, 'msg': '成功！'}}" ]
+      }, {
+        "name" : "test001[request_data1]",
+        "uid" : "cdc4aab379a1203d",
+        "parentUid" : "5a18da749f985c7ca979e11b554b29b3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1734512137374,
+          "stop" : 1734512137565,
+          "duration" : 191
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'Url': 'https://jsfk-api-test.bigvisiontech.com/api/v1/account/login', 'Method': 'POST', 'DataFormat': 'JSON', 'RequestBody': {'username': 'test111', 'password': 'bv123456'}, 'ExpectCode': '500', 'ExpectResult': {'message': '账号未注册', 'status': '500'}}" ]
+      }, {
+        "name" : "test001[request_data0]",
+        "uid" : "7721fd956a956456",
+        "parentUid" : "5a18da749f985c7ca979e11b554b29b3",
+        "status" : "passed",
+        "time" : {
+          "start" : 1734512137103,
+          "stop" : 1734512137369,
+          "duration" : 266
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'Url': 'https://jsfk-api-test.bigvisiontech.com/api/v1/account/login', 'Method': 'POST', 'DataFormat': 'JSON', 'RequestBody': {'username': 'platform', 'password': 'bv123456'}, 'ExpectCode': '1200', 'ExpectResult': {'expire': 43200}}" ]
+      } ],
+      "uid" : "5a18da749f985c7ca979e11b554b29b3"
+    }, {
+      "name" : "11886-MainThread",
+      "children" : [ {
+        "name" : "test001[request_data1]",
+        "uid" : "5a731e8e20794d88",
+        "parentUid" : "6e7dc60db5c1b326752855d1fa06e1ea",
+        "status" : "passed",
+        "time" : {
+          "start" : 1734512194217,
+          "stop" : 1734512194358,
+          "duration" : 141
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'Url': 'https://jsfk-api-test.bigvisiontech.com/api/v1/account/login', 'Method': 'POST', 'DataFormat': 'JSON', 'RequestBody': {'username': 'test111', 'password': 'bv123456'}, 'ExpectCode': '500', 'ExpectResult': {'message': '账号未注册', 'status': '500'}}" ]
+      }, {
+        "name" : "test001[request_data0]",
+        "uid" : "70138d74553ceba5",
+        "parentUid" : "6e7dc60db5c1b326752855d1fa06e1ea",
+        "status" : "passed",
+        "time" : {
+          "start" : 1734512193918,
+          "stop" : 1734512194214,
+          "duration" : 296
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'Url': 'https://jsfk-api-test.bigvisiontech.com/api/v1/account/login', 'Method': 'POST', 'DataFormat': 'JSON', 'RequestBody': {'username': 'platform', 'password': 'bv123456'}, 'ExpectCode': '1200', 'ExpectResult': {'expire': 43200}}" ]
+      }, {
+        "name" : "test001[request_data2]",
+        "uid" : "dd2b135d14b08cdd",
+        "parentUid" : "6e7dc60db5c1b326752855d1fa06e1ea",
+        "status" : "passed",
+        "time" : {
+          "start" : 1734512194361,
+          "stop" : 1734512194538,
+          "duration" : 177
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'Url': 'https://pay.thinkerx.com/cms/login/in', 'Method': 'POST', 'DataFormat': 'FORM', 'RequestBody': {'account': 'nihaoping', 'password': '0c98adac760bd840c30d2d143fbb38a4', 'loading': 'true'}, 'ExpectCode': '200', 'ExpectResult': {'code': 0, 'msg': '成功！'}}" ]
+      } ],
+      "uid" : "6e7dc60db5c1b326752855d1fa06e1ea"
+    } ],
+    "uid" : "8e2203512e8ab44da16eaa8c67c13b9d"
+  } ],
+  "name" : "timeline"
+}

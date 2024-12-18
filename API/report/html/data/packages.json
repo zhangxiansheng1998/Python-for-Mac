@@ -1,0 +1,48 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "children" : [ {
+    "name" : "test_cases.test_case_001",
+    "children" : [ {
+      "name" : "test001[request_data0]",
+      "uid" : "ac73618d3d2fa83a",
+      "parentUid" : "b622948567b340521195f80cd595e013",
+      "status" : "passed",
+      "time" : {
+        "start" : 1734512256051,
+        "stop" : 1734512256323,
+        "duration" : 272
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{'Url': 'https://jsfk-api-test.bigvisiontech.com/api/v1/account/login', 'Method': 'POST', 'DataFormat': 'JSON', 'RequestBody': {'username': 'platform', 'password': 'bv123456'}, 'ExpectCode': '1200', 'ExpectResult': {'expire': 43200}}" ]
+    }, {
+      "name" : "test001[request_data1]",
+      "uid" : "bda0a094b138ffc3",
+      "parentUid" : "b622948567b340521195f80cd595e013",
+      "status" : "passed",
+      "time" : {
+        "start" : 1734512256325,
+        "stop" : 1734512256473,
+        "duration" : 148
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{'Url': 'https://jsfk-api-test.bigvisiontech.com/api/v1/account/login', 'Method': 'POST', 'DataFormat': 'JSON', 'RequestBody': {'username': 'test111', 'password': 'bv123456'}, 'ExpectCode': '500', 'ExpectResult': {'message': '账号未注册', 'status': '500'}}" ]
+    }, {
+      "name" : "test001[request_data2]",
+      "uid" : "3254d961627e34c1",
+      "parentUid" : "b622948567b340521195f80cd595e013",
+      "status" : "passed",
+      "time" : {
+        "start" : 1734512256475,
+        "stop" : 1734512256616,
+        "duration" : 141
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{'Url': 'https://pay.thinkerx.com/cms/login/in', 'Method': 'POST', 'DataFormat': 'FORM', 'RequestBody': {'account': 'nihaoping', 'password': '0c98adac760bd840c30d2d143fbb38a4', 'loading': 'true'}, 'ExpectCode': '200', 'ExpectResult': {'code': 0, 'msg': '成功！'}}" ]
+    } ],
+    "uid" : "test_cases.test_case_001"
+  } ],
+  "name" : "packages"
+}

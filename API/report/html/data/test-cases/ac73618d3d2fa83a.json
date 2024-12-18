@@ -1,0 +1,131 @@
+{
+  "uid" : "ac73618d3d2fa83a",
+  "name" : "test001[request_data0]",
+  "fullName" : "test_cases.test_case_001#test001",
+  "historyId" : "04c3dc0c05c91ef713340750aa9f18bd",
+  "time" : {
+    "start" : 1734512256051,
+    "stop" : 1734512256323,
+    "duration" : 272
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "ff27110c90114458",
+      "name" : "stdout",
+      "source" : "ff27110c90114458.txt",
+      "type" : "text/plain",
+      "size" : 237
+    } ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 0,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "开始发送请求"
+  }, {
+    "name" : "parentSuite",
+    "value" : "test_cases"
+  }, {
+    "name" : "suite",
+    "value" : "test_case_001"
+  }, {
+    "name" : "host",
+    "value" : "小平のMacBook"
+  }, {
+    "name" : "thread",
+    "value" : "12017-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_cases.test_case_001"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "request_data",
+    "value" : "{'Url': 'https://jsfk-api-test.bigvisiontech.com/api/v1/account/login', 'Method': 'POST', 'DataFormat': 'JSON', 'RequestBody': {'username': 'platform', 'password': 'bv123456'}, 'ExpectCode': '1200', 'ExpectResult': {'expire': 43200}}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "1dc96f7629acc986",
+      "status" : "passed",
+      "time" : {
+        "start" : 1734512246091,
+        "stop" : 1734512246333,
+        "duration" : 242
+      }
+    }, {
+      "uid" : "843c8277d72a83d3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1734512202926,
+        "stop" : 1734512203214,
+        "duration" : 288
+      }
+    }, {
+      "uid" : "70138d74553ceba5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1734512193918,
+        "stop" : 1734512194214,
+        "duration" : 296
+      }
+    }, {
+      "uid" : "7721fd956a956456",
+      "status" : "passed",
+      "time" : {
+        "start" : 1734512137103,
+        "stop" : 1734512137369,
+        "duration" : 266
+      }
+    }, {
+      "uid" : "d650ccf590236fb5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1734512124729,
+        "stop" : 1734512125021,
+        "duration" : 292
+      }
+    }, {
+      "uid" : "de4020edd3489dc1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1734512105479,
+        "stop" : 1734512105747,
+        "duration" : 268
+      }
+    }, {
+      "uid" : "c8d5de601487662f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1734511966827,
+        "stop" : 1734511967101,
+        "duration" : 274
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ac73618d3d2fa83a.json",
+  "parameterValues" : [ "{'Url': 'https://jsfk-api-test.bigvisiontech.com/api/v1/account/login', 'Method': 'POST', 'DataFormat': 'JSON', 'RequestBody': {'username': 'platform', 'password': 'bv123456'}, 'ExpectCode': '1200', 'ExpectResult': {'expire': 43200}}" ]
+}

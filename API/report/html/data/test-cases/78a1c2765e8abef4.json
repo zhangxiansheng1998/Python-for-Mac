@@ -1,0 +1,57 @@
+{
+  "uid" : "78a1c2765e8abef4",
+  "name" : "test001[request_data2]",
+  "fullName" : "test_cases.test_case_001#test001",
+  "historyId" : "8b8508393336345e33f6be4a80011482",
+  "time" : {
+    "start" : 1734512203375,
+    "stop" : 1734512203509,
+    "duration" : 134
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "开始发送请求"
+  }, {
+    "name" : "parentSuite",
+    "value" : "test_cases"
+  }, {
+    "name" : "suite",
+    "value" : "test_case_001"
+  }, {
+    "name" : "host",
+    "value" : "小平のMacBook"
+  }, {
+    "name" : "thread",
+    "value" : "11926-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_cases.test_case_001"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "request_data",
+    "value" : "{'Url': 'https://pay.thinkerx.com/cms/login/in', 'Method': 'POST', 'DataFormat': 'FORM', 'RequestBody': {'account': 'nihaoping', 'password': '0c98adac760bd840c30d2d143fbb38a4', 'loading': 'true'}, 'ExpectCode': '200', 'ExpectResult': {'code': 0, 'msg': '成功！'}}"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "78a1c2765e8abef4.json",
+  "parameterValues" : [ "{'Url': 'https://pay.thinkerx.com/cms/login/in', 'Method': 'POST', 'DataFormat': 'FORM', 'RequestBody': {'account': 'nihaoping', 'password': '0c98adac760bd840c30d2d143fbb38a4', 'loading': 'true'}, 'ExpectCode': '200', 'ExpectResult': {'code': 0, 'msg': '成功！'}}" ]
+}
