@@ -2,21 +2,36 @@
     {
         "Url": "https://jsfk-api-test.bigvisiontech.com/api/v1/account/login",
         "Method": "POST",
+        "DataFormat": "JSON",
         "RequestBody": {
             "username": "platform",
             "password": "bv123456"
         },
         "ExpectCode": "200",
-        "ExpectResult": {"message": "账号未注册","status": "500"}
+        "ExpectResult": {"expire": 43200}
     },
     {
         "Url": "https://jsfk-api-test.bigvisiontech.com/api/v1/account/login",
         "Method": "POST",
+        "DataFormat": "JSON",
         "RequestBody": {
             "username": "test111",
             "password": "bv123456"
         },
-        "ExpectCode": "200",
+        "ExpectCode": "500",
         "ExpectResult": {"message": "账号未注册","status": "500"}
+    },
+    {
+        "Url": "https://pay.thinkerx.com/cms/login/in",
+        "Method": "POST",
+        "DataFormat": "FORM",
+        "RequestBody": {
+            "account": "nihaoping",
+            "password": "0c98adac760bd840c30d2d143fbb38a4",
+            "loading": "true"
+        },
+        "ExpectCode": "200",
+        "ExpectResult": {"code": 0,"msg": "成功！"}
     }
 ]
+
